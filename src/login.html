@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Página de Login</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="processa_login.php" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+            
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastrar-se aqui</a>.</p>
+
+        <p><a href="index.html">Voltar à Página Inicial</a></p>
+
+    </div>
+</body>
+</html>
