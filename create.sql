@@ -15,8 +15,6 @@ CREATE TABLE funcionarios (
     nome varchar(50) NOT NULL,
     cargo varchar(30) NOT NULL,
     cpf varchar(14) NOT NULL,
-    salario decimal(10, 2) NOT NULL,
-    data_contratacao date NOT NULL,
     email varchar(50) NOT NULL,
     senha varchar(20) NOT NULL,
     primary key(cod_funcionario)
