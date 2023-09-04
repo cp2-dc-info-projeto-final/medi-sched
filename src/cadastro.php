@@ -4,43 +4,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     
-    $erro = 0; // Inicializar a variável $erro
-    
-    if (empty($nome) || strstr($nome, " ") === FALSE){
-        echo "Preencha seu nome com sobrenome";
-        $erro = 1;
+    $erro = false; // Inicializar a variável $erro
+
+    // Validação do nome
+    if (empty($nome) || strpos($nome, " ") === false) {
+        echo "Preencha seu nome completo com sobrenome.<br>";
+        $erro = true;
     }
 
-    if (strlen($email) < 8 || strstr($email, "@") === FALSE){
-        echo "Preencha seu email com pelo menos 8 caracteres.<br>";
-        $erro = 1;
+    // Validação do email
+    if (strlen($email) < 8 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Preencha um email válido com pelo menos 8 caracteres.<br>";
+        $erro = true;
     }
 
-    if (empty($senha) || strlen($senha) < 8){
-        echo "Preencha sua senha com pelo menos 8 caracteres.<br>";
-        $erro = 1;
+    // Validação da senha
+    if (strlen($senha) < 8) {
+        echo "A senha deve ter pelo menos 8 caracteres.<br>";
+        $erro = true;
     }
-    
-    if ($erro == 0){
-        $mysqli = mysqli_connect("localhost", "cadastro", "123", "CADASTRO");
-        if (!$mysqli) {
-            die("Erro na conexão: " . mysqli_connect_error());
-        }
-        
-        $sql = "INSERT INTO cadastrados (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
-        if (!mysqli_query($mysqli, $sql)){
-            echo "Erro ao inserir dados: " . mysqli_error($mysqli);
-        } else {
+
+    // Verificar se o email já está cadastrado
+    $mysqli = new mysqli("localhost", "cadastro", "123", "CADASTRO");
+    if ($mysqli->connect_error) {
+        die("Erro na conexão: " . $mysqli->connect_error);
+    }
+
+    $stmt = $mysqli->prepare("SELECT email FROM cadastrados WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        echo "Este endereço de email já está cadastrado.<br>";
+        $erro = true;
+    }
+
+    $stmt->close();
+
+    if (!$erro) {
+        // Usar consultas preparadas para evitar injeção de SQL
+        $stmt = $mysqli->prepare("INSERT INTO cadastrados (nome, email, senha) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $nome, $email, $senha);
+
+        if ($stmt->execute()) {
             echo "<br>O usuário foi cadastrado com sucesso";
+        } else {
+            echo "Erro ao inserir dados: " . $stmt->error;
         }
-        
-        mysqli_close($mysqli);
+
+        $stmt->close();
     }
+
+    $mysqli->close();
 }
-    
-
-
-
-
-
 ?>
+
