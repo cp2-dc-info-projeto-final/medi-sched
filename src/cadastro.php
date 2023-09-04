@@ -48,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sss", $nome, $email, $senha);
 
         if ($stmt->execute()) {
-            echo "<br>O usuário foi cadastrado com sucesso";
+            header("location: index.html");
+
         } else {
             echo "Erro ao inserir dados: " . $stmt->error;
         }
@@ -59,4 +60,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
+
 
