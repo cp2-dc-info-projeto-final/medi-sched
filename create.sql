@@ -1,4 +1,4 @@
-CREATE TABLE usuarios(
+CREATE TABLE clientes(
     cod_usuario int NOT NULL AUTO_INCREMENT,
     username varchar(10) NOT NULL,
     senha varchar(10) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE usuarios(
     idade int NOT NULL,
     cpf varchar(14) NOT NULL,
     email varchar(30) NOT NULL,
-    primary key(cod_usuario)
+    primary key(cod_cliente)
 );
 
 
