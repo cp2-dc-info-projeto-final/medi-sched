@@ -1,12 +1,19 @@
-CREATE TABLE clientes(
-    cod_usuario int NOT NULL AUTO_INCREMENT,
-    username varchar(10) NOT NULL,
-    senha varchar(10) NOT NULL,
-    nome varchar(30) NOT NULL,
-    idade int NOT NULL,
-    cpf varchar(14) NOT NULL,
-    email varchar(30) NOT NULL,
-    primary key(cod_cliente)
+CREATE DATABASE IF NOT EXISTS CADASTRO;
+USE CADASTRO;
+
+DROP USER IF EXISTS 'cadastro'@'localhost';
+CREATE USER IF NOT EXISTS 'cadastro'@'localhost' IDENTIFIED BY '123';
+GRANT ALL PRIVILEGES ON CADASTRO.* TO 'cadastro'@'localhost';
+
+DROP TABLE IF EXISTS cadastrados;
+
+CREATE TABLE cadastrados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    cpf VARCHAR(11)
 );
 
 
