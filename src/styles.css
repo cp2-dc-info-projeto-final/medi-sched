@@ -14,17 +14,6 @@ body {
     background-color: #ffffff;
 }
 
-fieldset {
-    margin: 50 auto; 
-    width: 80%; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 50px;
-    background-color: #f9f9f9;
-}
-
-
-
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -39,7 +28,8 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="date"] { /* Adicionei o estilo para o campo de data */
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -50,7 +40,8 @@ form input[type="password"] {
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
-form input[type="password"]:focus {
+form input[type="password"]:focus,
+form input[type="date"]:focus { /* Adicionei o estilo para o campo de data */
     border-color: #3498db;
 }
 
@@ -72,7 +63,7 @@ form button:hover {
 
 p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     color: #777;
 }
 
