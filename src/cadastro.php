@@ -3,6 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
+    $cpf = $_POST["cpf"];
+    $data_nascimento = $_POST["data_nascimento"];
     
     $erro = false; // Inicializar a variável $erro
 
@@ -21,6 +23,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validação da senha
     if (strlen($senha) < 8) {
         echo "A senha deve ter pelo menos 8 caracteres.<br>";
+        $erro = true;
+    }
+
+    // Validação do CPF (pode ser mais rigorosa)
+    if (empty($cpf) || !is_numeric($cpf) || strlen($cpf) != 11) {
+        echo "Preencha um CPF válido com 11 dígitos numéricos.<br>";
+        $erro = true;
+    }
+
+    // Validação da data de nascimento (pode ser mais rigorosa)
+    if (empty($data_nascimento) || !strtotime($data_nascimento)) {
+        echo "Preencha uma data de nascimento válida no formato YYYY-MM-DD.<br>";
         $erro = true;
     }
 
@@ -44,11 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!$erro) {
         // Usar consultas preparadas para evitar injeção de SQL
-        $stmt = $mysqli->prepare("INSERT INTO cadastrados (nome, email, senha) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $nome, $email, $senha);
+        $stmt = $mysqli->prepare("INSERT INTO cadastrados (nome, email, senha, cpf, data_nascimento) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $nome, $email, $senha, $cpf, $data_nascimento);
 
         if ($stmt->execute()) {
-            header("location: index.html");
+            echo "O usuário foi cadastrado com sucesso. Redirecionando para a página inicial...";
+            header("Refresh: 3; URL=index.html"); // Redireciona após 3 segundos
 
         } else {
             echo "Erro ao inserir dados: " . $stmt->error;
@@ -60,5 +75,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
-
-
