@@ -44,7 +44,7 @@ O sistema deve ser acessível por meio de um aplicativo móvel compatível com p
 
 ### RNF 01
 
-O sistema deve ser desenvolvido em PHP, Javascript, HTML, CSS, PostgreSQL
+O sistema deve ser desenvolvido em PHP, Javascript, HTML, CSS, MySQL
 
 ### RNF 02
 
@@ -60,31 +60,15 @@ O tempo de resposta para agendar, modificar ou cancelar um evento não deve exce
 
 ### RNF 05
 
-A disponibilidade do sistema deve ser de pelo menos 99% do tempo, com janelas de manutenção planejada agendadas fora dos horários de pico.
+As informações do usuário devem ser armazenadas de forma segura usando criptografia.
 
 ### RNF 06
 
-As informações do usuário devem ser armazenadas de forma segura usando criptografia.
+O sistema deve ser compatível com os principais navegadores (Chrome, Firefox, Safari, Edge) e dispositivos móveis modernos.
 
 ### RNF 07
 
-O sistema deve ser dimensionado para lidar com um aumento significativo de usuários e agendamentos sem impacto negativo no desempenho.
-
-### RNF 08
-
-O sistema deve ser compatível com os principais navegadores (Chrome, Firefox, Safari, Edge) e dispositivos móveis modernos.
-
-### RNF 09
-
 O sistema deve suportar diferentes fusos horários, idiomas e formatos de data/hora, dependendo da localização dos usuários.
-
-### RNF 10
-
-O sistema deve ser projetado para ser acessível a pessoas com deficiências, seguindo diretrizes de acessibilidade da web.
-
-### RNF 11
-
-O sistema deve manter registros de todas as atividades, como agendamentos, modificações e cancelamentos, para fins de auditoria e rastreabilidade.
 
 
 
