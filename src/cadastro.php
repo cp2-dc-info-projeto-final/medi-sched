@@ -57,13 +57,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     if (!$erro) {
+        // Criptografar a senha
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
         // Usar consultas preparadas para evitar injeção de SQL
         $stmt = $mysqli->prepare("INSERT INTO cadastrados (nome, email, senha, cpf, data_nascimento) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $nome, $email, $senha, $cpf, $data_nascimento);
+        $stmt->bind_param("sssss", $nome, $email, $senhaHash, $cpf, $data_nascimento);
 
         if ($stmt->execute()) {
             echo "O usuário foi cadastrado com sucesso. Redirecionando para a página inicial...";
-            header("Refresh: 3; URL=index.html"); // Redireciona após 3 segundos
+            header("Refresh: 1; URL=index.html"); // Redireciona após 1 segundo
 
         } else {
             echo "Erro ao inserir dados: " . $stmt->error;
@@ -75,4 +78,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
-    
