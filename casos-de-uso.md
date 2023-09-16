@@ -31,7 +31,7 @@
 
 
 
-### CDU 01 Cadastrar funcionário
+### CDU 
 
 **Fluxo Principal**
 
@@ -72,7 +72,7 @@
 9. O sistema informará ao funcionário que o cadastro não foi permitido
 
 
-### CDU 02 Cadastrar cliente
+### CDU 02 
 
 **Fluxo Principal**
 
@@ -97,7 +97,7 @@
 o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
 
- ### CDU 03 Login
+ ### CDU 03
 
 **Fluxo Principal**
 
@@ -122,7 +122,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 8. O usuário corrige os dados incorretos, clica em enviar.
 9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
 
-### CDU 04 Cadastro de Serviço
+### CDU 04
 
  **Fluxo Principal**
 
@@ -141,7 +141,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!". 
 
-### CDU 05 Listar clientes cadastrados
+### CDU 05 
 
 **Fluxo Principal**
 
@@ -151,7 +151,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. Essa página possuirá todos os usuarios cadastrados.
 5. O administrador poderá editar cadastros.
 
-### CDU 06 Editar cadastro
+### CDU 06
 **Fluxo Principal**
 
 1. O administrador irá acessar sua interface própria
@@ -163,14 +163,14 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 7. O administrador tentará editar o cadastro.
 8. Será exibido a mensagem de que o cadastro foi editado.
 
-### CDU 07 Disponibilização de horários
+### CDU 07
 
 **Fluxo principal**  
 1. O funcionário selecionará "serviços" na página principal
 2. O sistema exibirá ao funcionário a lista de serviços.
 3. O funcionário selecionará determinado serviço.
-4. O funcionário criará datas e horários disponíveis 
-5. O sistema confirmará datas e horários
+3. O funcionário criará datas e horários disponíveis 
+4. O sistema confirmará datas e horários
 
 
 
@@ -178,10 +178,10 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 1. O funcionário selecionará "serviços" na página principal
 2. O sistema exibirá ao funcionário a lista de serviços.
 3. O funcionário selecionará determinado serviço.
-4. O funcionário criará datas e horários disponíveis
+3. O funcionário criará datas e horários disponíveis
 5. O sistema informará que determinadas datas e horários disponíveis já foram criados anteriormente
 
-### CDU 08 Agendamento
+### CDU 08 
  
 **Fluxo principal**
 1. O cliente selecionará um serviço 
@@ -194,7 +194,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 8. O sistema recarrega para a página inicial.
 
 
-### CDU 09 Visualizar agendamento
+### CDU 09 
 
 **Fluxo Principal**
 1. A pagina principal possuirá um botão "Visualizar agendamentos". 
@@ -202,7 +202,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
 4. O cliente poderá ver os seus próprios agendamentos.
 
-### CDU 10 Cancelar agendamento 
+### CDU 10 
 
 **Fluxo Principal**
 1. Na interface do funcionário terá a página "agendamentos".
@@ -210,8 +210,8 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 3. O funcionário clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
 4. O funcionário clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
 
-### CDU 11 Excluir cliente 
-
+### CDU 11 
+ 
 **Fluxo principal**
 
 1. O administrador irá acessar sua interface própria.
@@ -228,7 +228,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
 
-### CDU 12 Excluir funcionário 
+### CDU 12 
 
 **Fluxo principal**
 
@@ -247,7 +247,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 5. O administrador clicará em "não" e não excluirá o funcionário. 
 
 
-### CDU 13 Logout
+### CDU 13 
 
 **Fluxo Principal**
 1. O cliente selecionará "Sair"
