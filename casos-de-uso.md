@@ -24,8 +24,7 @@
  - Administrador;
 
 ## Diagrama de Casos de Uso
-
-
+![Diagrama CDU (3)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/687b06e2-3950-4ad8-8808-2e867532abc1)
 
 ### CDU 01
 
