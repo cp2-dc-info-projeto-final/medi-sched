@@ -31,7 +31,7 @@
 
 
 
-### CDU 
+### CDU 01
 
 **Fluxo Principal**
 
@@ -165,7 +165,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
 ### CDU 07
 
-**Fluxo principal**  
+**Fluxo Principal**  
 1. O funcionário selecionará "serviços" na página principal
 2. O sistema exibirá ao funcionário a lista de serviços.
 3. O funcionário selecionará determinado serviço.
@@ -183,7 +183,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
 ### CDU 08 
  
-**Fluxo principal**
+**Fluxo Principal**
 1. O cliente selecionará um serviço 
 2. O sistema exibirá uma lista de funcionários disponíveis para o agendamento
 3. O cliente irá selecionar funcionário desejado.
@@ -207,12 +207,18 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 **Fluxo Principal**
 1. Na interface do funcionário terá a página "agendamentos".
 2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
-3. O funcionário clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
-4. O funcionário clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
+3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
+4. O funcionário ou administrador clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
+
+**Fluxo alternativo**
+1. Na interface do funcionário terá a página "agendamentos".
+2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
+3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
+4. O funcionário ou administrador clicará em "não" e a mensagem "cancelamento negado!".
 
 ### CDU 11 
  
-**Fluxo principal**
+**Fluxo Principal**
 
 1. O administrador irá acessar sua interface própria.
 2. Na interface do administrador terá a página "Clientes".
@@ -220,7 +226,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "sim" e excluirá o cliente. 
 
-**Fluxo alternativo**
+**Fluxo Alternativo**
 
 1. O administrador irá acessar sua interface própria
 2. Na interface do administrador terá a página "Clientes".
@@ -230,7 +236,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
 ### CDU 12 
 
-**Fluxo principal**
+**Fluxo Principal**
 
 1. O administrador irá acessar sua interface própria.
 2. Na interface do administrador terá a página "Funcionários".
@@ -238,7 +244,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário. 
 
-**Fluxo alternativo**
+**Fluxo Alternativo**
 
 1. O administrador irá acessar sua interface própria
 2. Na interface do administrador terá a página "Funcionário".
