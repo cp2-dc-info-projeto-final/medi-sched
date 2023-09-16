@@ -38,8 +38,9 @@
 5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
 6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
 7. O administrador terá que permitir o cadastro do funcionário
-8. O sistema informará ao funcionário que o cadastro foi efetuado  
-
+8. O sistema informará ao funcionário que o cadastro foi efetuado
+   
+![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/2579b643-8c6a-4a46-8cec-af4dbfb7b3cb)
 
 **Fluxo Alternativo**
 
@@ -53,7 +54,9 @@
 8. O funcionário digitará corretamente email ou senha.
 9. O funcionário clica em "Enviar".
 10. O administrador terá que permitir o cadastro do funcionário
-11. O sistema informará ao funcionário que o cadastro foi efetuado 
+11. O sistema informará ao funcionário que o cadastro foi efetuado
+    
+![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/a44b2040-efec-48e7-9124-fd8b9a7dd141)
 
 **Fluxo Alternativo**
 
@@ -66,7 +69,8 @@
 7. O administrador terá que permitir o cadastro do funcionário
 8. O administrador não permitirá o cadastro do funcionário
 9. O sistema informará ao funcionário que o cadastro não foi permitido
-
+   
+![Fluxo alternativo funcionario2](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/2d8f1877-e687-456c-9a80-59ec47706777)
 
 ### CDU 02 
 
@@ -77,7 +81,9 @@
 3. O sistema exibirá uma pagina de cadastro com um formulário.
 4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento).
 5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
-6. O sistema informará ao cliente que o cadastro foi efetuado. 
+6. O sistema informará ao cliente que o cadastro foi efetuado.
+
+![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/447a9514-e7a6-4568-bd25-4fbfc166c9ee)
 
 **Fluxo Alternativo**
 
@@ -89,9 +95,9 @@
 6. O sistema informará ao cliente que o email ou senha estão inválidos.
 7. O cliente digitará corretamente email ou senha.
 8. O cliente clica em "Enviar".
-9. O sistema informará ao cliente que
-o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
+9. O sistema informará ao cliente que o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
+![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/798c9c38-3ba4-4b35-967f-6576fa991f4a)
 
  ### CDU 03
 
