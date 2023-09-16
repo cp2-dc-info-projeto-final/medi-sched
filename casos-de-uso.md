@@ -8,19 +8,14 @@
  - [CDU 04](#CDU-04): Recuperar senha;
  - [CDU 05](#CDU-05): Cadastro de Serviço;
  - [CDU 06](#CDU-06): Listar clientes cadastrados;
- - [CDU 07](#CDU-07): Editar cadastro;
- - [CDU 08](#CDU-08): Disponibilização de horários
- - [CDU 09](#CDU-09): Agendamento;
- - [CDU 10](#CDU-10): Visualizar agendamento;
- - [CDU 11](#CDU-11): Cancelar agendamento;
- - [CDU 12](#CDU-12): Excluir cliente;
- - [CDU 13](#CDU-13): Excluir funcionário;
- - [CDU 14](#CDU-14): Logout;
-
+ - [CDU 07](#CDU-07): Disponibilização de horários
+ - [CDU 08](#CDU-08): Agendamento;
+ - [CDU 09](#CDU-09): Visualizar agendamento;
+ - [CDU 10](#CDU-10): Cancelar agendamento;
+ - [CDU 11](#CDU-11): Excluir cliente;
+ - [CDU 12](#CDU-12): Excluir funcionário;
+ - [CDU 13](#CDU-13): Logout;
  
-
- 
-
  
 ## Lista dos Atores
 
@@ -170,18 +165,6 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 5. O administrador poderá editar cadastros.
 
 ### CDU 07
-**Fluxo Principal**
-
-1. O administrador irá acessar sua interface própria
-2. Nessa interface possuirá um botão "Listar usuarios".
-3. O administrador clica nesse botão e será redirecionado para outra página.
-4. Essa página possuirá todos os usuarios cadastrados.
-5. O administrador poderá editar cadastros.
-6. O administrador selecionará um cliente.
-7. O administrador tentará editar o cadastro.
-8. Será exibido a mensagem de que o cadastro foi editado.
-
-### CDU 08
 
 **Fluxo Principal**  
 1. O funcionário selecionará "serviços" na página principal
@@ -199,7 +182,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. O funcionário criará datas e horários disponíveis
 5. O sistema informará que determinadas datas e horários disponíveis já foram criados anteriormente
 
-### CDU 09 
+### CDU 08 
  
 **Fluxo Principal**
 1. O cliente selecionará um serviço 
@@ -212,7 +195,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 8. O sistema recarrega para a página inicial.
 
 
-### CDU 10 
+### CDU 09 
 
 **Fluxo Principal**
 1. A pagina principal possuirá um botão "Visualizar agendamentos". 
@@ -220,7 +203,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
 4. O cliente poderá ver os seus próprios agendamentos.
 
-### CDU 11 
+### CDU 10 
 
 **Fluxo Principal**
 1. Na interface do funcionário terá a página "agendamentos".
@@ -234,7 +217,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
 4. O funcionário ou administrador clicará em "não" e a mensagem "cancelamento negado!".
 
-### CDU 12 
+### CDU 11 
  
 **Fluxo Principal**
 
@@ -252,7 +235,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
 
-### CDU 13 
+### CDU 12 
 
 **Fluxo Principal**
 
@@ -271,7 +254,7 @@ o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 5. O administrador clicará em "não" e não excluirá o funcionário. 
 
 
-### CDU 14 
+### CDU 13 
 
 **Fluxo Principal**
 1. O cliente selecionará "Sair"
