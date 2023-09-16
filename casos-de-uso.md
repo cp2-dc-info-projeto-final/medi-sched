@@ -6,16 +6,16 @@
  - [CDU 02](#CDU-02): Cadastrar cliente;
  - [CDU 03](#CDU-03): Login;
  - [CDU 04](#CDU-04): Recuperar senha;
- - [CDU 04](#CDU-05): Cadastro de Serviço;
- - [CDU 05](#CDU-06): Listar clientes cadastrados;
- - [CDU 06](#CDU-07): Editar cadastro;
- - [CDU 07](#CDU-08): Disponibilização de horários
- - [CDU 08](#CDU-09): Agendamento;
- - [CDU 09](#CDU-10): Visualizar agendamento;
- - [CDU 10](#CDU-11): Cancelar agendamento;
- - [CDU 11](#CDU-12): Excluir cliente;
- - [CDU 12](#CDU-13): Excluir funcionário;
- - [CDU 13](#CDU-14): Logout;
+ - [CDU 05](#CDU-05): Cadastro de Serviço;
+ - [CDU 06](#CDU-06): Listar clientes cadastrados;
+ - [CDU 07](#CDU-07): Editar cadastro;
+ - [CDU 08](#CDU-08): Disponibilização de horários
+ - [CDU 09](#CDU-09): Agendamento;
+ - [CDU 10](#CDU-10): Visualizar agendamento;
+ - [CDU 11](#CDU-11): Cancelar agendamento;
+ - [CDU 12](#CDU-12): Excluir cliente;
+ - [CDU 13](#CDU-13): Excluir funcionário;
+ - [CDU 14](#CDU-14): Logout;
 
  
 
