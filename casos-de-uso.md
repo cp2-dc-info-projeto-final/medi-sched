@@ -1,131 +1,256 @@
-# CASOS DE USO
+# Documento de Casos de Uso
 
-## CDU Página de Login ( 1 ):
-### Fluxo principal
+## Lista dos Casos de Uso
 
-1. O usuário entra na página de login do usuário.
-2. O usuário insere seu endereço de e-mail e senha.
-3. O usuário clica no botão "Entrar".
-4. O sistema verifica o endereço de e-mail e a senha do usuário.
-5. Se o endereço de e-mail e a senha estiverem corretos, o sistema permite que o usuário faça login.
-6. Se o endereço de e-mail e a senha estiverem incorretos, o sistema exibe uma mensagem de erro.
+ - [CDU 01](#CDU-01): Cadastrar funcionário;
+ - [CDU 02](#CDU-02): Cadastrar cliente;
+ - [CDU 03](#CDU-03): Login;
+ - [CDU 04](#CDU-04): Cadastro de Serviço;
+ - [CDU 05](#CDU-05): Listar clientes cadastrados;
+ - [CDU 06](#CDU-06): Editar cadastro;
+ - [CDU 07](#CDU-07): Disponibilização de horários
+ - [CDU 08](#CDU-08): Agendamento;
+ - [CDU 09](#CDU-09): Visualizar agendamento;
+ - [CDU 10](#CDU-10): Cancelar agendamento;
+ - [CDU 11](#CDU-11): Excluir cliente;
+ - [CDU 12](#CDU-12): Excluir funcionário;
+ - [CDU 13](#CDU-13): Logout;
 
-### Fluxo alternativo  ( 2 ): Esqueceu a senha:
+ 
 
-1. O usuário entra na página de login do usuário.
-2. O usuário clica no link "Esqueceu a senha?".
-3. O sistema envia um e-mail de redefinição de senha para o endereço de e-mail do usuário.
-4. O usuário abre o e-mail e clica no link "Redefinir senha".
-5. O sistema abre uma nova página onde o usuário pode inserir uma nova senha.
-6. O usuário insere uma nova senha e clica no botão "Redefinir senha".
-7. O sistema altera a senha do usuário e o usuário pode fazer login com a nova senha.
+ 
 
-### Fluxo alternativo  ( 3 ): Senha ou e-mail incorreta
+ 
+## Lista dos Atores
 
-1. O usuário entra na página de login do usuário.
-2. O usuário insere seu e-mail e senha.
-3. O usuário clica no botão "Entrar".
-4. O sistema verifica o e-mail e a senha do usuário.
-5. Se o e-mail e a senha estiverem corretos, o sistema permite que o usuário faça login.
-6. Se o e-mail e a senha estiverem incorretos, o sistema exibe uma mensagem de erro e pede ao usuário para tentar novamente.
-7. O usuário tenta novamente com um e-mail diferente.
-8. Se o e-mail estiver correto, o sistema envia um e-mail de redefinição de senha para o endereço de e-mail do usuário.
-9. O usuário tenta novamente com uma senha diferente.
-10. Se a senha estiver correta, o sistema permite que o usuário faça login.
-11. Se a senha estiver incorreta, o sistema exibe uma mensagem de erro e pede ao usuário para entrar em contato com o suporte ao cliente.
+ - Cliente;
+ - Funcionários; 
+ - Administrador;
 
-## CDU Página de cadastro ( 2 ):
+## Diagrama de Casos de Uso
 
 
-### Fluxo principal
 
-1. O usuário acessa a página de cadastro.
-2. O usuário insere seu nome, endereço de e-mail e senha.
-3. O usuário clica no botão "Criar conta".
-4. O sistema verifica o endereço de e-mail e a senha do usuário.
-5. Se o endereço de e-mail e a senha estiverem corretos, o sistema cria uma conta para o usuário.
-6. O sistema envia um e-mail de confirmação para o endereço de e-mail do usuário.
-7. O usuário clica no link de confirmação no e-mail.
-8. A conta do usuário é ativada e o usuário pode fazer login no sistema.
+### CDU 01 Cadastrar funcionário
 
-### Fluxo alternativo - E-mail incorreto
+**Fluxo Principal**
 
-1. O usuário acessa a página de cadastro.
-2. O usuário insere um endereço de e-mail incorreto.
-3. O sistema exibe uma mensagem de erro e pede ao usuário para tentar novamente.
-4. O usuário tenta novamente com um endereço de e-mail correto.
-5. O sistema verifica o endereço de e-mail e a senha do usuário.
-6. Se as credenciais estiverem corretas, o sistema cria uma conta para o usuário.
-7. Um e-mail de confirmação é enviado para o endereço de e-mail fornecido.
-8. O usuário clica no link de confirmação no e-mail.
-9. A conta é ativada e o usuário pode fazer login no sistema.
+1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
+2. O sistema exibirá a página inicial.
+3. O funcionário clica em "Cadastro de funcionário".
+4. O sistema exibirá uma pagina de cadastro com um formulário.
+5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
+6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
+7. O administrador terá que permitir o cadastro do funcionário
+8. O sistema informará ao funcionário que o cadastro foi efetuado  
 
-## CDU Página de agendamento ( 3 ):
 
-### Fluxo principal - Agendar Consulta Médica
+**Fluxo Alternativo**
 
-1. O paciente seleciona "Agendar Consulta".
-2. O sistema exibe uma lista de especialidades médicas disponíveis.
-3. O paciente seleciona a especialidade desejada (por exemplo, Cardiologia).
-4. O sistema exibe uma lista de médicos disponíveis na especialidade escolhida.
-5. O paciente seleciona um médico e visualiza sua agenda.
-6. O paciente escolhe uma data e horário disponíveis para a consulta.
-7. O sistema solicita a confirmação do agendamento.
-8. O paciente confirma o agendamento.
-9. O sistema exibe uma confirmação de agendamento com os detalhes da consulta.
-10. O sistema envia um e-mail ou SMS de confirmação para o paciente.
+1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
+2. O sistema exibirá a página inicial.
+3. O funcionário clica em "Cadastro de funcionário".
+4. O sistema exibirá uma pagina de cadastro com um formulário.
+5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
+6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
+7. O sistema informará ao funcionário que o email ou senha estão inválidos.
+8. O funcionário digitará corretamente email ou senha.
+9. O funcionário clica em "Enviar".
+10. O administrador terá que permitir o cadastro do funcionário
+11. O sistema informará ao funcionário que o cadastro foi efetuado 
 
-## Fluxo Alternativo 1: Paciente Não Encontra Horário Disponível
+**Fluxo Alternativo**
 
-1. No passo 5 do fluxo principal, se o médico não tiver horários disponíveis próximos, o sistema exibe uma mensagem indicando que não há horários disponíveis e sugere tentar outra data ou médico.
+1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
+2. O sistema exibirá a página inicial.
+3. O funcionário clica em "Cadastro de funcionário".
+4. O sistema exibirá uma pagina de cadastro com um formulário.
+5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
+6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
+7. O administrador terá que permitir o cadastro do funcionário
+8. O administrador não permitirá o cadastro do funcionário
+9. O sistema informará ao funcionário que o cadastro não foi permitido
 
-## Fluxo Alternativo 2: Paciente Deseja Modificar Agendamento
 
-1. O paciente acessa o sistema de agendamento.
-2. O sistema exibe o painel do paciente.
-4. O paciente seleciona "Meus Agendamentos".
-5. O sistema exibe a lista de agendamentos do paciente.
-6. O paciente seleciona o agendamento que deseja modificar.
-7. O sistema exibe os detalhes do agendamento e opções para modificar ou cancelar.
-8. O paciente escolhe "Modificar Agendamento".
-9. O sistema exibe opções para escolher uma nova data e horário.
-10. O paciente escolhe um novo horário e confirma a modificação.
-11. O sistema exibe uma confirmação da modificação.
+### CDU 02 Cadastrar cliente
 
-## Fluxo Alternativo 3: Paciente Deseja Cancelar Agendamento
+**Fluxo Principal**
 
-1. O paciente acessa o sistema de agendamento.
-2. O sistema exibe o painel do paciente.
-3. O paciente seleciona "Meus Agendamentos".
-4. O sistema exibe a lista de agendamentos do paciente.
-5. O paciente seleciona o agendamento que deseja cancelar.
-6. O sistema exibe os detalhes do agendamento e opções para modificar ou cancelar.
-7. O paciente escolhe "Cancelar Agendamento".
-8. O sistema solicita confirmação para o cancelamento.
-9. O paciente confirma o cancelamento.
-10. O sistema exibe uma confirmação do cancelamento.
+1. O sistema exibirá a página inicial
+2. O cliente clica em "Cadastro".
+3. O sistema exibirá uma pagina de cadastro com um formulário.
+4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento).
+5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
+6. O sistema informará ao cliente que o cadastro foi efetuado. 
 
-## Fluxo Alternativo 4: Paciente Solicita Lista de Espera
+**Fluxo Alternativo**
 
-1. No passo 5 do fluxo principal, se o médico não tiver horários disponíveis, o sistema oferece ao paciente a opção de entrar em uma lista de espera.
-2. O paciente opta por entrar na lista de espera para o horário desejado.
-3. Se um horário se tornar disponível devido a um cancelamento, o sistema notifica o paciente da lista de espera.
+1. O sistema exibirá a página inicial
+2. O cliente clica em "Cadastro".
+3. O sistema exibirá uma pagina de cadastro com um formulário.
+4. O cliente irá inserir os dados no formulário (nome,e-mail ,senha, cpf, data de nascimento).
+5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
+6. O sistema informará ao cliente que o email ou senha estão inválidos.
+7. O cliente digitará corretamente email ou senha.
+8. O cliente clica em "Enviar".
+9. O sistema informará ao cliente que
+o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
 
-## Fluxo Alternativo 5: Paciente Esquece Senha
 
-1. O paciente tenta fazer login, mas não lembra da senha.
-2. O paciente seleciona a opção "Esqueci minha senha".
-3. O sistema solicita o endereço de e-mail associado à conta.
-4. O paciente insere o endereço de e-mail e solicita a redefinição da senha.
-5. O sistema envia um e-mail com um link de redefinição de senha.
-6. O paciente acessa o link e define uma nova senha.
-7. O sistema confirma a alteração da senha e redireciona o paciente para o painel do paciente.
+ ### CDU 03 Login
 
-## Fluxo Alternativo 6: Médico Indisponível
+**Fluxo Principal**
 
-1. No passo 3 do fluxo principal, se o paciente selecionar uma especialidade, mas todos os médicos dessa especialidade estiverem temporariamente indisponíveis, o sistema notifica o paciente e sugere que ele tente outra especialidade ou aguarde.
+1. O sistema exibirá a página inicial
+2. O cliente clica em "Login".
+3. O cliente será redirecionado para a página de login.
+4. Os sistema exibirá os campos de email e senha.
+5. Cliente entra com email e senha.
+6. O cliente clica em "enviar".
+7. O sistema verifica as informações fornecidas pelo usuário.
+8. O cliente está logado ao sistema.
 
-## Fluxo Alternativo 7: Erro Técnico Durante Agendamento
+ **Fluxo Alternativo**
 
-1. Durante qualquer ponto do fluxo principal, se ocorrer um erro técnico (como uma falha no servidor), o sistema exibe uma mensagem de erro ao paciente, pedindo para tentar novamente mais tarde.
-2. O paciente pode recarregar a página ou retornar à página inicial.
+1. O sistema exibirá a página inicial do programa.
+2. O cliente clica em "Login".
+3. O cliente será redirecionado para a página de login.
+4. Será exibido os campos de email e senha.
+5. Cliente entra com email e senha.
+6. O cliente clica em "enviar".
+7. O sistema informará ao cliente que o email ou senha estão incorretos.
+8. O usuário corrige os dados incorretos, clica em enviar.
+9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
+
+### CDU 04 Cadastro de Serviço
+
+ **Fluxo Principal**
+
+1. O sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
+2. O cliente irá escolher o horário,especialização do funcionário e os funcionarios disponíveis na região do cliente. 
+3. O cliente irá clicar em "Agendar".
+4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!". 
+
+**Fluxo Alternativo**
+
+1.  sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
+2. O cliente irá escolher o horário,especialização do funcionário e os funcionários disponíveis na região do cliente. 
+3. O cliente irá clicar em "Agendar".
+4. O sistema informará que o funcionário ou o horário não está disponivel.
+5. O cliente escolherá outro funcionário ou outro horário.
+6. O cliente irá clicar em "Agendar".
+7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!". 
+
+### CDU 05 Listar clientes cadastrados
+
+**Fluxo Principal**
+
+1. O administrador possuirá uma interface própria para administradores.
+2. Nessa interface possuirá um botão "Listar usuarios".
+3. O administrador clica nesse botão e será redirecionado para outra página.
+4. Essa página possuirá todos os usuarios cadastrados.
+5. O administrador poderá editar cadastros.
+
+### CDU 06 Editar cadastro
+**Fluxo Principal**
+
+1. O administrador irá acessar sua interface própria
+2. Nessa interface possuirá um botão "Listar usuarios".
+3. O administrador clica nesse botão e será redirecionado para outra página.
+4. Essa página possuirá todos os usuarios cadastrados.
+5. O administrador poderá editar cadastros.
+6. O administrador selecionará um cliente.
+7. O administrador tentará editar o cadastro.
+8. Será exibido a mensagem de que o cadastro foi editado.
+
+### CDU 07 Disponibilização de horários
+
+**Fluxo principal**  
+1. O funcionário selecionará "serviços" na página principal
+2. O sistema exibirá ao funcionário a lista de serviços.
+3. O funcionário selecionará determinado serviço.
+4. O funcionário criará datas e horários disponíveis 
+5. O sistema confirmará datas e horários
+
+
+
+**Fluxo Alternativo** 
+1. O funcionário selecionará "serviços" na página principal
+2. O sistema exibirá ao funcionário a lista de serviços.
+3. O funcionário selecionará determinado serviço.
+4. O funcionário criará datas e horários disponíveis
+5. O sistema informará que determinadas datas e horários disponíveis já foram criados anteriormente
+
+### CDU 08 Agendamento
+ 
+**Fluxo principal**
+1. O cliente selecionará um serviço 
+2. O sistema exibirá uma lista de funcionários disponíveis para o agendamento
+3. O cliente irá selecionar funcionário desejado.
+4. O sistema exibirá uma lista de horários disponíveis de determinado funcionário.
+5. O cliente seleciona horário
+6. O sistema confirmará o agendamento
+7. O sistema exibirá "agendamento cadastrado"
+8. O sistema recarrega para a página inicial.
+
+
+### CDU 09 Visualizar agendamento
+
+**Fluxo Principal**
+1. A pagina principal possuirá um botão "Visualizar agendamentos". 
+2. O sistema incaminhará o administrador, funcionário e cliente à pagina de visualização de agendamentos.
+3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
+4. O cliente poderá ver os seus próprios agendamentos.
+
+### CDU 10 Cancelar agendamento 
+
+**Fluxo Principal**
+1. Na interface do funcionário terá a página "agendamentos".
+2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
+3. O funcionário clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
+4. O funcionário clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
+
+### CDU 11 Excluir cliente 
+
+**Fluxo principal**
+
+1. O administrador irá acessar sua interface própria.
+2. Na interface do administrador terá a página "Clientes".
+3. O sistema exibirá a página "Clientes". Na página "Clientes" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada cliente. 
+4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
+5. O administrador clicará em "sim" e excluirá o cliente. 
+
+**Fluxo alternativo**
+
+1. O administrador irá acessar sua interface própria
+2. Na interface do administrador terá a página "Clientes".
+3. O sistema exibirá a página "Clientes". Na página "Clientes" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada cliente 
+4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
+5. O administrador clicará em "não" e não excluirá o cliente.
+
+### CDU 12 Excluir funcionário 
+
+**Fluxo principal**
+
+1. O administrador irá acessar sua interface própria.
+2. Na interface do administrador terá a página "Funcionários".
+3. O sistema exibirá a página "Funcionários". Na página "Funcionários" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada funcionário. 
+4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
+5. O administrador clicará em "sim" e excluirá o funcionário. 
+
+**Fluxo alternativo**
+
+1. O administrador irá acessar sua interface própria
+2. Na interface do administrador terá a página "Funcionário".
+3. O sistema exibirá a página "Funcionário". Na página "Funcionário" haverá uma lista com cada funcionário. Haverá um botão "excluir"ao lado de cada funcionário 
+4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
+5. O administrador clicará em "não" e não excluirá o funcionário. 
+
+
+### CDU 13 Logout
+
+**Fluxo Principal**
+1. O cliente selecionará "Sair"
+2. O sistema incerra sessão
+3. O sistema recarrega para página inicial
+
