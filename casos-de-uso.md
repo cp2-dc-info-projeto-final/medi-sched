@@ -167,7 +167,9 @@
 4. O sistema informará que o funcionário ou o horário não está disponivel.
 5. O cliente escolherá outro funcionário ou outro horário.
 6. O cliente irá clicar em "Agendar".
-7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!". 
+7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
+
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/49ee7665-cea3-49c4-91ab-cf634ad4cc1e)
 
 ### CDU 06 
 
@@ -177,7 +179,6 @@
 2. Nessa interface possuirá um botão "Listar usuarios".
 3. O administrador clica nesse botão e será redirecionado para outra página.
 4. Essa página possuirá todos os usuarios cadastrados.
-5. O administrador poderá editar cadastros.
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/14d14d2e-3e1d-4ca8-9f3d-9f26471360d4)
 
@@ -188,9 +189,9 @@
 2. O sistema exibirá ao funcionário a lista de serviços.
 3. O funcionário selecionará determinado serviço.
 4. O funcionário criará datas e horários disponíveis 
-4. O sistema confirmará datas e horários
+5. O sistema confirmará datas e horários
 
-
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f5cceb63-31bd-48eb-a87e-e1b2eeeb951f)
 
 **Fluxo Alternativo** 
 1. O funcionário selecionará "serviços" na página principal
@@ -211,6 +212,7 @@
 7. O sistema exibirá "agendamento cadastrado"
 8. O sistema recarrega para a página inicial.
 
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/e38a5835-8178-4c96-9242-08aa825b5499)
 
 ### CDU 09 
 
