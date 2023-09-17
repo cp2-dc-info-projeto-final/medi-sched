@@ -6,7 +6,7 @@
  - [CDU 02](#CDU-02): Cadastrar cliente;
  - [CDU 03](#CDU-03): Login;
  - [CDU 04](#CDU-04): Recuperar senha;
- - [CDU 05](#CDU-05): Cadastro de Serviço;
+ - [CDU 05](#CDU-05): Agendamento;
  - [CDU 06](#CDU-06): Listar clientes cadastrados;
  - [CDU 07](#CDU-07): Disponibilização de horários
  - [CDU 08](#CDU-09): Visualizar agendamento;
