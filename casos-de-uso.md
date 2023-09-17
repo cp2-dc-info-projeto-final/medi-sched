@@ -158,7 +158,7 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b3280c98-ec06-4d89-b442-df1eff1b5a04)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/77c3bf7b-07d6-48a4-b204-2a8bdbff97d9)
 
 **Fluxo Alternativo**
 
@@ -170,7 +170,7 @@
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ea630d6c-98b3-4125-a961-920232a47a88)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/66ea8269-31ea-46d5-88e8-a1236ddde305)
 
 ### CDU 06 
 
