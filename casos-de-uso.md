@@ -137,6 +137,8 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
+![Fluxo Principal Recuperação de senha](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20Principal%20Recuperar%20SEnha.jpg)
+
 **Fluxo Alternativo**
 
 1. O cliente seleciona a opção "Recuperar a senha "
