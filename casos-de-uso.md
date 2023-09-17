@@ -157,8 +157,6 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1a3feec8-13b3-4e13-9689-5cbb065c0b13)
-
 **Fluxo Alternativo**
 
 1.  sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
@@ -168,8 +166,6 @@
 5. O cliente escolherá outro funcionário ou outro horário.
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
-
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/49ee7665-cea3-49c4-91ab-cf634ad4cc1e)
 
 ### CDU 06 
 
@@ -191,7 +187,7 @@
 4. O funcionário criará datas e horários disponíveis 
 5. O sistema confirmará datas e horários
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f5cceb63-31bd-48eb-a87e-e1b2eeeb951f)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f4b0e4d2-edf2-4ed2-87fa-6cdc4b6fc8da)
 
 **Fluxo Alternativo** 
 1. O funcionário selecionará "serviços" na página principal
@@ -199,6 +195,8 @@
 3. O funcionário selecionará determinado serviço.
 4. O funcionário criará datas e horários disponíveis
 5. O sistema informará que determinadas datas e horários disponíveis já foram criados anteriormente
+
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b28e9b96-30e3-410e-9cb7-2b8eaec71d6c)
 
 ### CDU 08 
  
