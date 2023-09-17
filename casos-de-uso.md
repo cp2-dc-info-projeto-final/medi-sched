@@ -146,6 +146,8 @@
 3. O cliente digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
 4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
 
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/dd2e6f59-97c8-40a1-98a0-6c560ae13a82)
+
 ### CDU 05
 
  **Fluxo Principal**
@@ -153,7 +155,9 @@
 1. O sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
 2. O cliente irá escolher o horário,especialização do funcionário e os funcionarios disponíveis na região do cliente. 
 3. O cliente irá clicar em "Agendar".
-4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!". 
+4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
+
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1a3feec8-13b3-4e13-9689-5cbb065c0b13)
 
 **Fluxo Alternativo**
 
@@ -174,6 +178,8 @@
 3. O administrador clica nesse botão e será redirecionado para outra página.
 4. Essa página possuirá todos os usuarios cadastrados.
 5. O administrador poderá editar cadastros.
+
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/14d14d2e-3e1d-4ca8-9f3d-9f26471360d4)
 
 ### CDU 07
 
