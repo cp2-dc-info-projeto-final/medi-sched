@@ -111,7 +111,7 @@
 7. O sistema verifica as informações fornecidas pelo usuário.
 8. O cliente está logado ao sistema.
 
-![Fluxo principal Cliente] (https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20alternativo%20Login.jpg)
+![Fluxo principal Cliente] 
 
  **Fluxo Alternativo**
 
@@ -124,6 +124,8 @@
 7. O sistema informará ao cliente que o email ou senha estão incorretos.
 8. O usuário corrige os dados incorretos, clica em enviar.
 9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
+
+![Fluxo principal Cliente] (Fluxo Alternativo Login.jpg)
 
 ### CDU 04 
 
