@@ -94,7 +94,7 @@
 6. O sistema informará ao cliente que o email ou senha estão inválidos.
 7. O cliente digitará corretamente email ou senha.
 8. O cliente clica em "Enviar".
-9. O sistema informará ao cliente que o cadastro foi efetuado.(Fluxo-alternativo-cliente.png)
+9. O sistema informará ao cliente que o cadastro foi efetuado.
 
 ![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/798c9c38-3ba4-4b35-967f-6576fa991f4a)
 
