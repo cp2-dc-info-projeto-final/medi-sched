@@ -111,7 +111,7 @@
 7. O sistema verifica as informações fornecidas pelo usuário.
 8. O cliente está logado ao sistema.
 
-
+https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20alternativo%20Login.jpg
 
  **Fluxo Alternativo**
 
