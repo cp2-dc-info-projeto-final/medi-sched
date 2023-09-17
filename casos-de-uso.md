@@ -9,12 +9,11 @@
  - [CDU 05](#CDU-05): Cadastro de Serviço;
  - [CDU 06](#CDU-06): Listar clientes cadastrados;
  - [CDU 07](#CDU-07): Disponibilização de horários
- - [CDU 08](#CDU-08): Agendamento;
- - [CDU 09](#CDU-09): Visualizar agendamento;
- - [CDU 10](#CDU-10): Cancelar agendamento;
- - [CDU 11](#CDU-11): Excluir cliente;
- - [CDU 12](#CDU-12): Excluir funcionário;
- - [CDU 13](#CDU-13): Logout;
+ - [CDU 08](#CDU-09): Visualizar agendamento;
+ - [CDU 09](#CDU-10): Cancelar agendamento;
+ - [CDU 10](#CDU-11): Excluir cliente;
+ - [CDU 11](#CDU-12): Excluir funcionário;
+ - [CDU 12](#CDU-13): Logout;
  
  
 ## Lista dos Atores
@@ -203,21 +202,7 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b28e9b96-30e3-410e-9cb7-2b8eaec71d6c)
 
-### CDU 08 
- 
-**Fluxo Principal**
-1. O cliente selecionará um serviço 
-2. O sistema exibirá uma lista de funcionários disponíveis para o agendamento
-3. O cliente irá selecionar funcionário desejado.
-4. O sistema exibirá uma lista de horários disponíveis de determinado funcionário.
-5. O cliente seleciona horário
-6. O sistema confirmará o agendamento
-7. O sistema exibirá "agendamento cadastrado"
-8. O sistema recarrega para a página inicial.
-
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/e38a5835-8178-4c96-9242-08aa825b5499)
-
-### CDU 09 
+### CDU 08
 
 **Fluxo Principal**
 1. A pagina principal possuirá um botão "Visualizar agendamentos". 
@@ -225,7 +210,7 @@
 3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
 4. O cliente poderá ver os seus próprios agendamentos.
 
-### CDU 10 
+### CDU 09 
 
 **Fluxo Principal**
 1. Na interface do funcionário terá a página "agendamentos".
@@ -239,7 +224,7 @@
 3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
 4. O funcionário ou administrador clicará em "não" e a mensagem "cancelamento negado!".
 
-### CDU 11 
+### CDU 10 
  
 **Fluxo Principal**
 
@@ -257,7 +242,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
 
-### CDU 12 
+### CDU 11 
 
 **Fluxo Principal**
 
@@ -276,7 +261,7 @@
 5. O administrador clicará em "não" e não excluirá o funcionário. 
 
 
-### CDU 13 
+### CDU 12 
 
 **Fluxo Principal**
 1. O cliente selecionará "Sair"
