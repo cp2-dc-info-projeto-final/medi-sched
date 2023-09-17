@@ -111,7 +111,7 @@
 7. O sistema verifica as informações fornecidas pelo usuário.
 8. O cliente está logado ao sistema.
 
-![Fluxo Principal Login](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20Principal%20login.jpg)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/8c602529-5164-41ba-a3a7-4b0352be6aec)
 
  **Fluxo Alternativo**
 
@@ -125,7 +125,7 @@
 8. O usuário corrige os dados incorretos, clica em enviar.
 9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
 
-![Fluxo Alternativo Login](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20alternativo%20Login.jpg)
+
 
 ### CDU 04 
 
@@ -157,6 +157,8 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b3280c98-ec06-4d89-b442-df1eff1b5a04)
+
 **Fluxo Alternativo**
 
 1.  sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
@@ -166,6 +168,8 @@
 5. O cliente escolherá outro funcionário ou outro horário.
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
+
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ea630d6c-98b3-4125-a961-920232a47a88)
 
 ### CDU 06 
 
