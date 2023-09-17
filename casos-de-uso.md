@@ -111,6 +111,8 @@
 7. O sistema verifica as informações fornecidas pelo usuário.
 8. O cliente está logado ao sistema.
 
+https://photos.app.goo.gl/PUwUzktXwD3SSWbL7
+
  **Fluxo Alternativo**
 
 1. O sistema exibirá a página inicial do programa.
