@@ -125,6 +125,7 @@
 8. O usuário corrige os dados incorretos, clica em enviar.
 9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
 
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c34d8f0a-7b8d-4491-91aa-1c5b863372d6)
 
 
 ### CDU 04 
@@ -137,7 +138,7 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
-![Fluxo Principal Recuperação de senha](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/Fluxo%20Principal%20Recuperar%20SEnha.jpg)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c402b964-07fc-4474-8bd8-ef037f589c1f)
 
 **Fluxo Alternativo**
 
