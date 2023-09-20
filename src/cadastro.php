@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validação do CPF
-    if (empty($cpf) || !is_numeric($cpf) || strlen($cpf) != 11) {
+    if (empty($cpf) || !is_numeric($cpf) || strlen($cpf) != 14) {
         $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
         $erro = true;
     }
@@ -103,7 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
             
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required maxlength="11" placeholder="Digite seu CPF">
+            <input type="text" id="cpf" name="cpf" required maxlength="14" 
+            placeholder="Digite seu CPF" oninput="formatarCPF(this)">
 
             <label for="data_nascimento">Data de Nascimento:</label>
             <input type="date" id="data_nascimento" name="data_nascimento" required>
@@ -118,13 +119,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <script>
-        function formatarCPF(campo) {
-            campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
-            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o ponto após o terceiro dígito
-            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto após o sexto dígito
-            campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço após o nono dígito
+    function formatarCPF(campo) {
+        // Remove tudo que não é dígito
+        campo.value = campo.value.replace(/\D/g, '');
+
+        // Adiciona os pontos e traço conforme o formato do CPF
+        if (campo.value.length <= 11) {
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2');
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2');
+            campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
