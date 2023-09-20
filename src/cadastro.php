@@ -28,9 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
-    // Validação do CPF (pode ser mais rigorosa)
+    // Validação do CPF
     if (empty($cpf) || !is_numeric($cpf) || strlen($cpf) != 11) {
-        $mensagemErro .= "Preencha um CPF válido com 11 dígitos numéricos.<br>";
+        $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
         $erro = true;
     }
 
@@ -61,21 +61,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$erro) {
         // Criptografar a senha
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-
+    
         // Usar consultas preparadas para evitar injeção de SQL
         $stmt = $mysqli->prepare("INSERT INTO cadastrados (nome, email, senha, cpf, data_nascimento) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $nome, $email, $senhaHash, $cpf, $data_nascimento);
-
+    
         if ($stmt->execute()) {
+            $mysqli->close();
             header("Location: index.html"); // Redireciona para a página inicial após o cadastro bem-sucedido
-            exit;
+            exit; // Certifique-se de sair do script após o redirecionamento
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
         }
-
+    
         $stmt->close();
     }
-
+    
     $mysqli->close();
 }
 ?>
@@ -102,17 +103,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
             
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF">
+            <input type="text" id="cpf" name="cpf" required maxlength="11" placeholder="Digite seu CPF">
 
             <label for="data_nascimento">Data de Nascimento:</label>
             <input type="date" id="data_nascimento" name="data_nascimento" required>
             
-            <button type="submit">Cadastrar</button>
+            <button type="submit" href="index.html">Cadastrar</button>
         </form>
-
-        <p>É um profissional? <a href="cadastro_func.html">Cadastrar-se</a>.</p>
+        
         <p>Já tem uma conta? <a href="login.html">Fazer login</a>.</p>
+        <p>É um profissional? <a href="cadastro_func.html">Cadastrar-se</a>.</p>
         <div id="mensagemErro"><?php echo $mensagemErro; ?></div>
+
     </div>
+
+    <script>
+        function formatarCPF(campo) {
+            campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o ponto após o terceiro dígito
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto após o sexto dígito
+            campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço após o nono dígito
+        }
+    </script>
+
 </body>
 </html>
