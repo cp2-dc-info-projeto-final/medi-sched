@@ -209,6 +209,8 @@
 2. O sistema incaminhará o administrador, funcionário e cliente à pagina de visualização de agendamentos.
 3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
 4. O cliente poderá ver os seus próprios agendamentos.
+   
+![Fluxo Principak visu](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b29c0c2d-39cd-44df-971e-f687edd604fc)
 
 ### CDU 09 
 
