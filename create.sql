@@ -5,39 +5,47 @@ DROP USER IF EXISTS 'cadastro'@'localhost';
 CREATE USER IF NOT EXISTS 'cadastro'@'localhost' IDENTIFIED BY '123';
 GRANT ALL PRIVILEGES ON CADASTRO.* TO 'cadastro'@'localhost';
 
-DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS Cliente;
 
-CREATE TABLE clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE Cliente (
+    idCliente INT AUTO_INCREMENT,
     nome VARCHAR(200) NOT NULL,
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(200) NOT NULL,
     data_nascimento DATE,
     cpf VARCHAR(11)
+
+    primary key(idCliente)
 );
 
 
-CREATE TABLE funcionarios (
-    cod_funcionario int NOT NULL AUTO_INCREMENT,
+CREATE TABLE Funcionario (
+    idFuncionario int NOT NULL AUTO_INCREMENT,
     nome varchar(200) NOT NULL,
     email varchar(200) NOT NULL,
     senha varchar(200) NOT NULL,
     data_nascimento DATE NOT NULL,
     cpf varchar(11) NOT NULL,
     cargo varchar(50) NOT NULL,
+
+    primary key(idFuncionario)
+);
+
+CREATE TABLE Agendamento (
+    idAgendamento int NOT NULL AUTO_INCREMENT,
+    cliente_nome varchar(200) NOT NULL,
+    funcionario_nome varchar(200) NOT NULL,
+    data_consulta DATE NOT NULL,
+    horario_consulta TIME NOT NULL,
     
-
-    primary key(cod_funcionario)
+    primary key(idAgendamento)
 );
 
-CREATE TABLE agendamento_consulta (
-    cod_agendamento int NOT NULL AUTO_INCREMENT,
-    paciente_nome varchar(200) NOT NULL,
-    medico_nome varchar(200) NOT NULL,
-    data_consulta date NOT NULL,
-    horario_consulta time NOT NULL,
-    descricao varchar(200),
-    primary key(cod_agendamento)
-);
+CREATE TABLE Servico (
+    idServico int NOT NULL AUTO INCREMENT,
+    nome varchar(200) NOT NULL,
+    descricao varchar(200) NOT NULL,
 
+    primary key(idServico)
+);
 
