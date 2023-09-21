@@ -22,7 +22,7 @@ CREATE TABLE funcionarios (
     nome varchar(200) NOT NULL,
     email varchar(200) NOT NULL,
     senha varchar(200) NOT NULL,
-    data_nascimento DATE,
+    data_nascimento DATE NOT NULL,
     cpf varchar(11) NOT NULL,
     cargo varchar(50) NOT NULL,
     
