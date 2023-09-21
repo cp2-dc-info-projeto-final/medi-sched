@@ -13,7 +13,7 @@ CREATE TABLE Cliente (
     email VARCHAR(200) NOT NULL,
     senha VARCHAR(200) NOT NULL,
     data_nascimento DATE,
-    cpf VARCHAR(11)
+    cpf VARCHAR(14)
 
     primary key(idCliente)
 );
