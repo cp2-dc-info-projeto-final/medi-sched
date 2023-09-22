@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/css/styles.css">
   <style>
-    /* Adicione o CSS personalizado aqui */
+    
     @import url(https://fonts.googleapis.com/css?family=Poppins:300);
     *,
     *:before,
