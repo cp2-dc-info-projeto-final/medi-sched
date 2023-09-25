@@ -315,7 +315,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="undraw_shopping_re_3wst.svg" alt="">
+            <img src="" alt="">
         </div>
         <div class="form">
             <form action="#" method="post">
