@@ -213,7 +213,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="med.png" alt="">
         </div>
         <div class="form">
-            <form action="#" method="post">
+            <form action="cadastro_func.php" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
