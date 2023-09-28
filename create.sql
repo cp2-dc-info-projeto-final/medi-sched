@@ -20,6 +20,8 @@ CREATE TABLE Cliente (
     primary key(idCliente)
 );
 
+DROP TABLE IF EXISTS Funcionario;
+
 
 CREATE TABLE Funcionario (
     idFuncionario int NOT NULL AUTO_INCREMENT,
@@ -34,6 +36,8 @@ CREATE TABLE Funcionario (
     primary key(idFuncionario)
 );
 
+DROP TABLE IF EXISTS Agendamento;
+
 CREATE TABLE Agendamento (
     idAgendamento int NOT NULL AUTO_INCREMENT,
     nome_servico varchar(200) NOT NULL FOREIGN KEY REFERENCES Servico(nome_servico),
@@ -44,6 +48,8 @@ CREATE TABLE Agendamento (
 
     primary key(idAgendamento)
 );
+
+DROP TABLE IF EXISTS Servico;
 
 CREATE TABLE Servico (
     idServico int NOT NULL AUTO INCREMENT,
