@@ -7,17 +7,15 @@ GRANT ALL PRIVILEGES ON CADASTRO.* TO 'cadastro'@'localhost';
 
 DROP TABLE IF EXISTS Cliente;
 
-CREATE TABLE Cliente (
-    idCliente INT AUTO_INCREMENT,
-    nome_cliente VARCHAR(200) NOT NULL,
+CREATE TABLE IF NOT EXISTS Cliente (
+    idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    primeiro_nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
     email VARCHAR(200) NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
     senha VARCHAR(200) NOT NULL,
     data_nascimento DATE NOT NULL,
-    cpf VARCHAR(14) NOT NULL,
-    Genero VARCHAR(50) NOT NULL,
-    
-    
-    primary key(idCliente)
+    genero VARCHAR(20) NOT NULL
 );
 
 DROP TABLE IF EXISTS Funcionario;
