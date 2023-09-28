@@ -2,6 +2,7 @@
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     $primeiro_nome = $_POST["firstname"];
     $sobrenome = $_POST["lastname"];
     $email = $_POST["email"];
@@ -27,11 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
-    if (empty($cpf) || !is_numeric($cpf) || strlen($cpf) != 14) {
+    if (empty($cpf) || strlen($cpf) != 14) {
         $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
         $erro = true;
     }
-
+    
     if (empty($data_nascimento) || !strtotime($data_nascimento)) {
         $mensagemErro .= "Preencha uma data de nascimento válida no formato YYYY-MM-DD.<br>";
         $erro = true;
@@ -58,8 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-
-    if (!$erro) {
+     echo $mensagemErro;
+    if (!$erro) { 
+        echo "entrou no if2";
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     
         $stmt = $mysqli->prepare("INSERT INTO cliente (primeiro_nome, sobrenome, email, senha, cpf, data_nascimento, genero) VALUES (?, ?, ?, ?, ?, ?, ?)");
@@ -98,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="med.png" alt="">
         </div>
         <div class="form">
-            <form action="#" method="post">
+            <form action="cadastro.php" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -189,7 +191,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-
 
 
 
