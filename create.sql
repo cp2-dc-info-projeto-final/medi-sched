@@ -8,7 +8,7 @@ GRANT ALL PRIVILEGES ON CADASTRO.* TO 'cadastro'@'localhost';
 DROP TABLE IF EXISTS Cliente;
 
 CREATE TABLE IF NOT EXISTS Cliente (
-    idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    idCliente INT AUTO_INCREMENT PRIMARY KEY,
     nome_cliente VARCHAR(100) NOT NULL,
     sobrenome_cliente VARCHAR(100) NOT NULL,
     email VARCHAR(200) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE Funcionario (
     data_nascimento DATE NOT NULL,
     cpf varchar(14) NOT NULL,
     cargo varchar(50) NOT NULL,
-    Genero VARCHAR(50) NOT NULL,
+    genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
 
     primary key(idFuncionario)
 );
