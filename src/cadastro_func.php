@@ -1,36 +1,82 @@
 <?php
+$mensagemErro = ""; // Inicializa a mensagem de erro como uma string vazia
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST["nome"];
+    $primeiro_nome = $_POST["firstname"];
+    $sobrenome = $_POST["lastname"];
     $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $senha = $_POST["password"];
+    $cpf = $_POST["cpf"];
+    $data_nascimento = $_POST["dataNascimento"];
+    $genero = $_POST["gender"];
     $cargo = $_POST["cargo"];
+    
+    $erro = false; // Inicializar a variável $erro
 
-    // Criptografar a senha
-    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-
-    // Conectar ao banco de dados
-    $mysqli = new mysqli("localhost", "cadastro", "123", "CADASTRO");
-
-    if ($mysqli->connect_error) {
-        die("Erro na conexão: " . $mysqli->connect_error);
+    // Validação do nome completo
+    if (empty($primeiro_nome) || empty($sobrenome)) {
+        $mensagemErro .= "Preencha seu nome completo com sobrenome.<br>";
+        $erro = true;
     }
 
-    // Usar consultas preparadas para evitar injeção de SQL
-    $stmt = $mysqli->prepare("INSERT INTO funcionarios (nome, email, senha, cargo) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $nome, $email, $senhaHash, $cargo);
-
-    if ($stmt->execute()) {
-        echo "O funcionário foi cadastrado com sucesso. Redirecionando para a página inicial...";
-        header("Refresh: 3; URL=index.html"); // Redireciona após 3 segundos
-
-    } else {
-        echo "Erro ao inserir dados: " . $stmt->error;
+    // Validação do email
+    if (strlen($email) < 8 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $mensagemErro .= "Preencha um email válido com pelo menos 8 caracteres.<br>";
+        $erro = true;
     }
 
-    $stmt->close();
+    // Validação da senha
+    if (strlen($senha) < 8) {
+        $mensagemErro .= "A senha deve ter pelo menos 8 caracteres.<br>";
+        $erro = true;
+    }
+
+    // Validação do CPF
+    if (empty($cpf) || strlen($cpf) != 14) {
+        $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
+        $erro = true;
+    }
+
+    // Validação da data de nascimento
+    if (empty($data_nascimento) || !strtotime($data_nascimento)) {
+        $mensagemErro .= "Preencha uma data de nascimento válida no formato YYYY-MM-DD.<br>";
+        $erro = true;
+    }
+
+    // Validação do gênero
+    if (empty($genero)) {
+        $mensagemErro .= "Selecione seu gênero.<br>";
+        $erro = true;
+    }
+
+    // Validação do cargo
+    if (empty($cargo)) {
+        $mensagemErro .= "Selecione seu cargo.<br>";
+        $erro = true;
+    }
+
+    if (!$erro) {
+        $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+    
+        $stmt = $mysqli->prepare("INSERT INTO funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, cargo, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $genero);
+    
+        if ($stmt->execute()) {
+            $mysqli->close();
+            header("Location: index.html");
+            exit;
+        } else {
+            $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
+        }
+    
+        $stmt->close();
+    }
+    
     $mysqli->close();
-}
+    }
+    
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,171 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+    <link rel="stylesheet" href="style2.css">
 
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0c0ce94d;
-        }
-
-        .container {
-            width: 80%;
-            height: 80vh;
-            display: flex;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-        }
-
-        .form-image {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fde3a7d7;
-            padding: 1rem;
-        }
-
-        .form-image img {
-            width: 100%; /* Ajusta a imagem para preencher todo o espaço disponível */
-            max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-
-        .form {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            padding: 3rem;
-        }
-
-        .form-header {
-            margin-bottom: 3rem;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .title h1 {
-            font-size: 2rem; /* Tamanho maior para o título */
-        }
-
-        .login-button button {
-            border: none;
-            background-color: #6c63ff;
-            padding: 0.4rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none; /* Remova a sublinhado do link */
-            color: #fff;
-            font-weight: 500;
-        }
-
-        .login-button button:hover {
-            background-color: #6b63fff1;
-        }
-
-        .input-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-
-        .input-box {
-            flex: 1; /* Distribui uniformemente os campos de entrada */
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1.1rem;
-        }
-
-        .input-box label {
-            font-size: 0.9rem; /* Tamanho do rótulo aumentado */
-            font-weight: 600;
-            color: #000; /* Cor do texto do rótulo ajustada */
-        }
-
-        .input-box input,
-        .input-box select {
-            margin: 0.6rem 0;
-            padding: 0.8rem 1.2rem;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 1px 1px 6px #0000001c;
-            font-size: 0.8rem;
-        }
-
-        .input-box input:hover,
-        .input-box select:hover {
-            background-color: #eeeeee75;
-        }
-
-        .input-box input:focus-visible,
-        .input-box select:focus-visible {
-            outline: 1px solid #6c63ff;
-        }
-
-        .input-box input::placeholder {
-            color: #000000be;
-        }
-
-        .gender-title h6 {
-            font-size: 0.9rem; /* Tamanho do rótulo de gênero aumentado */
-        }
-
-        .gender-group {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.62rem;
-            padding: 0 .5rem;
-        }
-
-        .gender-input {
-            display: flex;
-            align-items: center;
-        }
-
-        .gender-input input {
-            margin-right: 0.35rem;
-        }
-
-        .gender-input label {
-            font-size: 0.81rem;
-            font-weight: 600;
-            color: #000000c0;
-        }
-
-        .continue-button button {
-            width: 100%;
-            margin-top: 2.5rem;
-            border: none;
-            background-color: #6c63ff;
-            padding: 0.62rem;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            color: #fff;
-            font-size: 0.93rem;
-            font-weight: 500;
-        }
-
-        .continue-button button:hover {
-            background-color: #6b63fff1;
-        }
-    </style>
     <title>Formulário</title>
 </head>
 
@@ -213,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="med.png" alt="">
         </div>
         <div class="form">
-            <form action="cadastro_func.php" method="post">
+            <form action="cadastro_func" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
