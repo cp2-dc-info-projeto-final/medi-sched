@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $sql = "SELECT * FROM cadastrados WHERE email = '$email' AND senha = '$senha'";
+    $sql = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
     $result = mysqli_query($mysqli, $sql);
 
     if (!$result) {
