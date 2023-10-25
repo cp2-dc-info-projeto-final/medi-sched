@@ -40,7 +40,7 @@
    
 ![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/2579b643-8c6a-4a46-8cec-af4dbfb7b3cb)
 
-**Fluxo Alternativo A**
+**Fluxo Alternativo  A**
 
 1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
 2. O sistema exibirá a página inicial.
@@ -56,7 +56,7 @@
     
 ![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/a44b2040-efec-48e7-9124-fd8b9a7dd141)
 
-**Fluxo Alternativo**
+**Fluxo Alternativo  B**
 
 1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
 2. O sistema exibirá a página inicial.
