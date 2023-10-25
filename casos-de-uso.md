@@ -112,7 +112,7 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/8c602529-5164-41ba-a3a7-4b0352be6aec)
 
- **Fluxo Alternativo**
+ **Fluxo Alternativo  A**
 
 1. O sistema exibirá a página inicial do programa.
 2. O cliente clica em "Login".
@@ -139,7 +139,7 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c402b964-07fc-4474-8bd8-ef037f589c1f)
 
-**Fluxo Alternativo**
+**Fluxo Alternativo  A**
 
 1. O cliente seleciona a opção "Recuperar a senha "
 2. O sistema requisita um email de recuperaçao.
@@ -159,7 +159,7 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/77c3bf7b-07d6-48a4-b204-2a8bdbff97d9)
 
-**Fluxo Alternativo**
+**Fluxo Alternativo  A**
 
 1.  sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
 2. O cliente irá escolher o horário,especialização do funcionário e os funcionários disponíveis na região do cliente. 
@@ -193,7 +193,7 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f4b0e4d2-edf2-4ed2-87fa-6cdc4b6fc8da)
 
-**Fluxo Alternativo** 
+**Fluxo Alternativo  A** 
 1. O funcionário selecionará "serviços" na página principal
 2. O sistema exibirá ao funcionário a lista de serviços.
 3. O funcionário selecionará determinado serviço.
@@ -222,7 +222,7 @@
 
 ![aRabio saudito(1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c1f49ac8-56f3-4df4-811b-7dceb381a93d)
 
-**Fluxo alternativo**
+**Fluxo alternativo A**
 1. Na interface do funcionário terá a página "agendamentos".
 2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
 3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
@@ -238,7 +238,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "sim" e excluirá o cliente. 
 
-**Fluxo Alternativo**
+**Fluxo Alternativo  A**
 
 1. O administrador irá acessar sua interface própria
 2. Na interface do administrador terá a página "Clientes".
@@ -256,7 +256,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário. 
 
-**Fluxo Alternativo**
+**Fluxo Alternativon A**
 
 1. O administrador irá acessar sua interface própria
 2. Na interface do administrador terá a página "Funcionário".
