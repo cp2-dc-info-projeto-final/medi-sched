@@ -83,7 +83,7 @@
 
 ![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/447a9514-e7a6-4568-bd25-4fbfc166c9ee)
 
-**Fluxo Alternativo**
+**Fluxo Alternativo  A**
 
 1. O sistema exibirá a página inicial
 2. O cliente clica em "Cadastro".
