@@ -39,23 +39,22 @@ DROP TABLE IF EXISTS Agendamento;
 
 CREATE TABLE Agendamento (
     idAgendamento int NOT NULL AUTO_INCREMENT,
-    nome_servico varchar(200) NOT NULL FOREIGN KEY REFERENCES Servico(nome_servico),
-    nome_funcionario varchar(100) NOT NULL FOREIGN KEY REFERENCES Funcionario(nome_funcionario),
-    sobrenome_funcionario varchar(100) NOT NULL FOREIGN KEY REFERENCES Funcionario(sobrenome_funcionario),
-    nome_cliente varchar(100) NOT NULL FOREIGN KEY REFERENCES Cliente(nome_cliente),
-    sobrenome_cliente varchar(100) NOT NULL FOREIGN KEY REFERENCES Cliente(sobrenome_cliente),
+    idServico int NOT NULL,
+    idFuncionario int NOT NULL,
+    idCliente int NOT NULL,
     data_consulta DATE NOT NULL,
     horario_consulta TIME NOT NULL,
-
-    primary key(idAgendamento)
+    PRIMARY KEY (idAgendamento),
+    FOREIGN KEY (idServico) REFERENCES Servico(idServico),
+    FOREIGN KEY (idFuncionario) REFERENCES Funcionario(idFuncionario),
+    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
 );
 
 DROP TABLE IF EXISTS Servico;
 
 CREATE TABLE Servico (
-    idServico int NOT NULL AUTO INCREMENT,
+    idServico int NOT NULL AUTO_INCREMENT,
     nome_servico varchar(200) NOT NULL,
     descricao varchar(200) NOT NULL,
-
-    primary key(idServico)
+    PRIMARY KEY (idServico)
 );
