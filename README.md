@@ -23,4 +23,4 @@ O programa tem como objetivo agendar clientes para um atendimento médico com pr
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama-banco-de-dados.png)
+![Diagrama de Banco de Dados](Diagrama-AgendaSaude-banco-de-dados.png)
