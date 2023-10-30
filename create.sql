@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS Cliente (
     cpf VARCHAR(14) NOT NULL,
     senha VARCHAR(200) NOT NULL,
     data_nascimento DATE NOT NULL,
-    genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL,
+    genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
 );
 
 DROP TABLE IF EXISTS Funcionario;
