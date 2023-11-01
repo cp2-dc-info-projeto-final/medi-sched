@@ -1,5 +1,5 @@
 <?php
-$mysqli = mysqli_connect("localhost", "cadastro", "123", "CADASTRO");
+$mysqli = mysqli_connect("localhost", "agendasaude", "123", "CADASTRO");
 if (!$mysqli) {
     die("Erro na conexão: " . mysqli_connect_error());
 }
