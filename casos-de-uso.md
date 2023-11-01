@@ -55,7 +55,7 @@
 10. O administrador terá que permitir o cadastro do funcionário
 11. O sistema informará ao funcionário que o cadastro foi efetuado
     
-![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/a44b2040-efec-48e7-9124-fd8b9a7dd141)
+![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/c55d1bf3-9449-4635-9e65-a85cdf4b7fd6)
 
 **Fluxo Alternativo  B**
 
@@ -69,7 +69,8 @@
 8. O administrador não permitirá o cadastro do funcionário
 9. O sistema informará ao funcionário que o cadastro não foi permitido
    
-![Fluxo alternativo funcionario2](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/2d8f1877-e687-456c-9a80-59ec47706777)
+![Fluxo alternativo funcionario2](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/773dc591-910b-4611-ac11-194c5357c66d)
+
 
 ### CDU 02 
 
@@ -82,7 +83,7 @@
 5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
 6. O sistema informará ao cliente que o cadastro foi efetuado.
 
-![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/447a9514-e7a6-4568-bd25-4fbfc166c9ee)
+![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/4fad766e-8244-4b10-a9d8-df1d23b84efd)
 
 **Fluxo Alternativo  A**
 
@@ -96,10 +97,10 @@
 8. O cliente clica em "Enviar".
 9. O sistema informará ao cliente que o cadastro foi efetuado.
 
-![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/798c9c38-3ba4-4b35-967f-6576fa991f4a)
+![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/5457bc2c-7931-48f4-a31d-f2f8068a0894)
 
  ### CDU 03
-
+ 
 **Fluxo Principal**
 
 1. O sistema exibirá a página inicial
@@ -111,7 +112,8 @@
 7. O sistema verifica as informações fornecidas pelo usuário.
 8. O cliente está logado ao sistema.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/8c602529-5164-41ba-a3a7-4b0352be6aec)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/0ed60fb1-f390-4985-990e-029f0b403a1f)
+
 
  **Fluxo Alternativo  A**
 
@@ -125,7 +127,8 @@
 8. O usuário corrige os dados incorretos, clica em enviar.
 9. O programa reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c34d8f0a-7b8d-4491-91aa-1c5b863372d6)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/bea21e76-6d3a-47f5-b5f2-d03295669540)
+
 
 
 ### CDU 04 
@@ -138,7 +141,8 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c402b964-07fc-4474-8bd8-ef037f589c1f)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/0edc3ee5-87a2-48a7-a0bd-50dec11b17ab)
+
 
 **Fluxo Alternativo  A**
 
@@ -147,7 +151,8 @@
 3. O cliente digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
 4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/dd2e6f59-97c8-40a1-98a0-6c560ae13a82)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/d14c1dad-4419-4b24-8cbe-a60ea066413a)
+
 
 ### CDU 05
 
@@ -158,7 +163,8 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/77c3bf7b-07d6-48a4-b204-2a8bdbff97d9)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/3f08a5bf-ffa4-4a80-aca0-e60136ca0357)
+
 
 **Fluxo Alternativo  A**
 
@@ -170,7 +176,8 @@
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com o aviso "Agendamento efetuado!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/66ea8269-31ea-46d5-88e8-a1236ddde305)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/80680e25-fcbf-434d-b5c1-3420a22fd544)
+
 
 ### CDU 06 
 
@@ -181,7 +188,7 @@
 3. O administrador clica nesse botão e será redirecionado para outra página.
 4. Essa página possuirá todos os usuarios cadastrados.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/14d14d2e-3e1d-4ca8-9f3d-9f26471360d4)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/1ed019c9-d8c6-49ab-8210-2ac32c4ee6f9)
 
 ### CDU 07
 
@@ -192,7 +199,7 @@
 4. O funcionário criará datas e horários disponíveis 
 5. O sistema confirmará datas e horários
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f4b0e4d2-edf2-4ed2-87fa-6cdc4b6fc8da)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/2739aefc-c881-4883-82d1-f61ce713dfaf)
 
 **Fluxo Alternativo  A** 
 1. O funcionário selecionará "serviços" na página principal
@@ -201,7 +208,8 @@
 4. O funcionário criará datas e horários disponíveis
 5. O sistema informará que determinadas datas e horários disponíveis já foram criados anteriormente
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b28e9b96-30e3-410e-9cb7-2b8eaec71d6c)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/58b444e5-7f53-4663-ba15-8d97de8b84d2)
+
 
 ### CDU 08
 
@@ -211,7 +219,7 @@
 3. Os administradores e funcionários poderão ver os agendamentos feitos pelos clientes.
 4. O cliente poderá ver os seus próprios agendamentos.
    
-![Fluxo Principak visu](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b29c0c2d-39cd-44df-971e-f687edd604fc)
+![Fluxo Principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/28a29710-9075-437f-83b9-d856d3800597)
 
 ### CDU 09 
 
@@ -221,7 +229,8 @@
 3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
 4. O funcionário ou administrador clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
 
-![aRabio saudito(1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c1f49ac8-56f3-4df4-811b-7dceb381a93d)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/95357b94-0ddf-47bf-9fb2-caa241f82f65)
+
 
 **Fluxo alternativo A**
 1. Na interface do funcionário terá a página "agendamentos".
