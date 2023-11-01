@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
-    $mysqli = new mysqli("localhost", "cadastro", "123", "Cadastro");
+    $mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
     if ($mysqli->connect_error) {
         die("Erro na conexão: " . $mysqli->connect_error);
     }
@@ -61,10 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
      echo $mensagemErro;
     if (!$erro) { 
-        echo "entrou no if2";
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     
-        $stmt = $mysqli->prepare("INSERT INTO cliente (primeiro_nome, sobrenome, email, senha, cpf, data_nascimento, genero) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $mysqli->prepare("INSERT INTO cliente (nome_cliente, sobrenome_cliente, email, senha, cpf, data_nascimento, genero) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $genero);
     
         if ($stmt->execute()) {
