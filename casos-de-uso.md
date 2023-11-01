@@ -261,6 +261,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário.
 
+![Uploading Diagrama sem nome.drawio (3).png…]()
 
 **Fluxo Alternativo A**
 
