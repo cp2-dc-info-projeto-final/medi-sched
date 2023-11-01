@@ -239,6 +239,8 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "sim" e excluirá o cliente. 
 
+![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/5642a14b-db69-450c-bb23-506842798975)
+
 **Fluxo Alternativo  A**
 
 1. O administrador irá acessar sua interface própria
@@ -246,6 +248,8 @@
 3. O sistema exibirá a página "Clientes". Na página "Clientes" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada cliente 
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
+
+![Diagrama sem nome drawio (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/3715de73-42bc-4faf-9f7b-bb82b8454f90)
 
 ### CDU 11 
 
@@ -257,7 +261,6 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário.
 
-![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/7e136d6c-ea40-40fb-b8ac-2474afa28fc3)
 
 **Fluxo Alternativo A**
 
@@ -267,8 +270,6 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "não" e não excluirá o funcionário.
    
-![Diagrama sem nome drawio (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/39ed6ed1-8227-4192-a00f-143b842c91fc)
-
 ### CDU 12 
 
 **Fluxo Principal**
