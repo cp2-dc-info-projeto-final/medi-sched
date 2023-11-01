@@ -38,7 +38,8 @@
 7. O administrador terá que permitir o cadastro do funcionário
 8. O sistema informará ao funcionário que o cadastro foi efetuado
    
-![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/2579b643-8c6a-4a46-8cec-af4dbfb7b3cb)
+![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/2c7a6f68-afab-4c5e-847e-901bca54e655)
+
 
 **Fluxo Alternativo  A**
 
