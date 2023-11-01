@@ -271,6 +271,8 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "não" e não excluirá o funcionário.
    
+![Diagrama sem nome drawio (4)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/f0cae739-bd39-4e2d-a782-db9d651c1470)
+
 ### CDU 12 
 
 **Fluxo Principal**
