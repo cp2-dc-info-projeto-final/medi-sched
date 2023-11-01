@@ -258,7 +258,7 @@
 
 ![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/7e136d6c-ea40-40fb-b8ac-2474afa28fc3)
 
-**Fluxo Alternativon A**
+**Fluxo Alternativo A**
 
 1. O administrador irá acessar sua interface própria
 2. Na interface do administrador terá a página "Funcionário".
