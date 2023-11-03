@@ -270,7 +270,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário.
 
-![Uploading Diagrama sem nome.drawio (3).png…]()
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (4)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1576aef8-9276-4863-90bf-e12e5c38add8)
 
 **Fluxo Alternativo A**
 
