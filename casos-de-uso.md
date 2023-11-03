@@ -279,8 +279,8 @@
 3. O sistema exibirá a página "Funcionário". Na página "Funcionário" haverá uma lista com cada funcionário. Haverá um botão "excluir"ao lado de cada funcionário 
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "não" e não excluirá o funcionário.
-   
-![Diagrama sem nome drawio (5)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/16231c45-6bbc-4b46-8072-1e166cd715f8)
+
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (5)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/fea2b8dc-8991-406d-880e-53e2c48dac9d)
 
 ### CDU 12 
 
