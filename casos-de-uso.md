@@ -257,8 +257,8 @@
 3. O sistema exibirá a página "Clientes". Na página "Clientes" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada cliente 
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
-
-![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (2)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/232b3db0-29d6-4d56-8776-d7cf8bce41db)
+   
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (3)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/db733204-7ec5-490f-b115-817e5188f397)
 
 ### CDU 11 
 
