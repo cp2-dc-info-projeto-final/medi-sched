@@ -280,7 +280,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "não" e não excluirá o funcionário.
 
-![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (5)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/fea2b8dc-8991-406d-880e-53e2c48dac9d)
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (5)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/18944af4-cc87-48af-9b45-414e0fb98ffe)
 
 ### CDU 12 
 
