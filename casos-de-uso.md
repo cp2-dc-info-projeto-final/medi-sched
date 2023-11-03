@@ -246,10 +246,9 @@
 2. Na interface do administrador terá a página "Clientes".
 3. O sistema exibirá a página "Clientes". Na página "Clientes" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada cliente. 
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
-5. O administrador clicará em "sim" e excluirá o cliente. 
-
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/676ce45c-165a-4c05-ba6d-f9d36b53f7f0)
-
+5. O administrador clicará em "sim" e excluirá o cliente.
+   
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/0fe39de1-ac3c-4659-a43f-7fe15dfe8fa9)
 
 **Fluxo Alternativo  A**
 
