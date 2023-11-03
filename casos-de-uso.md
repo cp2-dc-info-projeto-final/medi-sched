@@ -258,7 +258,7 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "não" e não excluirá o cliente.
    
-![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (3)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/db733204-7ec5-490f-b115-817e5188f397)
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (10)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b9c7b97b-94f5-4a7b-9c96-09547467f54e)
 
 ### CDU 11 
 
