@@ -229,8 +229,7 @@
 3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
 4. O funcionário ou administrador clicará em "sim" e a mensagem "cancelamento feito com sucesso!".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/95357b94-0ddf-47bf-9fb2-caa241f82f65)
-
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (15)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/9273ff33-6e92-40dc-a0b6-a0c0024a2e72)
 
 **Fluxo alternativo A**
 1. Na interface do funcionário terá a página "agendamentos".
