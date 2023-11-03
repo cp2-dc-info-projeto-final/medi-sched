@@ -235,8 +235,10 @@
 **Fluxo alternativo A**
 1. Na interface do funcionário terá a página "agendamentos".
 2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
-3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamendo?" será exibida.
-4. O funcionário ou administrador clicará em "não" e a mensagem "cancelamento negado!".
+3. O funcionário ou administrador clicará no botão "cancelar" e uma mensagem "Gostaria de cancelar esse agendamento?" será exibida.
+4. O funcionário ou administrador clicará em "não" e o  sistema enviara ele de volta para a pagina "agendamentos".
+   
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (14)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1e8b0d39-4385-4b09-89b6-ce6920f4b54d)
 
 ### CDU 10 
  
