@@ -248,7 +248,8 @@
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse cliente?" será exibida.
 5. O administrador clicará em "sim" e excluirá o cliente. 
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6eb9ed46-1b6b-4921-976a-31dbc8f34f36)
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/676ce45c-165a-4c05-ba6d-f9d36b53f7f0)
+
 
 **Fluxo Alternativo  A**
 
