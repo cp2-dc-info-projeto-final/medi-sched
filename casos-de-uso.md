@@ -286,6 +286,7 @@
 
 **Fluxo Principal**
 1. O cliente selecionará "Sair"
-2. O sistema incerra sessão
+2. O sistema encerra sessão
 3. O sistema recarrega para página inicial
 
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (6)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/8dfd532d-3ba3-4721-97cd-f1f4ee977074)
