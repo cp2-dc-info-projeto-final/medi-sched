@@ -10,6 +10,7 @@
         nav {
             background-color: #87CEEB; /* Cor de fundo */
             text-align: center;
+            padding: 12px; /* Adicione espaço acima e abaixo do entalhe azul */
         }
 
         nav ul {
@@ -28,13 +29,21 @@
             font-size: 20px;
         }
 
-     
+        .logo {
+            color: #FF0000; /* Cor vermelha para o "+" */
+            font-size: 24px; /* Tamanho da fonte para o nome */
+            font-weight: bold; /* Negrito para o nome */
+            position: absolute;
+            left: 20px; /* Distância da esquerda */
+            top: 10px; /* Distância do topo */
+        }
 
     </style>
     <title>Página Principal</title>
 </head>
 <body>
     <nav>
+        <div class="logo">Agenda<span style="color: #FF0000;">+</span>Saúde</div>
         <ul>
             <li><a href="cadastro.php">Criar Conta</a></li>
             <li><a href="login.php">Entrar</a></li>
