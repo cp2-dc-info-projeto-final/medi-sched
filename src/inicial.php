@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
     <style>
-                /* Estilos para a navegação */
         nav {
             background-color: #87CEEB; /* Cor de fundo */
             text-align: center;
