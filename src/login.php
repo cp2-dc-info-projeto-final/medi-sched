@@ -8,16 +8,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $sql = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
-    $result = mysqli_query($mysqli, $sql);
+    $sqlCliente = "SELECT * FROM cliente WHERE email = '$email'";
+    $resultCliente = mysqli_query($mysqli, $sqlCliente);
 
-    if (!$result) {
+    $sqlFuncionario = "SELECT * FROM funcionario WHERE email = '$email'";
+    $resultFuncionario = mysqli_query($mysqli, $sqlFuncionario);
+
+    if (!$resultCliente || !$resultFuncionario) {
         echo "Erro na consulta: " . mysqli_error($mysqli);
     } else {
-        $row = mysqli_fetch_assoc($result);
-        if ($row) {
+        $rowCliente = mysqli_fetch_assoc($resultCliente);
+        $rowFuncionario = mysqli_fetch_assoc($resultFuncionario);
+
+        if (($rowCliente && password_verify($senha, $rowCliente["senha"])) || ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) ) {
             // Login bem-sucedido, redirecionar para a página inicial
-            header("location: index.html");
+            header("location: inicial.php");
             exit; // Certifique-se de sair do script após o redirecionamento
         } else {
             echo "Credenciais inválidas. Tente novamente.";
@@ -27,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 mysqli_close($mysqli);
 ?>
+
 
 
 <!DOCTYPE html>
