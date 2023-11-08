@@ -7,10 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $primeiro_nome = $_POST["firstname"];
     $sobrenome = $_POST["lastname"];
     $email = $_POST["email"];
-    $senha = $_POST["password"];
+    $senha = $_POST["senha"];
     $cpf = $_POST["cpf"];
     $data_nascimento = $_POST["dataNascimento"];
-    $genero = $_POST["gender"];
+    $genero = $_POST["genero"];
     $cargo = $_POST["areasMedicas"]; 
 
     $erro = false;
@@ -137,8 +137,8 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
                     </div>
 
                     <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
                     <div class="input-box">
@@ -159,29 +159,29 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
 
                 </div>
 
-                <div class="gender-inputs">
-                    <div class="gender-title">
+                <div class="genero-inputs">
+                    <div class="genero-title">
                         <h6>Gênero</h6>
                     </div>
 
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input id="female" type="radio" name="gender" value="Feminino">
+                    <div class="genero-group">
+                        <div class="genero-input">
+                            <input id="female" type="radio" name="genero" value="Feminino">
                             <label for="female">Feminino</label>
                         </div>
 
-                        <div class="gender-input">
-                            <input id="male" type="radio" name="gender" value="Masculino">
+                        <div class="genero-input">
+                            <input id="male" type="radio" name="genero" value="Masculino">
                             <label for="male">Masculino</label>
                         </div>
 
-                        <div class="gender-input">
-                            <input id="others" type="radio" name="gender" value="Outros">
+                        <div class="genero-input">
+                            <input id="others" type="radio" name="genero" value="Outros">
                             <label for="others">Outros</label>
                         </div>
 
-                        <div class="gender-input">
-                            <input id="none" type="radio" name="gender" value="Prefiro não dizer">
+                        <div class="genero-input">
+                            <input id="none" type="radio" name="genero" value="Prefiro não dizer">
                             <label for="none">Prefiro não dizer</label>
                         </div>
                     </div>
