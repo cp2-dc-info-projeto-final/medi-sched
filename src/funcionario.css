@@ -117,7 +117,7 @@ body {
 }
 
 .input-box label,
-.gender-title h6 {
+.genero-title h6 {
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
@@ -127,23 +127,23 @@ body {
     color: #000000be;
 }
 
-.gender-group {
+.genero-group {
     display: flex;
     justify-content: space-between;
     margin-top: 0.62rem;
     padding: 0 .5rem;
 }
 
-.gender-input {
+.genero-input {
     display: flex;
     align-items: center;
 }
 
-.gender-input input {
+.genero-input input {
     margin-right: 0.35rem;
 }
 
-.gender-input label {
+.genero-input label {
     font-size: 0.81rem;
     font-weight: 600;
     color: #000000c0;
