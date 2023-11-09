@@ -10,7 +10,7 @@ Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colé
 
  ## Descrição do Projeto
 
-O projeto é um programa de uma clínica de agendamento médico 
+O projeto é um sistema de agendamento médico de uma clínica
 
 O programa tem como objetivo agendar clientes para um atendimento médico com profissionais da própria clínica
 
