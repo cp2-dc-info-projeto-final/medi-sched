@@ -1,6 +1,6 @@
 # Agenda+Saúde
 
-Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colégio Pedro II - Campus Duque de Caxias
+Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colégio Pedro II - Campus Duque de Caxias.
 
 **Integrantes:**
  - Pedro Henrique
@@ -10,9 +10,9 @@ Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colé
 
  ## Descrição do Projeto
 
-O projeto é um sistema de agendamento médico de uma clínica
+O projeto é um sistema de agendamento médico de uma clínica.
 
-O programa tem como objetivo agendar clientes para um atendimento médico com profissionais da própria clínica
+O programa tem como objetivo agendar clientes para um atendimento médico com profissionais da própria clínica.
 
 ## Documentação
 
