@@ -140,7 +140,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/checkup.avif" alt="" class="card-img-top" height= "300">
+                    <img src=".img/checkup.avif" alt="" class="card-img-top" height= "300">
                     <div class="card-body">
                         <h3 class="text-center">Check-up Anual</h3>
                         <hr class="mx-auto w-75">
@@ -187,7 +187,7 @@
         <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/mental.avif" alt="" class="card-img-top " height= "300" >
+                    <img src=".img/mental.avif" alt="" class="card-img-top " height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Serviços <br> de Saúde Mental</h3>
                         <hr class="mx-auto w-75">
