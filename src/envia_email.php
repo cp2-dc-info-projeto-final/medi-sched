@@ -3,9 +3,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/pet-e-gato/src_pet_e_gato/PHPMailer-master/src/Exception.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/pet-e-gato/src_pet_e_gato/PHPMailer-master/src/PHPMailer.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/pet-e-gato/src_pet_e_gato/PHPMailer-master/src/SMTP.php';
 
 function envia_email($para, $assunto, $mensagem){
 
