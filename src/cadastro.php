@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="med.png" alt="">
+            <img src=".img/med.png" alt="">
         </div>
         <div class="form">
             <form action="cadastro.php" method="post">
