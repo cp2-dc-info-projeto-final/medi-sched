@@ -103,7 +103,7 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="med.png" alt="">
+            <img src="img/med.png" alt="">
         </div>
         <div class="form">
             <form action="cadastro.php" method="post">
