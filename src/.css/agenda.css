@@ -1,0 +1,112 @@
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff; /* Tema claro */
+    color: #333333;
+}
+
+/* Navbar */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar {
+    padding: 0 15px;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #333333;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff0000; /* Efeito de hover vermelho */
+}
+
+/* Botões de seleção de data */
+.date-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.date-selector button {
+    background-color: #ff0000; /* Vermelho */
+    color: #fff;
+    border: 1px solid #ff0000;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.date-selector button:hover {
+    background-color: #cc0000; /* Vermelho mais escuro para o hover */
+}
+
+/* Sessão da clínica */
+.clinic-session {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.clinic-session h2 {
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.clinic-session p {
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+/* Botões de horários das sessões */
+.session-times {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.session-times button {
+    background-color: #ff0000; /* Vermelho */
+    color: #fff;
+    border: 1px solid #ff0000;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.session-times button:hover {
+    background-color: #cc0000; /* Vermelho mais escuro para o hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .date-selector, .session-times {
+        flex-direction: column;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}
