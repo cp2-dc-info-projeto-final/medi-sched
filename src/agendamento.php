@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $erro = false;
 
-    // Validações básicas (adicione mais conforme necessário)
+    // Validações básicas
     if (empty($idServico) || empty($idFuncionario) || empty($idCliente)) {
         $mensagemErro .= "Todos os campos do agendamento são obrigatórios.<br>";
         $erro = true;
@@ -78,10 +78,10 @@ echo $mensagemErro;
     <title>Atendimentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/atendimento.css"/>
+    <link rel="stylesheet" href=".css/agenda.css"/>
 </head>
 <body class="fadeIn">
     <div id="header">
@@ -101,14 +101,6 @@ echo $mensagemErro;
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#rodape">Sobre</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="login.php">Como paciente</a>
-                                <a class="dropdown-item" href="login.php">Como funcionário</a>
-                                <a class="dropdown-item" href="login.php">Como administrador</a>
-                            </div>
                         </li>
                     </ul>
                 </div>
