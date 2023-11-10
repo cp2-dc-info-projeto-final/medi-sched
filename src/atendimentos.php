@@ -7,7 +7,7 @@
     <title>Atendimentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href=".css"/>
     <link rel="stylesheet" href=".css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -26,7 +26,7 @@
           <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
               
               <a class="navbar-brand" href="#"></a>
-              <a href="inicial.php"><img src="img/logo.png" class="img-center" width="25%"/></a>
+              <a href="inicial.php"><img src=".img/logo.png" class="img-center" width="25%"/></a>
               
               <nav class="navbar navbar-expand-sm navbar-light bg-faded" id="topo">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,7 @@
         <a href="cadastro_cliente.php" class="btn btn-primary button">Cadastra-se</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
-        <img src="img/paciente.png" class="img-fluid" alt="Pacientes felizes">
+        <img src=".img/paciente.png" class="img-fluid" alt="Pacientes felizes">
       </div>
     </div>
   </div>
@@ -90,7 +90,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/consulta.png" alt="" class="card-img-top" height= "300" >
+                    <img src=".img/consulta.png" alt="" class="card-img-top" height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Consulta Geral </h3>
                         <hr class="mx-auto w-75">
@@ -108,7 +108,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/exames.png" alt="" class="card-img-top" height= "300" >
+                    <img src=".img/exames.png" alt="" class="card-img-top" height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Exames de Rotina</h3>
                         <hr class="mx-auto w-75">
@@ -124,7 +124,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/urgencia.png" alt="" class="card-img-top" height= "300" >
+                    <img src=".img/urgencia.png" alt="" class="card-img-top" height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Atendimento de Urgência</h3>
                         <hr class="mx-auto w-75">
@@ -157,7 +157,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/vacina.webp" alt="" class="card-img-top" height= "300" >
+                    <img src=".img/vacina.webp" alt="" class="card-img-top" height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Vacinação</h3>
                         <hr class="mx-auto w-75">
@@ -172,7 +172,7 @@
             <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
                 <!-- card starts here -->
                 <div class="card shadow">
-                    <img src="img/gerenciamento.avif" alt="" class="card-img-top " height= "300" >
+                    <img src=".img/gerenciamento.avif" alt="" class="card-img-top " height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Gerenciamento de <br> Doenças Crônicas</h3>
                         <hr class="mx-auto w-75">
@@ -204,7 +204,7 @@
                 <!-- card starts here -->
                 <div class="card shadow">
                 <a href="#" class="topo-link">&#9650;</a>
-                    <img src="img/mulher.avif" alt="" class="card-img-top " height= "300" >
+                    <img src=".img/mulher.avif" alt="" class="card-img-top " height= "300" >
                     <div class="card-body">
                         <h3 class="text-center">Saúde da Mulher</h3>
                         <hr class="mx-auto w-75">
@@ -268,13 +268,13 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4" >Contato</h6>
-          <p> <img src="img/home.png" class="img-fluid" ><i class="fas fa-home me-3"></i> Rua Dr Manoel Reis - Duque de Caxias - Rj </p>
-          <p> <img src="img/mail.png" class="img-fluid" >
+          <p> <img src=".img/home.png" class="img-fluid" ><i class="fas fa-home me-3"></i> Rua Dr Manoel Reis - Duque de Caxias - Rj </p>
+          <p> <img src=".img/mail.png" class="img-fluid" >
             <i class="fas fa-envelope me-3"></i>
             agendasaude1@gmail.com
           </p>
-          <p ><img src="img/phone.png" class="img-fluid" ><i class="fas fa-phone me-3"></i> (21) 98019-2431</p>
-          <p><img src="img/phone.png" class="img-fluid" ><i class="fas fa-print me-3"></i> (21) 98904-7495</p>
+          <p ><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-phone me-3"></i> (21) 98019-2431</p>
+          <p><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-print me-3"></i> (21) 98904-7495</p>
         </div>
         <!-- Grid column -->
       </div>
