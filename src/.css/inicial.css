@@ -1,0 +1,131 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Cabeçalho */
+#header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botão vermelho destacado */
+.button {
+    background-color: #ff0000; /* Vermelho */
+    color: #fff;
+    border: 1px solid #ff0000; /* Borda vermelha para botões secundários */
+}
+
+.button:hover {
+    background-color: #cc0000; /* Vermelho escuro no hover */
+    border-color: #cc0000;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+#rodape .text-uppercase {
+    color: #ff0000; /* Títulos em vermelho */
+}
+
+/* Detalhes em vermelho */
+.nav-link.active, .navbar-toggler-icon, .icon span {
+    color: #ff0000;
+}
+
+/* Animação de fade in */
+.fadeIn {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #fff;
+    }
+}
+
+/* Botão de retorno ao topo */
+.topo-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.topo-link:hover {
+    background-color: #cc0000;
+}
+
+/* Ajustes para imagens e ícones */
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.fa-home, .fa-envelope, .fa-phone, .fa-print {
+    color: #ff0000; /* Ícones em vermelho */
+}
+
+/* Seção de serviços */
+.services-2 .icon {
+    background-color: #ff0000; /* Fundo vermelho para ícones de serviço */
+}
+
+.services-2 .icon span {
+    color: #fff;
+}
+
+/* Botão 'Cadastre-se' com fundo vermelho */
+.btn-primary {
+    background-color: #ff0000; /* Vermelho */
+    border-color: #ff0000; /* Mesma cor de borda */
+}
+
+/* Efeito hover para o botão 'Cadastre-se' */
+.btn-primary:hover {
+    background-color: #cc0000; /* Vermelho mais escuro para hover */
+    border-color: #cc0000;
+}
+
+/* Links da navbar sublinhados em vermelho ao passar o mouse */
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff0000; /* Sublinhado em vermelho */
+    text-underline-offset: 2px; /* Ajusta a distância do sublinhado em relação ao texto */
+}
