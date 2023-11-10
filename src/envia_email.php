@@ -3,6 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/medi-sched/src_medi-sched/PHPMailer-master/src/Exception.php';
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/medi-sched/src_medi-sched/PHPMailer-master/src/PHPMailer.php';
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/medi-sched/src_medi-sched/PHPMailer-master/src/SMTP.php';
 
 function envia_email($para, $assunto, $mensagem){
 
@@ -16,7 +19,7 @@ function envia_email($para, $assunto, $mensagem){
         $mail->Host       = 'smtp.gmail.com';                       //Define o servidor SMTP utilizado para o envio
         $mail->SMTPAuth   = true;                                   //Habilita a autenticação do SMTP
         $mail->Username   = 'agendasaude1@gmail.com';               //usuário SMTP
-        $mail->Password   = 'ulihat67';                     //senha SMTP
+        $mail->Password   = 'ulihat67';                             //senha SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Habilita a encriptação implícita TLS
         $mail->Port       = 587;                                    //Porta TCP de conexão; use 587 se você tiver configurado `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
