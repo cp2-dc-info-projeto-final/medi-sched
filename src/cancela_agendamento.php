@@ -5,7 +5,7 @@ $usuario = "nome do usuário";
 $senha = "senha"; 
 
 try {
-    $conn = new PDO("mysql:host=$host;nome=$nome", $usuario, $senha);
+    $conn = new PDO("mysql:host=$mysqli;nome=$nome", $usuario, $senha);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully"; 
 } catch(PDOException $e) {
