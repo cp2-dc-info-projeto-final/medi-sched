@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$nome = 'nome';
-$usuario = 'nome do usuário'; 
-$senha = 'senha'; 
+$mysqli = "localhost";
+$nome = "nome";
+$usuario = "nome do usuário"; 
+$senha = "senha"; 
 
 try {
     $conn = new PDO("mysql:host=$host;nome=$nome", $usuario, $senha);
