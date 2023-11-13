@@ -28,7 +28,7 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
+                            <a class="nav-link" href="atendimetos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#rodape">Sobre</a>
@@ -56,7 +56,7 @@
         <a href="atendimentos.php" class="btn btn-outline-secondary button">Atendimentos</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
-        <img src="img/logo_medico.png" class="img-fluid" alt="Imagem relacionada à saúde.">
+        <img src=".img/logo_medico.png" class="img-fluid" alt="Imagem relacionada à saúde.">
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
     		<div class="row d-flex no-gutters">
     			<div class="col-md-5 d-flex">
     				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0">
-                        <img src="img/medico.png" class="img-fluid"  height= "150" width="100%"alt="Imagem simbolizando a saúde." >
+                        <img src=".img/medico.png" class="img-fluid"  height= "150" width="100%"alt="Imagem simbolizando a saúde." >
     				</div>
     			</div>
     			<div class="col-md-7 pl-md-5 py-md-5">
