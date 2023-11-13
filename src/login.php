@@ -1,8 +1,5 @@
 <?php
-$mysqli = mysqli_connect("localhost", "agendasaude", "123", "AGENDASAUDE") or die ("Erro de conexão com o banco de dados");
-if (!$mysqli) {
-    die("Erro na conexão: " . mysqli_connect_error());
-}
+include "conecta_mysql.inc";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
