@@ -1,5 +1,6 @@
 <?php
 include "conecta_mysql.inc";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
@@ -67,9 +68,13 @@ mysqli_close($mysqli);
                     <label for="senha">Senha</label>
                     <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                 </div>
-
+                
                 <div class="continue-button">
                     <button type="submit">Entrar</button>
+                </div>
+                
+                <div class="login-button">
+                    <button><a href="recuperar_senha.php">Esqueceu sua senha?</a></button>
                 </div>
             </form>
         </div>
