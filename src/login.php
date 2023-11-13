@@ -1,6 +1,5 @@
 <?php
 include "conecta_mysql.inc";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
@@ -19,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (($rowCliente && password_verify($senha, $rowCliente["senha"])) || ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) ) {
             // Login bem-sucedido, redirecionar para a página inicial
-            header("location: inicial.php");
+            header("location: agendamento.php");
             exit; // Certifique-se de sair do script após o redirecionamento
         } else {
             echo "Credenciais inválidas. Tente novamente.";
@@ -39,14 +38,14 @@ mysqli_close($mysqli);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href=".css/login.css">
     <title>Login</title>
 </head>
 
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="med.png" alt="">
+            <img src=".img/med.png" alt="">
         </div>
         <div class="form">
             <form action="login.php" method="post">
