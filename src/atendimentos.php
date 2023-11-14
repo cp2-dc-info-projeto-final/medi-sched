@@ -1,70 +1,45 @@
-<?php  ?>
-
-
 <!doctype html>
 <html lang="pt-br">
-  <head>
+<head>
     <title>Atendimentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href=".css"/>
-    <link rel="stylesheet" href=".css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-  </head>
-  <body class="fadeIn">
+</head>
+<body class="fadeIn">
 
-  <div id="header">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-              
-              <a class="navbar-brand" href="#"></a>
-              <a href="inicial.php"><img src=".img/logo.png" class="img-center" width="25%"/></a>
-              
-              <nav class="navbar navbar-expand-sm navbar-light bg-faded" id="topo">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-              
-              <div class="navbar-collapse" id="nav-content">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
+<div id="header" class="container">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+        <a href="index.php"><img src="img/logo.png" class="img-center" width="25%"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="inicial.php"> Início</a>
-                  </li>
-
-                  <li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="atendimentos.php">Atendimentos</a>
-                  </li>
-
-                  <li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#sobre">Sobre</a>
-                  </li>
-
-                    <div class="navbar-collapse" id="nav-content">
-                    <ul class="navbar-nav mr-auto">
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Login </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="login.php">Como paciente</a>
-                              <a class="dropdown-item" href="login-funcionario.php">Como funcionário</a>
-                              <a class="dropdown-item" href="login-adm.html">Como administrador</a>
-                            </div>
-                          </li>
-                      </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Login </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="login.php">Como paciente</a>
+                        <a class="dropdown-item" href="login.php">Como funcionário</a>
+                        <a class="dropdown-item" href="login.php">Como administrador</a>
                     </div>
-
-                </ul>
-              </div>
-          </nav>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
+</div>
 
     
 
@@ -74,8 +49,8 @@
       <div class="col-md-6 align-self-center">
         <h1> Faça já seu cadastro e aproveite os nossos serviços</h1>
         <h4>Todo o carinho e a atenção que sua saúde merece!</h4>
-        <a href="inicial.php" class="btn btn-outline-secondary button">Página inicial</a>
-        <a href="cadastro_cliente.php" class="btn btn-primary button">Cadastra-se</a>
+        <a href="index.php" class="btn btn-outline-secondary button">Página inicial</a>
+        <a href="cadastro.php" class="btn btn-primary button">Cadastre-se</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
         <img src=".img/paciente.png" class="img-fluid" alt="Pacientes felizes">
@@ -83,33 +58,117 @@
     </div>
   </div>
  
-  <div class="container-fluid card">
-        <h1 class="text-center mt-5 display-3 fw-bold"> <span class="theme-text">Conheça alguns de nossos atendimentos </span></h1>
+  <div class="container my-5">
+        <h1 class="text-center mt-5 display-3 fw-bold">Conheça nossos Atendimentos</h1>
         <hr class="mx-auto mb-5 w-25">
-        <div class="row mb-5">
-            <div class="col-12 col-sm-6 col-md-3 m-auto tamanho">
-                <!-- card starts here -->
-                <div class="card shadow">
-                    <img src=".img/consulta.png" alt="" class="card-img-top" height= "300" >
-                    <div class="card-body">
-                        <h3 class="text-center">Consulta Geral </h3>
-                        <hr class="mx-auto w-75">
-                        <p>
-                        Uma avaliação abrangente da saúde do paciente, onde o médico realiza um exame físico, 
-                        revisa o histórico médico e discute quaisquer sintomas ou preocupações atuais para manter ou melhorar 
-                        a saúde geral do paciente.
 
-                        </p>
-                    </div>
-                </div>
-                <!-- card ends here -->
-            </div>
-            <!-- col ends here -->
-            
+    <!-- Atendimento - Consulta Geral -->
+    <div class="row atendimento mb-5 flex-row-reverse">
+        <div class="col-md-6">
+            <img src=".img/consulta.png" alt="Consulta Geral" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Consulta Geral</h3>
+            <p>Durante uma consulta geral, o paciente recebe uma avaliação abrangente de sua saúde. 
+                O médico realiza um exame físico completo, revisa o histórico médico e discute quaisquer sintomas ou preocupações atuais. 
+                Este tipo de consulta visa manter e melhorar a saúde geral do paciente.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Exames de Rotina -->
+    <div class="row atendimento mb-5">
+        <div class="col-md-6">
+            <img src=".img/exames.png" alt="Exames de Rotina" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Exames de Rotina</h3>
+            <p>Os exames de rotina são procedimentos preventivos essenciais, incluindo hemogramas completos, exames de urina e testes de colesterol. 
+                Eles são fundamentais para a detecção precoce de doenças e para monitorar a saúde contínua dos pacientes.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Atendimento de Urgência -->
+    <div class="row atendimento mb-5 flex-row-reverse">
+        <div class="col-md-6">
+            <img src=".img/urgencia.png" alt="Atendimento de Urgência" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Atendimento de Urgência</h3>
+            <p>Nosso atendimento de urgência é dedicado a condições que requerem atenção imediata, mas não são graves o suficiente para uma visita ao pronto-socorro. 
+                Isso inclui tratamento de cortes que necessitam de suturas, infecções leves, febres e outras condições semelhantes.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Check-up Anual -->
+    <div class="row atendimento mb-5">
+        <div class="col-md-6">
+            <img src=".img/checkup.png" alt="Check-up Anual" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Check-up Anual</h3>
+            <p>O check-up anual é uma avaliação preventiva que checa o estado geral da saúde do paciente. Inclui uma série de exames de sangue, 
+                aferição de pressão arterial e outros testes específicos baseados na idade e no perfil de risco do paciente.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Vacinação -->
+    <div class="row atendimento mb-5 flex-row-reverse">
+        <div class="col-md-6">
+            <img src=".img/vacina.png" alt="Vacinação" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Vacinação</h3>
+            <p>Oferecemos serviços completos de vacinação para prevenir contra doenças infecciosas. Seguimos o calendário de vacinação recomendado para todas as faixas etárias e condições de saúde, 
+                garantindo proteção e prevenção para nossos pacientes.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Gerenciamento de Doenças Crônicas -->
+    <div class="row atendimento mb-5">
+        <div class="col-md-6">
+            <img src=".img/gerenciamento.png" alt="Gerenciamento de Doenças Crônicas" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Gerenciamento de Doenças Crônicas</h3>
+            <p>Nosso serviço de gerenciamento de doenças crônicas proporciona acompanhamento e tratamento contínuo para condições como diabetes, hipertensão e asma. 
+                Inclui ajuste de medicação, educação para o autocontrole e monitoramento de complicações.</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Serviços de Saúde Mental -->
+    <div class="row atendimento mb-5 flex-row-reverse">
+        <div class="col-md-6">
+            <img src=".img/mental.png" alt="Serviços de Saúde Mental" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Serviços de Saúde Mental</h3>
+            <p>Nossos serviços de saúde mental incluem consultas com psicólogos e psiquiatras para tratar questões como depressão, ansiedade e transtornos de humor. 
+                Oferecemos terapia e medicamentos conforme necessário, em um ambiente acolhedor e de apoio....</p>
+        </div>
+    </div>
+
+    <!-- Atendimento - Saúde da Mulher -->
+    <div class="row atendimento mb-5">
+        <div class="col-md-6">
+            <img src=",img/mulher.png" alt="Saúde da Mulher" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Saúde da Mulher</h3>
+            <p>Especializamo-nos em saúde da mulher, oferecendo serviços focados em ginecologia e obstetrícia. 
+                Isso inclui exames pélvicos, testes de Papanicolau, orientação contraceptiva, 
+                cuidados pré-natais e acompanhamento durante a menopausa.</p>
+        </div>
+    </div>
+</div>
+
+                
+                
+    </div>
+</div>
   
 
     <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted" id="sobre">
+  <footer class="text-center text-lg-start bg-light text-muted" id="sobre">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
  </section>
@@ -155,7 +214,7 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4" >Contato</h6>
-          <p> <img src=".img/home.png" class="img-fluid" ><i class="fas fa-home me-3"></i> Rua Dr Manoel Reis - Duque de Caxias - Rj </p>
+          <p> <img src=".img/home.png" class="img-fluid" ><i class="fas fa-home me-3"></i> Rua Manoel Gomes, 20 - Duque de Caxias- Rj </p>
           <p> <img src=".img/mail.png" class="img-fluid" >
             <i class="fas fa-envelope me-3"></i>
             agendasaude1@gmail.com
@@ -177,14 +236,15 @@
   </div>
 </footer>
 <!-- Footer -->
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
 <script> 
   
-      jQuery(document).ready(function() {
+                jQuery(document).ready(function() {
                 // Exibe ou oculta o botão
                 jQuery(window).scroll(function() {
                     if (jQuery(this).scrollTop() > 200) {
@@ -204,4 +264,27 @@
 </script>
 
 
+</html>    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function() {
+            // Exibe ou oculta o botão de retorno ao topo
+            jQuery(window).scroll(function() {
+                if (jQuery(this).scrollTop() > 200) {
+                    jQuery('.topo-link').fadeIn(200);
+                } else {
+                    jQuery('.topo-link').fadeOut(200);
+                }
+            });
+
+            // Faz animação para subir ao topo da página
+            jQuery('.topo-link').click(function(event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, 300);
+            });
+        });
+    </script>
+
+</body>
 </html>
