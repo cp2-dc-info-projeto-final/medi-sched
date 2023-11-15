@@ -7,7 +7,7 @@
 
 	<link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
 
-	<link rel="stylesheet" href=".css">
+	<link rel="stylesheet" href=".css/login.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
