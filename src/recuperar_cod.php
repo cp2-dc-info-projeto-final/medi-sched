@@ -25,7 +25,7 @@
 					<h2 class="heading-section">Recuperação de senha</h2>
 				</div>
 			</div>
-            <div class="row justify-content-center">
+            		<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-5">
 					<div class="login-wrap p-4 p-md-5">
 		      	<div class="icon d-flex align-items-center justify-content-center">
