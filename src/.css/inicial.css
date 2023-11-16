@@ -11,7 +11,7 @@ body {
 
 /* Cabeçalho */
 #header {
-    background-color: #f8f9fa;
+    background-color: #fff;
     padding: 10px 0;
 }
 
@@ -38,12 +38,12 @@ body {
 
 /* Rodapé */
 #rodape {
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px 0;
 }
 
 #rodape .text-uppercase {
-    color: #ff0000; /* Títulos em vermelho */
+    color: #43b1ea  ; /* Títulos em vermelho */
 }
 
 /* Detalhes em vermelho */
