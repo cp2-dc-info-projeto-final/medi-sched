@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/PHPMailer-master/src/Exception.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/PHPMailer-master/src/PHPMailer.php';
-require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/PHPMailer-master/src/SMTP.php';
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/MEDI-SCHED-MAIN/src/PHPMailer-master/src/Exception.php';
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/MEDI-SCHED-MAIN/src/PHPMailer-master/src/PHPMailer.php';
+require 'C:/Program Files (x86)/EasyPHP-Devserver-17/eds-www/MEDI-SCHED-MAIN/src/PHPMailer-master/src/SMTP.php';
 
 function envia_email($para, $assunto, $mensagem){
 
