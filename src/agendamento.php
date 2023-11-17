@@ -87,7 +87,7 @@ echo $mensagemErro;
     <div id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                <a class="navbar-brand" href="index.php"><img src=".img/logo.png" class="img-center" width="25%"/></a>
+                <a class="navbar-brand" href="index.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -102,12 +102,16 @@ echo $mensagemErro;
                         <li class="nav-item">
                             <a class="nav-link" href="#rodape">Sobre</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-
+    
 <div class="container mt-5">
     <h2 class="mb-4">Agendar Consulta</h2>
     <!-- Mensagem de erro, se houver -->
