@@ -1,9 +1,14 @@
 <?php
 include "conecta_mysql.inc";
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
+
+    // Escapar caracteres especiais para segurança na consulta ao banco de dados
+    $email = mysqli_real_escape_string($mysqli, $email);
 
     $sqlCliente = "SELECT * FROM cliente WHERE email = '$email'";
     $resultCliente = mysqli_query($mysqli, $sqlCliente);
@@ -17,10 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $rowCliente = mysqli_fetch_assoc($resultCliente);
         $rowFuncionario = mysqli_fetch_assoc($resultFuncionario);
 
-        if (($rowCliente && password_verify($senha, $rowCliente["senha"])) || ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) ) {
-            // Login bem-sucedido, redirecionar para a página inicial
-            header("location: agendamento.php");
-            exit; // Certifique-se de sair do script após o redirecionamento
+        if (($rowCliente && password_verify($senha, $rowCliente["senha"])) || ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"]))) {
+            $_SESSION['email'] = $email; // Guarda o email na sessão após o login bem-sucedido
+
+            // Verifica se há um redirecionamento específico na sessão
+            if (isset($_SESSION['redirect_to'])) {
+                $redirect_to = $_SESSION['redirect_to'];
+                unset($_SESSION['redirect_to']); // Limpa a variável de sessão após usar
+                header("Location: $redirect_to");
+                exit;
+            } else {
+                header("Location: agendamento.php");
+                exit;
+            }
         } else {
             echo "Credenciais inválidas. Tente novamente.";
         }
