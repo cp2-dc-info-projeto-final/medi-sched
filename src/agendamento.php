@@ -2,60 +2,41 @@
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Dados do agendamento
     $idServico = $_POST["idServico"];
     $idFuncionario = $_POST["idFuncionario"];
-    $idCliente = $_POST["idCliente"];
+    $nomeCliente = $_POST["nomeCliente"];
+    $sobrenomeCliente = $_POST["sobrenomeCliente"];
     $dataConsulta = $_POST["dataConsulta"];
     $horarioConsulta = $_POST["horarioConsulta"];
 
     $erro = false;
 
-    // Validações básicas
-    if (empty($idServico) || empty($idFuncionario) || empty($idCliente)) {
+    if (empty($idServico) || empty($idFuncionario) || empty($nomeCliente) || empty($sobrenomeCliente)) {
         $mensagemErro .= "Todos os campos do agendamento são obrigatórios.<br>";
         $erro = true;
     }
 
     if (empty($dataConsulta) || !strtotime($dataConsulta)) {
-        $mensagemErro .= "Preencha uma data de consulta válida no formato YYYY-MM-DD.<br>";
+        $mensagemErro .= "Preencha uma data de consulta válida.<br>";
         $erro = true;
     }
 
-    if (empty($horarioConsulta) || !preg_match("/^[0-2][0-9]:[0-5][0-9]$/", $horarioConsulta)) {
-        $mensagemErro .= "Preencha um horário de consulta válido no formato HH:MM.<br>";
+    if (empty($horarioConsulta) || !preg_match("/^(10|11|12|13|14|15|16|17|18):[0-5][0-9]$/", $horarioConsulta)) {
+        $mensagemErro .= "Preencha um horário de consulta válido entre 10:00 e 18:00.<br>";
         $erro = true;
     }
 
-    // Cria a conexão com o banco de dados
     $mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
     if ($mysqli->connect_error) {
         die("Erro na conexão: " . $mysqli->connect_error);
     }
 
-    // Verifica se já existe um agendamento para o horário selecionado
-    $stmt = $mysqli->prepare("SELECT idAgendamento FROM Agendamento WHERE idFuncionario = ? AND data_consulta = ? AND horario_consulta = ?");
-    $stmt->bind_param("iss", $idFuncionario, $dataConsulta, $horarioConsulta);
-    $stmt->execute();
-    $stmt->store_result();
-
-    if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Já existe um agendamento para este horário com o funcionário selecionado.<br>";
-        $erro = true;
-    }
-
-    $stmt->close();
-
     if (!$erro) {
-        // Insere o novo agendamento no banco de dados
-        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
+        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, nomeCliente, sobrenomeCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("iissss", $idServico, $idFuncionario, $nomeCliente, $sobrenomeCliente, $dataConsulta, $horarioConsulta);
 
         if ($stmt->execute()) {
-            // Redireciona para uma página de confirmação ou outra página conforme necessário
-            $stmt->close();
-            $mysqli->close();
-            header("Location: .php"); // Não fiz a pagina de confirmação ainda
+            header("Location: confirmacao.php");
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
@@ -67,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 
-// Se houver mensagens de erro, elas serão exibidas na página
 echo $mensagemErro;
 ?>
 
