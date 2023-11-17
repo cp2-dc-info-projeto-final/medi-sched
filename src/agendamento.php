@@ -148,9 +148,14 @@ echo $mensagemErro;
         </div>
         
         <div class="mb-3">
-            <label for="idCliente" class="form-label">Cliente</label>
-            <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="Seu ID de cliente">
+            <label for="nomeCliente" class="form-label">Nome do Cliente</label>
+            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Digite seu nome">
         </div>
+        <div class="mb-3">
+            <label for="sobrenomeCliente" class="form-label">Sobrenome do Cliente</label>
+            <input type="text" class="form-control" id="sobrenomeCliente" name="sobrenomeCliente" placeholder="Digite seu sobrenome">
+        </div>
+
         
         <div class="mb-3">
             <label for="dataConsulta" class="form-label">Data da Consulta</label>
@@ -159,8 +164,19 @@ echo $mensagemErro;
         
         <div class="mb-3">
             <label for="horarioConsulta" class="form-label">Horário da Consulta</label>
-            <input type="time" class="form-control" id="horarioConsulta" name="horarioConsulta">
+            <select class="form-control" id="horarioConsulta" name="horarioConsulta">
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+            </select>
         </div>
+
         
         <button type="submit" class="btn btn-primary">Agendar</button>
     </form>
