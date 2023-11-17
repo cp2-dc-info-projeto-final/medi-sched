@@ -111,21 +111,14 @@
 
     <a href="#" class="topo-link">&#9650;</a>
 
-    <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted" id="rodape">
-  <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
  </section>
-  <!-- Section: Social media -->
 
-  <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
       <div class="row mt-3">
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4"> 
             <i class="fas fa-gem me-3"></i>Agenda+Saúde
           </h6>
@@ -133,11 +126,8 @@
             Desde sua fundação, a Agenda+Saúde tem o compromisso de oferecer atendimento médico de qualidade com pontualidade e cuidado, utilizando equipamentos modernos e um ambiente projetado para o conforto dos pacientes.
           </p>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Acesso ao site
           </h6>
@@ -149,13 +139,10 @@
           </p>
           
         </div>
-        <!-- Grid column -->
 
         
 
-        <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4" >Contato</h6>
           <p> <img src=".img/casa.png" class="img-fluid" ><i class="fas fa-casa me-3"></i> Rua Manoel Reis, 15 - Duque de Caxias- Rj </p>
           <p> <img src=".img/mail.png" class="img-fluid" >
@@ -165,22 +152,16 @@
           <p ><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-phone me-3"></i> (21) 98019-2431</p>
           <p><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-print me-3"></i> (21) 98904-7495</p>
         </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
 
-  <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 Direitos autorais:
     <a class="text-reset fw-bold" href="index.php">Agenda+Saúde</a>
   </div>
 </footer>
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
 
 </body>
 
