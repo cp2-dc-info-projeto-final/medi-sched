@@ -86,30 +86,6 @@
         </div>
     </div>
 
-    <!-- Atendimento - Atendimento de Urgência -->
-    <div class="row atendimento mb-5 flex-row-reverse">
-        <div class="col-md-6">
-            <img src=".img/urgencia.png" alt="Atendimento de Urgência" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Atendimento de Urgência</h3>
-            <p>Nosso atendimento de urgência é dedicado a condições que requerem atenção imediata, mas não são graves o suficiente para uma visita ao pronto-socorro. 
-                Isso inclui tratamento de cortes que necessitam de suturas, infecções leves, febres e outras condições semelhantes.</p>
-        </div>
-    </div>
-
-    <!-- Atendimento - Check-up Anual -->
-    <div class="row atendimento mb-5">
-        <div class="col-md-6">
-            <img src=".img/checkup.png" alt="Check-up Anual" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Check-up Anual</h3>
-            <p>O check-up anual é uma avaliação preventiva que checa o estado geral da saúde do paciente. Inclui uma série de exames de sangue, 
-                aferição de pressão arterial e outros testes específicos baseados na idade e no perfil de risco do paciente.</p>
-        </div>
-    </div>
-
     <!-- Atendimento - Vacinação -->
     <div class="row atendimento mb-5 flex-row-reverse">
         <div class="col-md-6">
@@ -119,18 +95,6 @@
             <h3>Vacinação</h3>
             <p>Oferecemos serviços completos de vacinação para prevenir contra doenças infecciosas. Seguimos o calendário de vacinação recomendado para todas as faixas etárias e condições de saúde, 
                 garantindo proteção e prevenção para nossos pacientes.</p>
-        </div>
-    </div>
-
-    <!-- Atendimento - Gerenciamento de Doenças Crônicas -->
-    <div class="row atendimento mb-5">
-        <div class="col-md-6">
-            <img src=".img/gerenciamento.png" alt="Gerenciamento de Doenças Crônicas" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Gerenciamento de Doenças Crônicas</h3>
-            <p>Nosso serviço de gerenciamento de doenças crônicas proporciona acompanhamento e tratamento contínuo para condições como diabetes, hipertensão e asma. 
-                Inclui ajuste de medicação, educação para o autocontrole e monitoramento de complicações.</p>
         </div>
     </div>
 
@@ -158,9 +122,7 @@
                 cuidados pré-natais e acompanhamento durante a menopausa.</p>
         </div>
     </div>
-</div>
-
-                
+</div>                
                 
     </div>
 </div>
