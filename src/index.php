@@ -28,18 +28,13 @@
                             <a class="nav-link active" aria-current="page" href="index.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimetos.php">Atendimentos</a>
+                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#rodape">Sobre</a>
+                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="login.php">Como paciente</a>
-                                <a class="dropdown-item" href="login.php">Como funcionário</a>
-                                <a class="dropdown-item" href="login.php">Como administrador</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                 </div>
