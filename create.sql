@@ -11,32 +11,29 @@ CREATE TABLE IF NOT EXISTS Cliente (
     idCliente INT AUTO_INCREMENT PRIMARY KEY,
     nome_cliente VARCHAR(100) NOT NULL,
     sobrenome_cliente VARCHAR(100) NOT NULL,
-    email VARCHAR(200) NOT NULL,
+    email VARCHAR(200) NOT NULL UNIQUE,
     senha VARCHAR(200) NOT NULL,
-    cpf VARCHAR(14) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
     data_nascimento DATE NOT NULL,
     genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
 );
 
 DROP TABLE IF EXISTS Funcionario;
-
-
 CREATE TABLE Funcionario (
-    idFuncionario int NOT NULL AUTO_INCREMENT,
-    nome_funcionario varchar(100) NOT NULL,
-    sobrenome_funcionario varchar(100) NOT NULL,
-    email varchar(200) NOT NULL,
-    senha varchar(200) NOT NULL,
+    idFuncionario INT NOT NULL AUTO_INCREMENT,
+    nome_funcionario VARCHAR(100) NOT NULL,
+    sobrenome_funcionario VARCHAR(100) NOT NULL,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    senha VARCHAR(200) NOT NULL,
     data_nascimento DATE NOT NULL,
-    cpf varchar(14) NOT NULL,
-    cargo varchar(50) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    cargo VARCHAR(50) NOT NULL,
+    area VARCHAR(50) NOT NULL, 
     genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL,
-
-    primary key(idFuncionario)
+    PRIMARY KEY(idFuncionario)
 );
 
 DROP TABLE IF EXISTS Agendamento;
-
 CREATE TABLE IF NOT EXISTS Agendamento (
     idAgendamento INT AUTO_INCREMENT PRIMARY KEY,
     idServico INT NOT NULL,
@@ -49,12 +46,10 @@ CREATE TABLE IF NOT EXISTS Agendamento (
     FOREIGN KEY (idFuncionario) REFERENCES Funcionario(idFuncionario)
 );
 
-
 DROP TABLE IF EXISTS Servico;
-
 CREATE TABLE Servico (
-    idServico int NOT NULL AUTO_INCREMENT,
-    nome_servico varchar(200) NOT NULL,
-    descricao varchar(200) NOT NULL,
+    idServico INT NOT NULL AUTO_INCREMENT,
+    nome_servico VARCHAR(200) NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
     PRIMARY KEY (idServico)
 );
