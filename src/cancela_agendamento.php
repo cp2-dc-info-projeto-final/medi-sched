@@ -3,7 +3,7 @@ INCOMPLETO
 <?php
 
 include "autentica.php";
-include "conecta_mysql.php";
+include "conecta_mysql.inc";
 include "envia_email.php";
 
 
