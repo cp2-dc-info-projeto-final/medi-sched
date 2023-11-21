@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conecta_mysql.php"; // Certifique-se de que este arquivo contenha as informações corretas de conexão
+include "conecta_mysql.inc"; // Certifique-se de que este arquivo contenha as informações corretas de conexão
 
 // Verifica se o cliente está logado e se o e-mail está na sessão
 if (!isset($_SESSION['email'])) {
