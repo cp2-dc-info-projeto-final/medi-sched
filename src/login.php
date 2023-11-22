@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: $redirect_to");
                 exit;
             } else {
-                header("Location: agendamento.php");
+                header("Location: index_paciente.php");
                 exit;
             }
         } else {
