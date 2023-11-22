@@ -4,14 +4,13 @@ $mensagemErro = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $idServico = $_POST["idServico"];
     $idFuncionario = $_POST["idFuncionario"];
-    $nomeCliente = $_POST["nomeCliente"];
-    $sobrenomeCliente = $_POST["sobrenomeCliente"];
+    $idCliente = $_POST["idCliente"];
     $dataConsulta = $_POST["dataConsulta"];
     $horarioConsulta = $_POST["horarioConsulta"];
 
     $erro = false;
 
-    if (empty($idServico) || empty($idFuncionario) || empty($nomeCliente) || empty($sobrenomeCliente)) {
+    if (empty($idServico) || empty($idFuncionario) || empty($idCliente)) {
         $mensagemErro .= "Todos os campos do agendamento são obrigatórios.<br>";
         $erro = true;
     }
@@ -32,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!$erro) {
-        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, nomeCliente, sobrenomeCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("iissss", $idServico, $idFuncionario, $nomeCliente, $sobrenomeCliente, $dataConsulta, $horarioConsulta);
+        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
 
         if ($stmt->execute()) {
             header("Location: confirmacao.php");
@@ -106,14 +105,12 @@ echo $mensagemErro;
             <label for="idServico" class="form-label">Serviço</label>
             <select class="form-select" id="idServico" name="idServico">
                 <option selected>Escolha um serviço...</option>
-                <option value="1">Consulta Geral</option>
+                <option value="1">Ortopedia</option>
                 <option value="2">Vacinação</option>
-                <option value="3">Check-up Anual</option>
-                <option value="4">Gerenciamento de Doenças Crônicas</option>
-                <option value="5">Serviços de Saúde Mental</option>
-                <option value="6">Saúde da Mulher</option>
-                <option value="7">Atendimento de Urgência</option>
-                <option value="8">Exame de Rotina</option>
+                <option value="3">Oftalmologia</option>
+                <option value="4">Odontologico</option>
+                <option value="5">Psicologo</option>
+                <option value="6">Ginecologia</option>
             </select>
         </div>
         
@@ -126,16 +123,9 @@ echo $mensagemErro;
                 
             </select>
         </div>
-        
         <div class="mb-3">
-            <label for="nomeCliente" class="form-label">Nome do Cliente</label>
-            <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" placeholder="Digite seu nome">
-        </div>
-        <div class="mb-3">
-            <label for="sobrenomeCliente" class="form-label">Sobrenome do Cliente</label>
-            <input type="text" class="form-control" id="sobrenomeCliente" name="sobrenomeCliente" placeholder="Digite seu sobrenome">
-        </div>
-
+            <label for="idCliente" class="form-label">ID Cliente</label>
+            <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="Digite seu id">
         
         <div class="mb-3">
             <label for="dataConsulta" class="form-label">Data da Consulta</label>
@@ -164,3 +154,4 @@ echo $mensagemErro;
 
 </body>
 </html>
+ 
