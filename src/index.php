@@ -129,9 +129,7 @@
           <p>
             <a href="atendimentos.php" class="text-reset">Atendimentos</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Sobre</a>
-          </p>
+
           
         </div>
 
