@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conecta_mysql.inc";
+include "conecta_mysql.inc"; 
 
 // Verifica se o cliente está logado e se o e-mail está na sessão
 if (!isset($_SESSION['email'])) {
@@ -15,12 +15,11 @@ $agendamentos = array();
 if ($mysqli->connect_error) {
     die("Erro na conexão: " . $mysqli->connect_error);
 }
-
+//seleciona registros
 $stmt = $mysqli->prepare("SELECT A.idAgendamento, A.data_consulta, A.horario_consulta, S.nome_servico, F.nome_funcionario 
                           FROM Agendamento A
                           INNER JOIN Servico S ON A.idServico = S.idServico
                           INNER JOIN Funcionario F ON A.idFuncionario = F.idFuncionario
-                          INNER JOIN Cliente C ON A.nomeCliente = C.nome_cliente AND A.sobrenomeCliente = C.sobrenome_cliente
                           WHERE C.email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
@@ -35,7 +34,7 @@ if ($result->num_rows > 0) {
 $stmt->close();
 $mysqli->close();
 
-$stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
+$stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, idCliente, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
 $stmt->bind_param("i", $idCliente);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -56,7 +55,7 @@ $mysqli->close();
     <title>Meus Agendamentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
@@ -71,16 +70,22 @@ $mysqli->close();
                         <th>ID do Agendamento</th>
                         <th>ID do Serviço</th>
                         <th>ID do Funcionário</th>
+                        <th>ID do Cliente</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($agendamentos as $agendamento): ?>
+                    <?php foreach ($agendamentos as $agendamento): 
+                        //converte caracteres predefinidos em entidades HTML
+                        ?>
+                    
                     <tr>
+                    
                         <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
                         <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
                         <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
+                        <td><?php echo htmlspecialchars($agendamento['idCliente']); ?></td>
                         <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                         <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
                     </tr>
