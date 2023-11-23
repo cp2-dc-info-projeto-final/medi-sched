@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MediShed</title>
-    <link rel="" href="" />
+    <link rel="stylesheet" href="" />
   </head>
 
   <body>
@@ -61,9 +61,4 @@
 
             </form>
         </div>
-
-        </footer>    
-      </nav>
-    </header>
-  </body>
 </html>
