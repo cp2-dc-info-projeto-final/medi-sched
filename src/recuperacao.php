@@ -1,42 +1,32 @@
 <?php
+include "envia_email.php";
+include "conecta_mysql.inc"; // Se você precisar conectar-se ao banco de dados
 
 session_start();
 
-include "conecta_mysql.inc"; 
+$nome = $_POST['nome']; 
+$data = date("d/m/Y"); 
+$email = $_POST['email']; 
 
-$email = $_REQUEST["emailrec"];
-$stmt = $mysqli->prepare("SELECT * FROM Cliente WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$result = $stmt->get_result();
-$usuario = $result->fetch_assoc();
 
-$code = rand(100000,999999);
+$recuperacao_codigo = rand(100000, 999999);
 
-if ($cliente) {
-    include "envia_email.php"; 
+$assunto = "Recuperação de Senha";
 
-    $para = $cliente["email"];
-    $assunto = "Recuperação de senha | Agenda+Saúde";
-    $mensagem = "<h2>Redefina sua senha</h2><br><small>Cliente Agenda+Saúde</small><br><h3>Seu código de redefinição de senha é:</h3><h2>$code</h2><br><small>Agenda+Saúde</small>";
+$mensagem = "Dados para recuperação de senha:<br>";
+$mensagem .= "<br><b>Nome:</b> $nome";
+$mensagem .= "<br><b>Data:</b> $data";
+$mensagem .= "<br><b>E-mail:</b> $email";
+$mensagem .= "<br><b>Código de Recuperação:</b> $recuperacao_codigo";
+$mensagem .= "<br><br>Clique no link abaixo para redefinir sua senha:";
+$mensagem .= "<br><a href='http://seusite.com/redefinir_senha.php?codigo=$recuperacao_codigo'>Redefinir Senha</a>";
 
-    if (envia_email($para, $assunto, $mensagem)) {
-        $_SESSION['msg_rec'] = "<div class='alert alert-success' role='alert'>Digite o código enviado para o seu e-mail!</div>";
-        $_SESSION['cod_senha'] = $code;
-        $_SESSION['email_cliente'] = $email;
-        header("Location: recuperar_cod.php");
-        exit;
-    } else {
-        $_SESSION['msg_rec'] = "<div class='alert alert-danger'>Houve um erro ao enviar o e-mail.</div>";
-        header("Location: recuperar_senha.php");
-        exit;
-    }
+if(envia_email($email, $assunto, $mensagem)){
+    $_SESSION['msg_rec'] = "Instruções de recuperação de senha foram enviadas para o seu e-mail.";
+    header("Location: verifica_codigo.php"); // Redireciona para a página inicial de recuperação
 } else {
-    $_SESSION['msg_rec'] = "<div class='alert alert-danger'>Email não encontrado.</div>";
-    header("Location: recuperar_senha.php");  
-    exit;
+    $_SESSION['msg_rec'] = "Falha no envio do e-mail. Por favor, tente novamente.";
+    header("Location: recuperar_senha.php"); // Redireciona para a página inicial de recuperação
 }
-
-$stmt->close();
-$mysqli->close();
+exit;
 ?>
