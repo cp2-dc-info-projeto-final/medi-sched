@@ -1,5 +1,5 @@
 <?php
-include "conecta_mysql.inc";
+include "conecta_mysql.php";
 
 session_start();
 
