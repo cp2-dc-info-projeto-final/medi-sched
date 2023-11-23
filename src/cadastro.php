@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         if ($stmt->execute()) {
             $mysqli->close();
-            header("Location: index_paciente.php");
+            header("Location: index.php");
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
