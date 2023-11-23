@@ -20,7 +20,9 @@ $stmt = $mysqli->prepare("SELECT A.idAgendamento, A.data_consulta, A.horario_con
                           FROM Agendamento A
                           INNER JOIN Servico S ON A.idServico = S.idServico
                           INNER JOIN Funcionario F ON A.idFuncionario = F.idFuncionario
+                          
                           WHERE C.email = ?");
+echo $mysqli->error;
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
