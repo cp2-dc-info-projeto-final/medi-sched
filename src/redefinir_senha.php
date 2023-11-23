@@ -1,6 +1,6 @@
 <?php
-include "autentica.inc"; 
-include "conecta_mysqli.inc"; 
+include "autentica.php"; 
+include "conecta_mysqli.php"; 
 
 $idCliente = $_GET["idCliente"]; 
 $sql = "SELECT * FROM Cliente WHERE idCliente = ?;";
