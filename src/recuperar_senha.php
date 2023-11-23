@@ -10,10 +10,8 @@ include "conecta_mysql.inc";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Atualize o link do favicon para o da Agenda+Saúde -->
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
 
-    <!-- Atualize os caminhos para os arquivos CSS conforme o diretório da Agenda+Saúde -->
     <link rel="stylesheet" href=".css/login.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
