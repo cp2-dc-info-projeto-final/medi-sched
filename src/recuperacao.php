@@ -1,6 +1,6 @@
 <?php
 include "envia_email.php";
-include "conecta_mysql.inc"; // Se você precisar conectar-se ao banco de dados
+include "conecta_mysql.php"; // Se você precisar conectar-se ao banco de dados
 
 session_start();
 
