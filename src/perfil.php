@@ -44,6 +44,7 @@
                 for($i = 0; $i < $linhas; $i++){
                     $cliente = mysqli_fetch_array($res);
                     echo "<strong>Dados pessoais:</strong><br>";
+                    echo "Id Cliente: ".$cliente["idCliente"]."<br>";
                     echo "Nome: ".$cliente["nome_cliente"]."<br>";
                     echo "E-mail: ".$cliente["email"]."<br>";
                     echo "Cpf: ".$cliente["cpf"]."<br";
