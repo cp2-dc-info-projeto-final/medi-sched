@@ -10,7 +10,7 @@ if (!isset($_SESSION["email"]) || !isset($_SESSION["senha"])) {
 $email = $_SESSION["email"];
 $senha = $_SESSION["senha"];
 
-include "conecta_mysqli.inc"; // Verifique se este arquivo tem as informações corretas para conectar ao banco de dados
+include "conecta_mysqli.php"; 
 
 $sql = "SELECT * FROM Cliente WHERE email = ?";
 $stmt = $mysqli->prepare($sql);
