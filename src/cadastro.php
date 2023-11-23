@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <div class="input-box">
                         <label for="senha">Senha</label>
-                        <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
 
