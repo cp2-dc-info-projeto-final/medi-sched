@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Redireciona para uma página de confirmação ou outra página conforme necessário
             $stmt->close();
             $mysqli->close();
-            header("Location: .php"); // Não fiz a pagina de confirmação ainda
+            header("Location: confirmacao.php"); // Não fiz a pagina de confirmação ainda
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
@@ -94,7 +94,7 @@ echo $mensagemErro;
                 <div class="collapse navbar-collapse" id="nav-content">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Início</a>
+                            <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="atendimentos.php">Atendimentos</a>
@@ -122,14 +122,12 @@ echo $mensagemErro;
             <label for="idServico" class="form-label">Serviço</label>
             <select class="form-select" id="idServico" name="idServico">
                 <option selected>Escolha um serviço...</option>
-                <option value="1">Consulta Geral</option>
+                <option value="1">Ortopedia</option>
                 <option value="2">Vacinação</option>
-                <option value="3">Check-up Anual</option>
-                <option value="4">Gerenciamento de Doenças Crônicas</option>
-                <option value="5">Serviços de Saúde Mental</option>
-                <option value="6">Saúde da Mulher</option>
-                <option value="7">Atendimento de Urgência</option>
-                <option value="8">Exame de Rotina</option>
+                <option value="3">Oftalmologia</option>
+                <option value="4">Odontologico</option>
+                <option value="5">Psicologo</option>
+                <option value="6">Ginecologia</option>
             </select>
         </div>
         
@@ -155,7 +153,17 @@ echo $mensagemErro;
         
         <div class="mb-3">
             <label for="horarioConsulta" class="form-label">Horário da Consulta</label>
-            <input type="time" class="form-control" id="horarioConsulta" name="horarioConsulta">
+            <select class="form-control" id="horarioConsulta" name="horarioConsulta">
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+            </select>
         </div>
         
         <button type="submit" class="btn btn-primary">Agendar</button>
