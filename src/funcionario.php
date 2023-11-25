@@ -97,7 +97,7 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="funcionario.css">
+    <link rel="stylesheet" href=".css/funcionario.css">
     <title>Formulário</title>
 </head>
 <body>
@@ -149,10 +149,12 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
                     <div class="input-box">
                         <label for="areasMedicas">Áreas Médicas</label>
                         <select id="areasMedicas" name="areasMedicas" required>
-                            <option value="cardiologia">Cardiologia</option>
-                            <option value="ortopedia">Ortopedia</option>
-                            <option value="dermatologia">Dermatologia</option>
-                            <option value="ginecologia">Ginecologia</option>
+                            <option value="1">Ortopedia</option>
+                            <option value="2">Enfermeiro</option>
+                            <option value="3">Oftalmologia</option>
+                            <option value="4">Odontologico</option>
+                            <option value="5">Psicologo</option>
+                            <option value="6">Ginecologia</option>
 
                         </select>
                     </div>
