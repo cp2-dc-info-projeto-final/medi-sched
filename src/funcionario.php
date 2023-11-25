@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         if ($stmt->execute()) {
             $mysqli->close();
-            header("Location: index.html"); // Redireciona para a página inicial
+            header("Location: index.php"); // Redireciona para a página inicial
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
