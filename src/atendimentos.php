@@ -1,13 +1,18 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <title>Atendimentos | Agenda+Saúde</title>
+    <title>Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href=".css/inicial.css"/>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body class="fadeIn">
     <div id="header">
@@ -26,154 +31,134 @@
                             <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#rodape">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
                         </li>
-                        
                     </ul>
                 </div>
             </nav>
         </div>
-    </div>
-    
-
+    </div
     <div id="slider">
   <div class="container">
     <div class="row">
       <div class="col-md-6 align-self-center">
-        <h1> Faça já seu cadastro e aproveite os nossos serviços</h1>
-        <h4>Todo o carinho e a atenção que sua saúde merece!</h4>
-        <a href="index.php" class="btn btn-outline-secondary button">Página inicial</a>
+        <h1>A clínica mais completa para a sua saúde!</h1>
+        <h4>Agende já uma consulta.</h4>
         <a href="cadastro.php" class="btn btn-primary button">Cadastre-se</a>
+        <a href="atendimentos.php" class="btn btn-outline-secondary button">Atendimentos</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
-        <img src=".img/paciente.png" class="img-fluid" alt="Pacientes felizes">
+        <img src=".img/medi.png" class="img-fluid" alt="Imagem relacionada à saúde.">
       </div>
     </div>
   </div>
- 
-  <div class="container my-5">
-        <h1 class="text-center mt-5 display-3 fw-bold">Conheça nossos Atendimentos</h1>
-        <hr class="mx-auto mb-5 w-25">
+  <section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row d-flex no-gutters">
+    			<div class="col-md-5 d-flex">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0">
+                        <img src=".img/medico.png" class="img-fluid"  height= "150" width="100%"alt="Imagem simbolizando a saúde." >
+    				</div>
+                    </div>
+                    <div class="col-md-7 pl-md-5 py-md-5">
+                    <div class="heading-section pt-md-5">
+                        <h2 class="mb-4">Nossas Especialidades</h2>
+                    </div>
+                    <div class="row">
+                        <!-- Ginecologia -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Ginecologia</h4>
+                                <p>Atendimento integral à saúde feminina, desde consultas ginecológicas, exames preventivos, até acompanhamento obstétrico.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Psicologia -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Psicologia</h4>
+                                <p>Serviços de psicologia para promover saúde mental, com terapia individual, de casal e em grupo, atendendo a diversas necessidades emocionais.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Odontologia -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Odontologia</h4>
+                                <p>Cuidados completos com a saúde bucal, tratamentos estéticos e preventivos, ortodontia e odontopediatria para todas as idades.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pediatria -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Pediatria</h4>
+                                <p>Acompanhamento da saúde das crianças e adolescentes, promovendo o desenvolvimento saudável com atenção dedicada à pediatria preventiva e curativa.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Ortopedia -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Ortopedia</h4>
+                                <p>Diagnóstico, tratamento e reabilitação de lesões musculoesqueléticas, com uma equipe de ortopedistas experientes e tecnologia avançada.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Vacinação -->
+                        <div class="col-md-6 services-2 w-100 d-flex">
+                            <div class="text pl-3">
+                                <h4>Vacinação</h4>
+                                <p>Programa completo de imunização para crianças, adultos e idosos, seguindo as diretrizes dos órgãos de saúde para prevenção de doenças.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Atendimento - Consulta Geral -->
-    <div class="row atendimento mb-5 flex-row-reverse">
-        <div class="col-md-6">
-            <img src=".img/consulta.png" alt="Consulta Geral" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Consulta Geral</h3>
-            <p>Durante uma consulta geral, o paciente recebe uma avaliação abrangente de sua saúde. 
-                O médico realiza um exame físico completo, revisa o histórico médico e discute quaisquer sintomas ou preocupações atuais. 
-                Este tipo de consulta visa manter e melhorar a saúde geral do paciente.</p>
-        </div>
-    </div>
+    	</div>
+    </section>
 
-    <!-- Atendimento - Exames de Rotina -->
-    <div class="row atendimento mb-5">
-        <div class="col-md-6">
-            <img src=".img/exames.png" alt="Exames de Rotina" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Exames de Rotina</h3>
-            <p>Os exames de rotina são procedimentos preventivos essenciais, incluindo hemogramas completos, exames de urina e testes de colesterol. 
-                Eles são fundamentais para a detecção precoce de doenças e para monitorar a saúde contínua dos pacientes.</p>
-        </div>
-    </div>
+    </section>
 
-    <!-- Atendimento - Vacinação -->
-    <div class="row atendimento mb-5 flex-row-reverse">
-        <div class="col-md-6">
-            <img src=".img/vacina.png" alt="Vacinação" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Vacinação</h3>
-            <p>Oferecemos serviços completos de vacinação para prevenir contra doenças infecciosas. Seguimos o calendário de vacinação recomendado para todas as faixas etárias e condições de saúde, 
-                garantindo proteção e prevenção para nossos pacientes.</p>
-        </div>
-    </div>
+    <a href="#" class="topo-link">&#9650;</a>
 
-    <!-- Atendimento - Serviços de Saúde Mental -->
-    <div class="row atendimento mb-5 flex-row-reverse">
-        <div class="col-md-6">
-            <img src=".img/mental.png" alt="Serviços de Saúde Mental" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Serviços de Saúde Mental</h3>
-            <p>Nossos serviços de saúde mental incluem consultas com psicólogos e psiquiatras para tratar questões como depressão, ansiedade e transtornos de humor. 
-                Oferecemos terapia e medicamentos conforme necessário, em um ambiente acolhedor e de apoio....</p>
-        </div>
-    </div>
-
-    <!-- Atendimento - Saúde da Mulher -->
-    <div class="row atendimento mb-5">
-        <div class="col-md-6">
-            <img src=".img/mulher.png" alt="Saúde da Mulher" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h3>Saúde da Mulher</h3>
-            <p>Especializamo-nos em saúde da mulher, oferecendo serviços focados em ginecologia e obstetrícia. 
-                Isso inclui exames pélvicos, testes de Papanicolau, orientação contraceptiva, 
-                cuidados pré-natais e acompanhamento durante a menopausa.</p>
-        </div>
-    </div>
-</div>                
-                
-    </div>
-</div>
-  
-
-    <!-- Footer -->
-  <footer class="text-center text-lg-start bg-light text-muted" id="sobre">
-  <!-- Section: Social media -->
+<footer class="text-center text-lg-start bg-light text-muted" id="rodape">
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
  </section>
-  <!-- Section: Social media -->
 
-  <!-- Section: Links  -->
   <section class="">
     <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
       <div class="row mt-3">
-        <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4"> 
-          <i class="fas fa-gem me-3"></i>Agenda+Saúde
+            <i class="fas fa-gem me-3"></i>Agenda+Saúde
           </h6>
           <p>
-            Desde sua fundação, a Agenda+Saúde tem o compromisso de oferecer atendimento médico de qualidade com pontualidade e cuidado, 
-            utilizando equipamentos modernos e um ambiente projetado para o conforto dos pacientes.
+            Desde sua fundação, a Agenda+Saúde tem o compromisso de oferecer atendimento médico de qualidade com pontualidade e cuidado, utilizando equipamentos modernos e um ambiente projetado para o conforto dos pacientes.
           </p>
         </div>
-        <!-- Grid column -->
 
-        <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
             Acesso ao site
           </h6>
           <p>
             <a href="atendimentos.php" class="text-reset">Atendimentos</a>
           </p>
-
+          <p>
+            <a href="#!" class="text-reset">Sobre</a>
+          </p>
+          <p>
+            <a href="funcionario.php" class="text-reset">Trabalhe conosco.</a>
+          </p>
           
         </div>
-        <!-- Grid column -->
 
         
 
-        <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4" >Contato</h6>
-          <p> <img src=".img/casa.png" class="img-fluid" ><i class="fas fa-home me-3"></i> Rua Manoel Gomes, 20 - Duque de Caxias- Rj </p>
+          <p> <img src=".img/casa.png" class="img-fluid" ><i class="fas fa-casa me-3"></i> Rua Manoel Reis, 15 - Duque de Caxias- Rj </p>
           <p> <img src=".img/mail.png" class="img-fluid" >
             <i class="fas fa-envelope me-3"></i>
             agendasaude1@gmail.com
@@ -181,29 +166,23 @@
           <p ><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-phone me-3"></i> (21) 98019-2431</p>
           <p><img src=".img/phone.png" class="img-fluid" ><i class="fas fa-print me-3"></i> (21) 98904-7495</p>
         </div>
-        <!-- Grid column -->
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
 
-  <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 Direitos autorais:
     <a class="text-reset fw-bold" href="index.php">Agenda+Saúde</a>
   </div>
 </footer>
-<!-- Footer -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</footer>
 
 </body>
 
+
 <script> 
   
-                jQuery(document).ready(function() {
+      jQuery(document).ready(function() {
                 // Exibe ou oculta o botão
                 jQuery(window).scroll(function() {
                     if (jQuery(this).scrollTop() > 200) {
@@ -222,28 +201,4 @@
 
 </script>
 
-
-</html>    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script>
-        jQuery(document).ready(function() {
-            // Exibe ou oculta o botão de retorno ao topo
-            jQuery(window).scroll(function() {
-                if (jQuery(this).scrollTop() > 200) {
-                    jQuery('.topo-link').fadeIn(200);
-                } else {
-                    jQuery('.topo-link').fadeOut(200);
-                }
-            });
-
-            // Faz animação para subir ao topo da página
-            jQuery('.topo-link').click(function(event) {
-                event.preventDefault();
-                jQuery('html, body').animate({scrollTop: 0}, 300);
-            });
-        });
-    </script>
-
-</body>
 </html>
