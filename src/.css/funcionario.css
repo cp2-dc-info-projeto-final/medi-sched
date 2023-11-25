@@ -13,14 +13,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94d;
+    background: #e3f2fd; /* Um tom de azul claro e suave */
 }
 
 .container {
     width: 80%;
-    height: 80vh;
+    max-height: 80vh;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Cantos arredondados para suavidade */
 }
 
 .form-image {
@@ -28,12 +29,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #ffffff; /* Fundo branco para a imagem */
     padding: 1rem;
+    border-radius: 15px 0 0 15px; /* Cantos arredondados do lado da imagem */
 }
 
 .form-image img {
-    width: 31rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .form {
@@ -44,146 +47,151 @@ body {
     align-items: center;
     background-color: #fff;
     padding: 3rem;
+    border-radius: 0 15px 15px 0; /* Cantos arredondados do lado do formulário */
 }
 
 .form-header {
     margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
 }
 
-.login-button {
-    display: flex;
-    align-items: center;
-}
-
-.login-button button {
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button button:hover {
-    background-color: #6b63fff1;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
+.form-header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #009688;
+    margin-bottom: .5rem;
 }
 
 .form-header h1::after {
     content: '';
     display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #6c63ff;
-    margin: 0 auto;
-    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #009688;
+    margin: 8px auto 0;
     border-radius: 10px;
 }
 
 .input-group {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 .input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.1rem;
+    flex: 0 0 48%; /* Define a caixa de entrada para pegar 48% do espaço disponível, deixando algum espaço entre elas */
+    margin-bottom: 1rem;
 }
 
 .input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    font-size: 0.8rem;
-}
-
-.input-box input:hover {
-    background-color: #eeeeee75;
-}
-
-.input-box input:focus-visible {
-    outline: 1px solid #6b63fff1;
-}
-
-.input-box label,
-.genero-title h6 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #000000c0;
-}
-
-.input-box input::placeholder {
-    color: #000000be;
-}
-
-.genero-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.62rem;
-    padding: 0 .5rem;
-}
-
-.genero-input {
-    display: flex;
-    align-items: center;
-}
-
-.genero-input input {
-    margin-right: 0.35rem;
-}
-
-.genero-input label {
-    font-size: 0.81rem;
-    font-weight: 600;
-    color: #000000c0;
-}
-
-.continue-button button {
     width: 100%;
-    margin-top: 2.5rem;
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.62rem;
-    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Cantos arredondados nas input-box */
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Mantém os cantos arredondados como nas outras input-box */
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Ajuste conforme necessário para corresponder ao tamanho das outras caixas de entrada */
+    background: white;
+    -webkit-appearance: none; /* Remove a aparência padrão para navegadores WebKit/Blink */
+    -moz-appearance: none; /* Remove a aparência padrão para o Firefox */
+    appearance: none; /* Remove a aparência padrão para navegadores modernos */
     cursor: pointer;
 }
 
+.input-box select::-ms-expand {
+    display: none; /* Esconde a seta padrão no IE */
+}
+
+.input-box::after {
+    content: '\25BC'; /* Adiciona ícone de seta para baixo */
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 3px); /* Ajuste a posição vertical conforme necessário */
+    pointer-events: none;
+    color: #333;
+}
+
+.continue-button {
+    width: 100%;
+    text-align: center; /* Centraliza o botão dentro do seu contêiner */
+    margin-top: 2rem; /* Aumenta a distância do campo 'Gênero' */
+}
+
+.continue-button button {
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 1rem; /* Ajusta o tamanho da fonte conforme necessário */
+    border-radius: 25px; /* Cantos mais arredondados */
+    background-color: #009688; /* Usa o tom de azul padrão */
+    color: white;
+    border: none; /* Remove a borda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para um efeito 3D */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .continue-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #00796b; /* Um tom mais escuro para o hover */
 }
 
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
+.login-button {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 1rem; /* Adiciona um pouco de espaço acima do botão */
 }
 
-/* Estilo para o campo "Áreas Médicas" */
-.input-box select {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    font-size: 0.8rem;
+.login-button button {
+    border: none; /* Remove a borda */
+    background: none; /* Remove o fundo padrão */
+    color: #009688; /* Usa o tom de azul para o texto */
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.input-box select:hover {
-    background-color: #eeeeee75;
+.login-button button:hover {
+    color: #00796b; /* Um tom mais escuro para o hover */
 }
 
-.input-box select:focus-visible {
-    outline: 1px solid #6b63fff1;
+.login-button button a {
+    text-decoration: none; /* Remove a sublinha do link */
+    color: inherit; /* Herda a cor do botão para o texto do link */
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        max-height: none;
+    }
+
+    .form-image, .form {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .form-image {
+        padding: 0.5rem;
+    }
+
+    .form {
+        padding: 2rem;
+    }
+
+    .input-box {
+        flex: 0 0 100%; /* Em telas menores, as caixas de entrada ocupam a largura total */
+    }
 }
