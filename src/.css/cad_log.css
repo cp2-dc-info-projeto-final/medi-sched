@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3f2fd; /* Um tom de azul claro e suave */
+}
+
+.container {
+    width: 80%;
+    max-height: 80vh;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Cantos arredondados para suavidade */
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco para a imagem */
+    padding: 1rem;
+    border-radius: 15px 0 0 15px; /* Cantos arredondados do lado da imagem */
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 0 15px 15px 0; /* Cantos arredondados do lado do formulário */
+}
+
+.form-header {
+    margin-bottom: 3rem;
+}
+
+.form-header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #009688;
+    margin-bottom: .5rem;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #009688;
+    margin: 8px auto 0;
+    border-radius: 10px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.input-box {
+    flex: 0 0 48%; /* Define a caixa de entrada para pegar 48% do espaço disponível, deixando algum espaço entre elas */
+    margin-bottom: 1rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Cantos arredondados nas input-box */
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.continue-button {
+    width: 100%;
+    text-align: center; /* Centraliza o botão dentro do seu contêiner */
+    margin-top: 2rem; /* Aumenta a distância do campo 'Gênero' */
+}
+
+.continue-button button {
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 1rem; /* Ajusta o tamanho da fonte conforme necessário */
+    border-radius: 25px; /* Cantos mais arredondados */
+    background-color: #009688; /* Usa o tom de azul padrão */
+    color: white;
+    border: none; /* Remove a borda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para um efeito 3D */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button button:hover {
+    background-color: #00796b; /* Um tom mais escuro para o hover */
+}
+
+.login-button {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 1rem; /* Adiciona um pouco de espaço acima do botão */
+}
+
+.login-button button {
+    border: none; /* Remove a borda */
+    background: none; /* Remove o fundo padrão */
+    color: #009688; /* Usa o tom de azul para o texto */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-button button:hover {
+    color: #00796b; /* Um tom mais escuro para o hover */
+}
+
+.login-button button a {
+    text-decoration: none; /* Remove a sublinha do link */
+    color: inherit; /* Herda a cor do botão para o texto do link */
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        max-height: none;
+    }
+
+    .form-image, .form {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .form-image {
+        padding: 0.5rem;
+    }
+
+    .form {
+        padding: 2rem;
+    }
+
+    .input-box {
+        flex: 0 0 100%; /* Em telas menores, as caixas de entrada ocupam a largura total */
+    }
+}
