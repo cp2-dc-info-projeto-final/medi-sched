@@ -47,10 +47,3 @@ CREATE TABLE IF NOT EXISTS Agendamento (
 );
 
 
-DROP TABLE IF EXISTS Servico;
-CREATE TABLE Servico (
-    idServico INT NOT NULL AUTO_INCREMENT,
-    nome_servico VARCHAR(200) NOT NULL,
-    descricao VARCHAR(200) NOT NULL,
-    PRIMARY KEY (idServico)
-);
