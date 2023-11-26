@@ -1,56 +1,53 @@
-INCOMPLETO
-
 <?php
-
-include "autentica.php";
+session_start();
 include "conecta_mysql.php";
-include "envia_email.php";
 
+// Verifique se o usuário está logado
+if (!isset($_SESSION['email'])) {
+    $_SESSION['mensagem'] = "Você precisa estar logado para cancelar um agendamento.";
+    header('Location: login.php');
+    exit;
+}
 
-$idAgendamento = $_REQUEST['idAgendamento'];
+// Verifique se o ID do agendamento foi fornecido
+if (!isset($_GET['idAgendamento'])) {
+    $_SESSION['mensagem'] = "ID do agendamento não fornecido.";
+    header('Location: status_agendamento.php');
+    exit;
+}
 
-$sql = "select * from Agendamento where idAgendamento = $idAgendamento";
-$res = mysqli_query($mysqli, $sql);
-$var = mysqli_fetch_array($res);
+$idAgendamento = $_GET['idAgendamento'];
 
-$nomeFuncionario = utf8_encode($var["  nomeFuncionario"]);
-$nomeCliente = utf8_encode($var["nomeCliente"]);
+// Primeiro, verifique se o agendamento existe
+$stmt = $mysqli->prepare("SELECT * FROM Agendamento WHERE idAgendamento = ?");
+$stmt->bind_param("i", $idAgendamento);
+$stmt->execute();
+$result = $stmt->get_result();
 
-$servico = utf8_encode($var["servico"]);
-$data_consulta = date('d/m/Y', strtotime($var["data_consulta"]));
-$horario_consulta = $var["horario_consulta"];
+// Se não houver agendamento com esse ID, redirecione com uma mensagem
+if ($result->num_rows == 0) {
+    $_SESSION['mensagem'] = "Agendamento não encontrado.";
+    $stmt->close();
+    header('Location: status_agendamento.php');
+    exit;
+}
 
-$idCliente = $var["idCliente"];
-$idFuncionario = $var["idFuncionario"];
+// O agendamento existe, então podemos prosseguir para cancelá-lo
+$stmt->close();
+$stmt = $mysqli->prepare("DELETE FROM Agendamento WHERE idAgendamento = ?");
+$stmt->bind_param("i", $idAgendamento);
 
-$sql = "select * from cliente where idCliente = 'idCliente'";
-$res = mysqli_query($mysqli, $sql);
-$cliente = mysqli_fetch_array($res);
+// Tente executar a consulta
+if ($stmt->execute()) {
+    $_SESSION['mensagem'] = "Agendamento cancelado com sucesso.";
+} else {
+    $_SESSION['mensagem'] = "Erro ao cancelar o agendamento.";
+}
 
-$email_cliente = $cliente["email"];
+$stmt->close();
+$mysqli->close();
 
-$sql = "select * from funcionario where idCliente = 'idCliente'";
-$res= mysqli_query($mysqli,$sql);
-$funcionario= mysqli_fetch_array($res);
-$email_funcionario = $funcionario["email"];
-
-#Enviar email
-
-$para = $email_cliente;
-$assunto = utf8_decode("Agendamento cancelado!");
-$mensagem = utf8_decode("<h2><u>Olá $nomeCliente!</u></h2> <br> <small>Cliente </small> <br> <h3>O serviço de <b>$servico</b> no dia <b>$data_consulta</b> às <b>$horario_consulta</b> com o (a) funcionário (a) <b>$nomeFuncionario</b> foi cancelado com sucesso.</h3> <br> ");
-envia_email($para, $assunto, $mensagem);
-
-$para = $email_funcionario;
-$assunto = utf8_decode("Agendamento cancelado!");
-$mensagem = utf8_decode("<h2><u>Olá $nomeFuncionario!</u></h2> <br> <small>Funcionário</small> <br> <h3>O serviço de <b>$servico</b> no dia <b>$data_consulta</b> às <b>$horario_consulta</b> foi cancelado pelo cliente <b>$nomeCliente</b>.</h3> <br> ");
-envia_email($para, $assunto, $mensagem);
-
-
-$sql = "UPDATE Agendamento SET idCliente = NULL, nomeCliente = NULL WHERE idAgendamento = '$idAgendamento'";
-$res= mysqli_query($mysqli,$sql);
-
-$_SESSION['mensagem_agendamento'] = "<div class='alert alert-success'>Agendamento cancelado!</div>";
-
-mysqli_close($mysqli);
+// Redirecione de volta para a página de status de agendamentos do usuário
+header('Location: status_agendamento.php');
+exit;
 ?>
