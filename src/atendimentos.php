@@ -117,8 +117,6 @@
     	</div>
     </section>
 
-    </section>
-
     <a href="#" class="topo-link">&#9650;</a>
 
 <footer class="text-center text-lg-start bg-light text-muted" id="rodape">
