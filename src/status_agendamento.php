@@ -27,7 +27,7 @@ session_start();
         <?php endif; ?>
         
         <!-- Botões de ação -->
-        <a href="meus_agendamentos.php" class="btn btn-primary">Voltar aos Meus Agendamentos</a>
+        <a href="meus_agend.php" class="btn btn-primary">Voltar aos Meus Agendamentos</a>
         <a href="index_paciente.php" class="btn btn-secondary">Voltar ao Início</a>
     </div>
 </body>
