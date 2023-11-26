@@ -38,10 +38,7 @@ CREATE TABLE IF NOT EXISTS Agendamento (
     idAgendamento INT AUTO_INCREMENT PRIMARY KEY,
     idServico INT NOT NULL,
     idFuncionario INT NOT NULL,
-    idCliente INT NOT NULL, 
-    nomeServico VARCHAR(255),
-    nomeFuncionario VARCHAR(255),
-    nomeCliente VARCHAR(255),
+    idCliente INT NOT NULL,
     data_consulta DATE NOT NULL,
     horario_consulta TIME NOT NULL,
     FOREIGN KEY (idServico) REFERENCES Servico(idServico),
@@ -49,5 +46,16 @@ CREATE TABLE IF NOT EXISTS Agendamento (
     FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente) 
 );
 
+DROP TABLE IF EXISTS Administrador;
 
+CREATE TABLE IF NOT EXISTS Administrador (
+    idAdministrador INT AUTO_INCREMENT PRIMARY KEY,
+    nome_administrador VARCHAR(100) NOT NULL,
+    sobrenome_administrador VARCHAR(100) NOT NULL,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    senha VARCHAR(200) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    data_nascimento DATE NOT NULL,
+    genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
+);
 
