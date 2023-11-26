@@ -1,58 +1,30 @@
 <?php
+include "conecta_mysql.php"; // Conecta ao banco de dados
 
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $primeiro_nome = $_POST["firstname"];
-    $sobrenome = $_POST["lastname"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $cpf = $_POST["cpf"];
-    $data_nascimento = $_POST["dataNascimento"];
-    $genero = $_POST["genero"];
-    $cargo = $_POST["areasMedicas"]; 
+    $primeiro_nome = $_POST["firstname"] ?? '';
+    $sobrenome = $_POST["lastname"] ?? '';
+    $email = $_POST["email"] ?? '';
+    $senha = $_POST["senha"] ?? '';
+    $cpf = $_POST["cpf"] ?? '';
+    $data_nascimento = $_POST["dataNascimento"] ?? '';
+    $genero = $_POST["genero"] ?? '';
+    $cargo = $_POST["cargo"] ?? ''; // Ajuste para o campo 'cargo'
+    $area = $_POST["areasMedicas"] ?? ''; // Ajuste para o campo 'area'
 
     $erro = false;
 
-    if (empty($primeiro_nome) || empty($sobrenome)) {
-        $mensagemErro .= "Preencha o nome completo com sobrenome.<br>";
-        $erro = true;
-    }
+    // Validações aqui...
 
-    if (strlen($email) < 8 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $mensagemErro .= "Preencha um email válido com pelo menos 8 caracteres.<br>";
-        $erro = true;
-    }
-
-    if (strlen($senha) < 8) {
-        $mensagemErro .= "A senha deve ter pelo menos 8 caracteres.<br>";
-        $erro = true;
-    }
-
-    if (empty($cpf) || strlen($cpf) != 14) {
-        $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
-        $erro = true;
-    }
-    
-    if (empty($data_nascimento) || !strtotime($data_nascimento)) {
-        $mensagemErro .= "Preencha uma data de nascimento válida no formato YYYY-MM-DD.<br>";
-        $erro = true;
-    }
-
-    if (empty($genero)) {
-        $mensagemErro .= "Selecione o gênero.<br>";
-        $erro = true;
-    }
-
-    // Conectar ao banco de dados
-    $mysqli = new mysqli("localhost", "seu_usuario", "sua_senha", "seu_banco_de_dados");
-
+    $mysqli = mysqli_connect("localhost", "agendasaude", "123", "AGENDASAUDE") or die ("Erro de conexão com o banco de dados");
     if ($mysqli->connect_error) {
         die("Erro na conexão: " . $mysqli->connect_error);
     }
 
-    // Verificar se o email já está cadastrado
+    // Verificação de email duplicado
     $stmt = $mysqli->prepare("SELECT email FROM Funcionario WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -62,33 +34,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagemErro .= "Este endereço de email já está cadastrado.<br>";
         $erro = true;
     }
-
     $stmt->close();
-    
-    if (!$erro) { 
-        // Criptografar a senha
+
+    if (!$erro) {
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
-    
-        // Inserir dados na tabela Funcionario
-        $stmt = $mysqli->prepare("INSERT INTO Funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, cargo, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $cargo, $genero);
+
+        $stmt = $mysqli->prepare("INSERT INTO Funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, cargo, area, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $cargo, $area, $genero);
     
         if ($stmt->execute()) {
+            $stmt->close();
             $mysqli->close();
-            header("Location: index.php"); // Redireciona para a página inicial
+            header("Location: index.php"); // Redirecionamento para a página do funcionário
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
         }
-    
+
         $stmt->close();
     }
     
     $mysqli->close();
 }
 
-echo $mensagemErro; // Exibe as mensagens de erro no formulário
-
+if ($mensagemErro) {
+    echo "<div class='alert alert-danger'>$mensagemErro</div>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -124,7 +95,7 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
 
                     <div class="input-box">
                         <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name "lastname" placeholder="Digite seu sobrenome" required>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
                     </div>
                     <div class="input-box">
                         <label for="email">E-mail</label>
@@ -138,7 +109,7 @@ echo $mensagemErro; // Exibe as mensagens de erro no formulário
 
                     <div class="input-box">
                         <label for="senha">Senha</label>
-                        <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
                     <div class="input-box">
