@@ -2,52 +2,69 @@
 session_start();
 include "conecta_mysql.php";
 
-// Verifique se o usuário está logado
-if (!isset($_SESSION['email'])) {
-    $_SESSION['mensagem'] = "Você precisa estar logado para cancelar um agendamento.";
+if (!isset($_SESSION['idCliente'])) {
     header('Location: login.php');
     exit;
 }
 
-// Verifique se o ID do agendamento foi fornecido
-if (!isset($_GET['idAgendamento'])) {
-    $_SESSION['mensagem'] = "ID do agendamento não fornecido.";
-    header('Location: status_agendamento.php');
-    exit;
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idAgendamento'])) {
+    $idAgendamento = $_POST['idAgendamento'];
 
-$idAgendamento = $_GET['idAgendamento'];
+    // Prepare a statement for deletion
+    $stmt = $mysqli->prepare("DELETE FROM Agendamento WHERE idAgendamento = ? AND idCliente = ?");
+    $stmt->bind_param("ii", $idAgendamento, $_SESSION['idCliente']);
 
-// Primeiro, verifique se o agendamento existe
-$stmt = $mysqli->prepare("SELECT * FROM Agendamento WHERE idAgendamento = ?");
-$stmt->bind_param("i", $idAgendamento);
-$stmt->execute();
-$result = $stmt->get_result();
+    if ($stmt->execute()) {
+        $_SESSION['mensagemStatus'] = "Agendamento cancelado com sucesso.";
+    } else {
+        $_SESSION['mensagemStatus'] = "Erro ao cancelar o agendamento: " . $stmt->error;
+    }
 
-// Se não houver agendamento com esse ID, redirecione com uma mensagem
-if ($result->num_rows == 0) {
-    $_SESSION['mensagem'] = "Agendamento não encontrado.";
     $stmt->close();
-    header('Location: status_agendamento.php');
-    exit;
-}
-
-// O agendamento existe, então podemos prosseguir para cancelá-lo
-$stmt->close();
-$stmt = $mysqli->prepare("DELETE FROM Agendamento WHERE idAgendamento = ?");
-$stmt->bind_param("i", $idAgendamento);
-
-// Tente executar a consulta
-if ($stmt->execute()) {
-    $_SESSION['mensagem'] = "Agendamento cancelado com sucesso.";
+    $mysqli->close();
 } else {
-    $_SESSION['mensagem'] = "Erro ao cancelar o agendamento.";
+    $_SESSION['mensagemStatus'] = "ID do agendamento não foi fornecido.";
 }
 
-$stmt->close();
-$mysqli->close();
-
-// Redirecione de volta para a página de status de agendamentos do usuário
 header('Location: status_agendamento.php');
 exit;
 ?>
+
+
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <title>Cancelar Agendamento | Agenda+Saúde</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Incluir CSS e outros -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Cancelar Agendamento</h2>
+
+        <!-- Exibe a mensagem de sucesso -->
+        <?php if (!empty($mensagemSucesso)): ?>
+            <div class="alert alert-success" role="alert">
+                <?php echo $mensagemSucesso; ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- Exibe a mensagem de erro -->
+        <?php if (!empty($mensagemErro)): ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $mensagemErro; ?>
+            </div>
+        <?php endif; ?>
+
+        <form action="cancelar_agendamento.php" method="post">
+            <div class="mb-3">
+                <label for="idAgendamento" class="form-label">ID do Agendamento</label>
+                <input type="number" class="form-control" id="idAgendamento" name="idAgendamento" placeholder="Digite o ID do agendamento" required>
+            </div>
+            <button type="submit" class="btn btn-danger">Cancelar Agendamento</button>
+        </form>
+    </div>
+</body>
+</html>
