@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST["cpf"] ?? '';
     $data_nascimento = $_POST["dataNascimento"] ?? '';
     $genero = $_POST["genero"] ?? '';
-    $cargo = $_POST["cargo"] ?? ''; // Ajuste para o campo 'cargo'
-    $area = $_POST["areasMedicas"] ?? ''; // Ajuste para o campo 'area'
+    $cargo = $_POST["cargo"] ?? ''; 
+    $area = $_POST["areasMedicas"] ?? '';
 
     $erro = false;
 
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             $stmt->close();
             $mysqli->close();
-            header("Location: index.php"); // Redirecionamento para a página do funcionário
+            header("Location: index.php"); // Redirecionamento para a página
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
