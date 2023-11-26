@@ -56,7 +56,7 @@ $mysqli->close();
 <html lang="pt-br">
 <head>
     <title>Editar Agendamento | Agenda+Saúde</title>
-    <!-- Incluir CSS e outros -->
+    
 </head>
 <body>
     <div class="container mt-5">
