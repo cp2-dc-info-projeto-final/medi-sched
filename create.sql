@@ -39,11 +39,15 @@ CREATE TABLE IF NOT EXISTS Agendamento (
     idServico INT NOT NULL,
     idFuncionario INT NOT NULL,
     idCliente INT NOT NULL, 
+    nomeServico VARCHAR(255),
+    nomeFuncionario VARCHAR(255),
+    nomeCliente VARCHAR(255),
     data_consulta DATE NOT NULL,
     horario_consulta TIME NOT NULL,
     FOREIGN KEY (idServico) REFERENCES Servico(idServico),
     FOREIGN KEY (idFuncionario) REFERENCES Funcionario(idFuncionario),
     FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente) 
 );
+
 
 
