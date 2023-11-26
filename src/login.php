@@ -1,7 +1,9 @@
 <?php
-include "conecta_mysql.php";
+include "conecta_mysql.php"; // Conecta ao banco de dados
 
 session_start();
+
+$mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -10,40 +12,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escapar caracteres especiais para segurança na consulta ao banco de dados
     $email = mysqli_real_escape_string($mysqli, $email);
 
+    // Primeiro verifica na tabela de clientes
     $sqlCliente = "SELECT * FROM cliente WHERE email = '$email'";
     $resultCliente = mysqli_query($mysqli, $sqlCliente);
 
+    // Depois verifica na tabela de funcionários
     $sqlFuncionario = "SELECT * FROM funcionario WHERE email = '$email'";
     $resultFuncionario = mysqli_query($mysqli, $sqlFuncionario);
 
     if (!$resultCliente || !$resultFuncionario) {
-        echo "Erro na consulta: " . mysqli_error($mysqli);
+        $mensagemErro = "Erro na consulta: " . mysqli_error($mysqli);
     } else {
         $rowCliente = mysqli_fetch_assoc($resultCliente);
         $rowFuncionario = mysqli_fetch_assoc($resultFuncionario);
 
-        if (($rowCliente && password_verify($senha, $rowCliente["senha"])) || ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"]))) {
-            $_SESSION['email'] = $email; // Guarda o email na sessão após o login bem-sucedido
+        if ($rowCliente && password_verify($senha, $rowCliente["senha"])) {
+            // Define as variáveis de sessão necessárias
+            $_SESSION['email'] = $email;
+            $_SESSION['idCliente'] = $rowCliente["idCliente"];
+            $_SESSION['tipoUsuario'] = 'cliente'; // Esta linha é opcional, usada para identificar o tipo de usuário
 
-            // Verifica se há um redirecionamento específico na sessão
-            if (isset($_SESSION['redirect_to'])) {
-                $redirect_to = $_SESSION['redirect_to'];
-                unset($_SESSION['redirect_to']); // Limpa a variável de sessão após usar
-                header("Location: $redirect_to");
-                exit;
+            // Verifica se há uma página de redirecionamento pendente
+            if (isset($_SESSION['login_redirect'])) {
+                $redirectPage = $_SESSION['login_redirect'];
+                unset($_SESSION['login_redirect']);
+                header("Location: $redirectPage");
             } else {
-                header("Location: index_paciente.php");
-                exit;
+                header("Location: index_paciente.php"); // Redireciona para a página do paciente
             }
+            exit;
+        } elseif ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) {
+            // Define as variáveis de sessão necessárias
+            $_SESSION['email'] = $email;
+            $_SESSION['idFuncionario'] = $rowFuncionario["idFuncionario"];
+            $_SESSION['tipoUsuario'] = 'funcionario'; // Esta linha é opcional, usada para identificar o tipo de usuário
+
+            header("Location: index_funcionario.php"); // Redireciona para a página do funcionário
+            exit;
         } else {
-            echo "Credenciais inválidas. Tente novamente.";
+            $mensagemErro = "Credenciais inválidas. Tente novamente.";
         }
     }
 }
 
 mysqli_close($mysqli);
 ?>
-
 
 
 <!DOCTYPE html>
