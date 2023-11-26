@@ -111,6 +111,7 @@ body {
     cursor: pointer;
 }
 
+/* Você pode adicionar um ícone de seta para baixo com CSS se quiser */
 .input-box select::-ms-expand {
     display: none; /* Esconde a seta padrão no IE */
 }
