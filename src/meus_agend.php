@@ -55,29 +55,30 @@ $mysqli->close();
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <div class="container mt-5">
+<div class="container mt-5">
         <h2>Meus Agendamentos</h2>
         <?php if (count($agendamentos) > 0): ?>
             <table class="table table-striped mt-4">
-                
+                <thead>
+                    <tr>
+                        <th>ID do Agendamento</th>
+                        <th>ID do Serviço</th>
+                        <th>ID do Funcionário</th>
+                        <th>ID do Cliente</th>
+                        <th>Data da Consulta</th>
+                        <th>Horário da Consulta</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <?php foreach ($agendamentos as $agendamento): ?>
+                <?php foreach ($agendamentos as $agendamento): ?>
                         <tr>
-                            <th>ID do Agendamento</th>
-                            <th>ID do Serviço</th>
-                            <th>ID do Funcionário</th>
-                            <th>ID do Cliente</th>
-                            <th>Data da Consulta</th>
-                            <th>Horário da Consulta</th>
-                        </tr>
-                            <td>
-                                <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
-                                <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
-                                <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
-                                <td><?php echo isset($agendamento['idCliente']) ? htmlspecialchars($agendamento['idCliente']) : 'Não informado'; ?></td>
-                                <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
-                                <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
-                            </td>
+                            <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
+                            <td><?php echo isset($agendamento['idCliente']) ? htmlspecialchars($agendamento['idCliente']) : 'Não informado'; ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
                             <td>
                                 <a href="editar_agendamento.php?id=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-primary btn-sm">Editar</a>
                                 <form action="cancela_agendamento.php" method="post" style="display: inline;">
@@ -90,8 +91,10 @@ $mysqli->close();
                 </tbody>
             </table>
         <?php else: ?>
-            <p>Não existem agendamentos marcados</p>
+            <p>Não existem agendamentos marcados.</p>
         <?php endif; ?>
     </div>
+
+        
 </body>
 </html>
