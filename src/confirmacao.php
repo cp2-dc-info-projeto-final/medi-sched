@@ -16,7 +16,7 @@
             <img src=".img/joinha.png" alt="Confirmação" style="width: 150px;" class="my-3">
             <p>Seu agendamento foi realizado com sucesso.</p>
             <p>Por favor, verifique seu e-mail para mais detalhes.</p>
-            <a href="index.php" class="btn btn-primary">Voltar para a Página Inicial</a>
+            <a href="index_paciente.php" class="btn btn-primary">Voltar para a Página Inicial</a>
         </div>
     </div>
 </body>
