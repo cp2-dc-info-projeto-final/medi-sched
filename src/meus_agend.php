@@ -2,52 +2,46 @@
 session_start();
 include "conecta_mysql.php"; 
 
-// Verifica se o cliente está logado e se o e-mail está na sessão
 if (!isset($_SESSION['email'])) {
-    header('Location: login.php'); // Redireciona para a página de login se não estiver logado
+    header('Location: login.php');
     exit;
 }
 
 $email = $_SESSION['email'];
 $agendamentos = array();
 
-// Conecta ao banco de dados e busca os agendamentos
 if ($mysqli->connect_error) {
     die("Erro na conexão: " . $mysqli->connect_error);
 }
-//seleciona registros
-$stmt = $mysqli->prepare("SELECT A.idAgendamento, A.data_consulta, A.horario_consulta, S.nome_servico, F.nome_funcionario 
-                          FROM Agendamento A
-                          INNER JOIN Servico S ON A.idServico = S.idServico
-                          INNER JOIN Funcionario F ON A.idFuncionario = F.idFuncionario
-                          INNER JOIN Cliente C ON C.email
-                          WHERE C.email = ?");
-echo $mysqli->error;
+
+// Obtem o idCliente com base no email do cliente logado
+$stmt = $mysqli->prepare("SELECT idCliente FROM Cliente WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
+$idCliente = null;
+if ($row = $result->fetch_assoc()) {
+    $idCliente = $row['idCliente'];
+}
+$stmt->close();
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $agendamentos[] = $row;
+// Se o idCliente foi encontrado, busca os agendamentos
+if ($idCliente !== null) {
+    $stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
+    $stmt->bind_param("i", $idCliente);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $agendamentos[] = $row;
+        }
+    } else {
+        echo "<p>Você não tem agendamentos marcados.</p>";
     }
+    $stmt->close();
 }
 
-$stmt->close();
-$mysqli->close();
-
-$stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, idCliente, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
-$stmt->bind_param("i", $idCliente);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $agendamentos[] = $row;
-    }
-}
-
-$stmt->close();
 $mysqli->close();
 ?>
 
@@ -78,19 +72,19 @@ $mysqli->close();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($agendamentos as $agendamento): 
-                        //converte caracteres predefinidos em entidades HTML
-                        ?>
-                    
-                    <tr>
-                    
-                        <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento['idCliente']); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
-                        <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
-                    </tr>
+                    <?php foreach ($agendamentos as $agendamento): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
+                            <td><?php echo isset($agendamento['idCliente']) ? htmlspecialchars($agendamento['idCliente']) : 'Não informado'; ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
+                            <td>
+                                <a href="editar_agendamento.php?id=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-primary btn-sm">Editar</a>
+                                <a href="cancela_agendamento.php?id=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">Cancelar</a>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
