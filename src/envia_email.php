@@ -20,13 +20,13 @@ function envia_email($para, $assunto, $mensagem){
         $mail->Host       = 'smtp.gmail.com';                       //Define o servidor SMTP utilizado para o envio
         $mail->SMTPAuth   = true;                                   //Habilita a autenticação do SMTP
         $mail->Username   = 'agendasaude1@gmail.com';               //usuário SMTP
-        $mail->Password   = 'wsrictjxblwgsxjo';                      //senha SMTP
+        $mail->Password   = 'hqmutctjeeybhrqs';                      //senha SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Habilita a encriptação implícita TLS
         $mail->Port       = 587;                                    //Porta TCP de conexão; use 587 se você tiver configurado `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
 
         //Remetente e Destinatários
-        $mail->setFrom('agendasaude1@gmail.com', 'Site do Professor');  // Adiciona o remetente
+        $mail->setFrom('agendasaude1@gmail.com', 'Agenda+Saúde');  // Adiciona o remetente
         $mail->addAddress($para);                                       // Adiciona um destinatário
         // $mail->addAddress('ellen@example.com');                      // O nome é opcional
         // $mail->addReplyTo('info@example.com', 'Information');        // Adicona um endereço de resposta
