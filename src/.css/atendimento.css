@@ -1,94 +1,102 @@
-/* Reset CSS e estilos básicos */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-}
-
-/* Cabeçalho */
-#header {
-    background-color: #fff;
-    padding: 10px 0;
-}
-
-.navbar-brand img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilização dos botões */
-.button {
-    margin: 5px;
-    border-radius: 0.25rem;
-}
-
-/* Botão 'Cadastre-se' com destaque em vermelho */
-.btn-primary {
-    background-color: #ff0000; /* Vermelho */
-    border-color: #ff0000; /* Borda vermelha */
-}
-
-.btn-primary:hover {
-    background-color: #cc0000; /* Vermelho mais escuro para hover */
-    border-color: #cc0000;
-}
-
-/* Efeito hover nos links da navbar */
-.navbar-nav .nav-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #ff0000; /* Sublinhado em vermelho */
-}
-
-/* Estilo do rodapé */
-#sobre {
-    background-color: #f1f1f1;
-    padding: 20px 0;
-}
-
-#sobre h6 {
+    background-color: #f4f4f4;
+    line-height: 1.6;
     color: #333;
 }
 
-/* Estilização dos cartões de atendimento */
-.card {
-    background-color: #fff;
+/* Estilos para a navbar */
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: #0056b3;
+}
+
+/* Botão principal */
+.main-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.card-body h3 {
-    color: #333;
+.main-btn:hover {
+    background-color: #00408b;
 }
 
-
-/* Estilo para o link de retorno ao topo */
-.topo-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff0000;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    display: none;
-    z-index: 100;
+/* Conteúdo principal */
+.main-heading {
+    background-color: #e9eff5;
+    color: #007bff;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-.topo-link:hover {
-    background-color: #cc0000;
+/* Rodapé */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: #007bff;
+    color: white;
+}
+
+.footer div {
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    font-size: 0.875rem;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .navbar-collapse {
-        background-color: #fff;
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 0.5rem 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        margin-bottom: 1rem;
     }
 }
-
-
