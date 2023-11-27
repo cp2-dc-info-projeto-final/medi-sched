@@ -35,8 +35,8 @@ if ($idCliente !== null) {
             $agendamentos[] = $row;
         }
     } else {
-        echo "<p>Você não tem agendamentos marcados.</p>";
- }
+        $mensagem = "<p>Você não tem agendamentos marcados.</p>";
+    }
     $stmt->close();
 }
 
@@ -52,11 +52,42 @@ $mysqli->close();
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href=".css/meus_agend.css"/>
 </head>
-<body>
-<div class="container mt-5">
+<body class="fadeIn">
+    <div id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                <a class="navbar-brand" href="index.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil.php">Perfil</a>
+                        </li>
+			            <li class="nav-item">
+                	        <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
         <h2>Meus Agendamentos</h2>
+        <?php if (isset($mensagem)): echo $mensagem; endif; ?>
         <?php if (count($agendamentos) > 0): ?>
             <table class="table table-striped mt-4">
                 <thead>
@@ -71,12 +102,12 @@ $mysqli->close();
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($agendamentos as $agendamento): ?>
+                    <?php foreach ($agendamentos as $agendamento): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
-                            <td><?php echo isset($agendamento['idCliente']) ? htmlspecialchars($agendamento['idCliente']) : 'Não informado'; ?></td>
+                            <td><?php echo htmlspecialchars($idCliente); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
                             <td>
@@ -90,11 +121,9 @@ $mysqli->close();
                     <?php endforeach; ?>
                 </tbody>
             </table>
-        <?php else: ?>
-            <p>Não existem agendamentos marcados.</p>
         <?php endif; ?>
     </div>
 
-        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
