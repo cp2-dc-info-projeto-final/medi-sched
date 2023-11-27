@@ -1,5 +1,5 @@
 <?php
-include "conecta_mysql.php"; // Conecta ao banco de dados
+include "conecta_mysql.php"; // Conexão com o banco de dados
 
 session_start();
 
@@ -13,53 +13,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($mysqli, $email);
 
     // Primeiro verifica na tabela de administradores
-    $sqlAdmin = "SELECT * FROM Administrador WHERE email = '$email'";
-    $resultAdmin = mysqli_query($mysqli, $sqlAdmin);
+    $sqlAdmin = "SELECT * FROM Administrador WHERE email = ?";
+    $stmtAdmin = $mysqli->prepare($sqlAdmin);
+    $stmtAdmin->bind_param("s", $email);
+    $stmtAdmin->execute();
+    $resultAdmin = $stmtAdmin->get_result();
+    $rowAdmin = $resultAdmin->fetch_assoc();
 
-    // Depois verifica na tabela de clientes
-    $sqlCliente = "SELECT * FROM cliente WHERE email = '$email'";
-    $resultCliente = mysqli_query($mysqli, $sqlCliente);
-
-    // Por último, verifica na tabela de funcionários
-    $sqlFuncionario = "SELECT * FROM funcionario WHERE email = '$email'";
-    $resultFuncionario = mysqli_query($mysqli, $sqlFuncionario);
-
-    if ($resultAdmin) {
-        $rowAdmin = mysqli_fetch_assoc($resultAdmin);
-        if ($rowAdmin && password_verify($senha, $rowAdmin["senha"])) {
-            $_SESSION['email'] = $email;
-            $_SESSION['idAdministrador'] = $rowAdmin["idAdministrador"];
-            header("Location: index_adm.php"); // Redireciona para a página do administrador
-            exit;
-        }
+    if ($rowAdmin && password_verify($senha, $rowAdmin["senha"])) {
+        $_SESSION['email'] = $email;
+        $_SESSION['idAdministrador'] = $rowAdmin["idAdministrador"];
+        $_SESSION['tipo_usuario'] = 'administrador'; // Define o tipo de usuário na sessão
+        header("Location: index_adm.php"); // Redireciona para a página do administrador
+        exit;
     }
+    $stmtAdmin->close();
 
-    if ($resultCliente) {
-        $rowCliente = mysqli_fetch_assoc($resultCliente);
-        if ($rowCliente && password_verify($senha, $rowCliente["senha"])) {
-            $_SESSION['email'] = $email;
-            $_SESSION['idCliente'] = $rowCliente["idCliente"];
-            header("Location: index_paciente.php"); // Redireciona para a página do paciente
-            exit;
-        }
-    }
+    // Se não for administrador, verifica na tabela de clientes
+    $sqlCliente = "SELECT * FROM Cliente WHERE email = ?";
+    $stmtCliente = $mysqli->prepare($sqlCliente);
+    $stmtCliente->bind_param("s", $email);
+    $stmtCliente->execute();
+    $resultCliente = $stmtCliente->get_result();
+    $rowCliente = $resultCliente->fetch_assoc();
 
-    if ($resultFuncionario) {
-        $rowFuncionario = mysqli_fetch_assoc($resultFuncionario);
-        if ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) {
-            $_SESSION['email'] = $email;
-            $_SESSION['idFuncionario'] = $rowFuncionario["idFuncionario"];
-            header("Location: index_funcionario.php"); // Redireciona para a página do funcionário
-            exit;
-        }
+    if ($rowCliente && password_verify($senha, $rowCliente["senha"])) {
+        $_SESSION['email'] = $email;
+        $_SESSION['idCliente'] = $rowCliente["idCliente"];
+        $_SESSION['tipo_usuario'] = 'cliente';
+        header("Location: index_paciente.php"); // Redireciona para a página do paciente
+        exit;
     }
+    $stmtCliente->close();
+
+    // Se não for cliente, verifica na tabela de funcionários
+    $sqlFuncionario = "SELECT * FROM Funcionario WHERE email = ?";
+    $stmtFuncionario = $mysqli->prepare($sqlFuncionario);
+    $stmtFuncionario->bind_param("s", $email);
+    $stmtFuncionario->execute();
+    $resultFuncionario = $stmtFuncionario->get_result();
+    $rowFuncionario = $resultFuncionario->fetch_assoc();
+
+    if ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) {
+        $_SESSION['email'] = $email;
+        $_SESSION['idFuncionario'] = $rowFuncionario["idFuncionario"];
+        $_SESSION['tipo_usuario'] = 'funcionario';
+        header("Location: index_funcionario.php"); // Redireciona para a página do funcionário
+        exit;
+    }
+    $stmtFuncionario->close();
 
     // Se o login falhar
     $mensagemErro = "Credenciais inválidas. Tente novamente.";
 }
 
+// Sempre feche a conexão depois de usar
 mysqli_close($mysqli);
 ?>
+
+
 
 
 
