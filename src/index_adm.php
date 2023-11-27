@@ -27,10 +27,7 @@
                             <a class="nav-link" href="funcionario.php">Cadastrar Funcionario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editar_funcionario.php">Editar Funcionario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="excluir_funcionario.php">Excluir Funcionario</a>
+                            <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>
