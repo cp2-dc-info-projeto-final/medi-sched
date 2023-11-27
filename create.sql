@@ -27,7 +27,6 @@ CREATE TABLE Funcionario (
     senha VARCHAR(200) NOT NULL,
     data_nascimento DATE NOT NULL,
     cpf VARCHAR(14) NOT NULL UNIQUE,
-    cargo VARCHAR(50) NOT NULL,
     area VARCHAR(50) NOT NULL, 
     genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL,
     PRIMARY KEY(idFuncionario)
