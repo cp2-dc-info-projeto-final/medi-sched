@@ -31,16 +31,13 @@
                             <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </div>
+    </div
     <div id="slider">
   <div class="container">
     <div class="row">
@@ -60,7 +57,7 @@
     		<div class="row d-flex no-gutters">
     			<div class="col-md-5 d-flex">
     				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0">
-                        <img src=".img/medico.png" class="img-fluid"  height= "150" width="100%"alt="Imagem simbolizando a saúde." >
+                <img src=".img/medico.png" class="img-fluid"  height= "150" width="100%"alt="Imagem simbolizando a saúde." >
     				</div>
     			</div>
     			<div class="col-md-7 pl-md-5 py-md-5">
@@ -129,7 +126,12 @@
           <p>
             <a href="atendimentos.php" class="text-reset">Atendimentos</a>
           </p>
-
+          <p>
+            <a href="#!" class="text-reset">Sobre</a>
+          </p>
+          <p>
+            <a href="cadastro_adm.php" class="text-reset">Seja nosso administrador.</a>
+          </p>
           
         </div>
 
