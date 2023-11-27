@@ -4,25 +4,15 @@ include "conecta_mysql.php"; // Conecta ao banco de dados
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $primeiro_nome = $_POST["firstname"] ?? '';
-    $sobrenome = $_POST["lastname"] ?? '';
-    $email = $_POST["email"] ?? '';
-    $senha = $_POST["senha"] ?? '';
-    $cpf = $_POST["cpf"] ?? '';
-    $data_nascimento = $_POST["dataNascimento"] ?? '';
-    $genero = $_POST["genero"] ?? '';
-    $cargo = $_POST["cargo"] ?? ''; 
-    $area = $_POST["areasMedicas"] ?? '';
+    $primeiro_nome = isset($_POST["firstname"]) ? $_POST["firstname"] : '';
+    $sobrenome = isset($_POST["lastname"]) ? $_POST["lastname"] : '';
+    $email = isset($_POST["email"]) ? $_POST["email"] : '';
+    $senha = isset($_POST["senha"]) ? $_POST["senha"] : '';
+    $cpf = isset($_POST["cpf"]) ? $_POST["cpf"] : '';
+    $data_nascimento = isset($_POST["dataNascimento"]) ? $_POST["dataNascimento"] : '';
+    $genero = isset($_POST["genero"]) ? $_POST["genero"] : '';
+    $area = isset($_POST["areasMedicas"]) ? $_POST["areasMedicas"] : '';
 
-    $erro = false;
-
-    // Validações aqui...
-
-    $mysqli = mysqli_connect("localhost", "agendasaude", "123", "AGENDASAUDE") or die ("Erro de conexão com o banco de dados");
-    if ($mysqli->connect_error) {
-        die("Erro na conexão: " . $mysqli->connect_error);
-    }
 
     // Verificação de email duplicado
     $stmt = $mysqli->prepare("SELECT email FROM Funcionario WHERE email = ?");
@@ -32,28 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->num_rows > 0) {
         $mensagemErro .= "Este endereço de email já está cadastrado.<br>";
-        $erro = true;
-    }
-    $stmt->close();
-
-    if (!$erro) {
+    } else {
+        $stmt->close();
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+        $stmt = $mysqli->prepare("INSERT INTO Funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, area, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $area, $genero);
 
-        $stmt = $mysqli->prepare("INSERT INTO Funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, cargo, area, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $cargo, $area, $genero);
-    
         if ($stmt->execute()) {
-            $stmt->close();
-            $mysqli->close();
-            header("Location: index.php"); // Redirecionamento para a página
+            header("Location: index.php"); // Redirecionamento para a página de confirmação ou de login do funcionário
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
         }
-
         $stmt->close();
     }
-    
     $mysqli->close();
 }
 
@@ -62,6 +44,7 @@ if ($mensagemErro) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -69,7 +52,7 @@ if ($mensagemErro) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".css/funcionario.css">
-    <title>Formulário</title>
+    <title>Formulário de Cadastro de Funcionário</title>
 </head>
 <body>
     <div class="container">
@@ -77,13 +60,13 @@ if ($mensagemErro) {
             <img src=".img/med.png" alt="">
         </div>
         <div class="form">
-            <form action="cadastro.php" method="post">
+            <form action="funcionario.php" method="post">
                 <div class="form-header">
                     <div class="title">
-                        <h1>Cadastre-se</h1>
+                        <h1>Cadastro de Funcionário</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="login.php">Entrar</a></button>
+                        <button type="button" onclick="location.href='login.php'">Entrar</button>
                     </div>
                 </div>
 
@@ -118,18 +101,16 @@ if ($mensagemErro) {
                     </div>
 
                     <div class="input-box">
-                        <label for="areasMedicas">Áreas Médicas</label>
+                        <label for="areasMedicas">Área Médica</label>
                         <select id="areasMedicas" name="areasMedicas" required>
-                            <option value="1">Ortopedia</option>
-                            <option value="2">Enfermeiro</option>
-                            <option value="3">Oftalmologia</option>
-                            <option value="4">Odontologico</option>
-                            <option value="5">Psicologo</option>
-                            <option value="6">Ginecologia</option>
-
+                            <option value="Ortopedia">Ortopedia</option>
+                            <option value="Enfermagem">Enfermagem</option>
+                            <option value="Oftalmologia">Oftalmologia</option>
+                            <option value="Odontologia">Odontologia</option>
+                            <option value="Psicologia">Psicologia</option>
+                            <option value="Ginecologia">Ginecologia</option>
                         </select>
                     </div>
-
                 </div>
 
                 <div class="genero-inputs">
@@ -161,20 +142,20 @@ if ($mensagemErro) {
                 </div>
 
                 <div class="continue-button">
-                    <button type="submit">Continuar</button>
+                    <button type="submit">Cadastrar</button>
                 </div>
             </form>
-            <script>
-                function formatarCPF(campo) {
-                    campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
-                    campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o ponto após o terceiro dígito
-                    campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto após o sexto dígito
-                    campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o traço após o nono dígito
-                }
-            </script>
         </div>
     </div>
+
+    <script>
+        function formatarCPF(campo) {
+            campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca ponto após o terceiro dígito
+            campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca ponto após o sexto dígito
+            campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca traço após o nono dígito
+        }
+    </script>
 </body>
 </html>
-
 
