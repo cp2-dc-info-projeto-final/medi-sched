@@ -54,10 +54,10 @@ $mysqli->close();
                             <a class="nav-link active" aria-current="page" href="index_adm.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="perfil.php">Perfil</a>
+                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
+                            <a class="nav-link" href="#rodape">Sobre</a>
                         </li>
                     </ul>
                 </div>
