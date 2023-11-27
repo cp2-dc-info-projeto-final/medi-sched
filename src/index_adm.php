@@ -50,7 +50,7 @@
 
         <!-- Botão de Ação -->
             <div class="col-lg-4 mb-3">
-                <a href="mostrar_funcionarios.php" class="btn btn-success">Ver Funcionarios</a>
+                <a href="mostrar_funcionarios.php" class="btn btn-success" class="text-center">Ver Funcionarios</a>
             </div>
         </div>
     </div>
