@@ -29,7 +29,7 @@
         </div>
     </div
     <div id="slider">
-        <div class="">
+        <div class="container">
             <h1>Dados do seu Perfil</h1>
             <form action="perfil.php" method="POST" class="form-container">
             <?php
@@ -51,9 +51,6 @@
         
                 }
                 
-
-                $_SESSION["email"];
-
             ?>
 
             </form>
