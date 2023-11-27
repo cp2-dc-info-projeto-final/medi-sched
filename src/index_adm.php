@@ -48,14 +48,7 @@
             </div>
         </div>
 
-        <!-- Botões de Ação -->
-        <div class="row text-center mt-4">
-            <div class="col-lg-4 mb-3">
-                <a href="editar_funcionario.php" class="btn btn-info">Editar Funcionarios</a>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <a href="excluir_funcionario.php" class="btn btn-warning">Excluir Funcionarios </a>
-            </div>
+        <!-- Botão de Ação -->
             <div class="col-lg-4 mb-3">
                 <a href="mostrar_funcionarios.php" class="btn btn-success">Ver Funcionarios</a>
             </div>
