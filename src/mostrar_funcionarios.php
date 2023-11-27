@@ -51,13 +51,13 @@ $mysqli->close();
                 <div class="collapse navbar-collapse" id="nav-content">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
+                            <a class="nav-link active" aria-current="page" href="index_adm.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
+                            <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#rodape">Sobre</a>
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>
