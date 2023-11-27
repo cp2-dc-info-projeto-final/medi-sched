@@ -42,7 +42,7 @@ include "conecta_mysql.php";
                         <form action="recuperacao.php" method="POST" class="needs-validation" novalidate>
                             <div class="label-float">
                                 <input type="hidden" name="operacao" value="enviar-email">
-                                <input type="email" class="form-control rounded-left" id="emailrec" name="emailrec" placeholder="Email" required>
+                                <input type="email" class="form-control rounded-left" id="email" name="email" placeholder="Email" required>
                                 <div class="invalid-feedback">
                                     Por favor, preencha seu email.
                                 </div>
