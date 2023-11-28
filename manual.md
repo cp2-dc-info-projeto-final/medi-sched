@@ -37,15 +37,15 @@ Esse é o manual de usuário do site da empresa médica agenda+saúde, ele foi f
 
  - Clique em "Login".
 
-![Login](https://user-images.githubusercontent.com/95935490/214967731-091c0098-6228-438d-b8db-4c6e486015da.png)
+![Login]()
 
  - Clique em "Como cliente".
  
-![image](https://user-images.githubusercontent.com/95979551/208581968-3e7568fc-5f12-49ec-99a8-3248cef293da.png)
+![image]()
 
  - Insira o email e a senha e aperte em "Login".
 
-![Login](https://user-images.githubusercontent.com/95979551/208568472-5a1c360e-2211-4fb9-af0e-5283f067b053.png)
+![Login]()
 
  - Seu login como cliente será feito com sucesso.
  
@@ -54,15 +54,15 @@ Esse é o manual de usuário do site da empresa médica agenda+saúde, ele foi f
 
 - Clique em "Login".
 
-![Login](https://user-images.githubusercontent.com/95935490/214967770-00e00a63-6cd0-4b69-b339-f3327fd880da.png)
+![Login]()
 
 - Clique em "Como funcionário". 
  
-![image](https://user-images.githubusercontent.com/95979551/208578974-2bce5b6c-c41a-4ab3-baa9-5491cd110633.png)
+![image]()
 
 - Insira o email e a senha e aperte em "Loginr".
 
-![Login 2 funcionário](https://user-images.githubusercontent.com/95935490/216327788-3587544c-2994-49f9-a204-1ec0ca6f2d94.png)
+![Login 2 funcionário]()
 
 
 - Seu login de funcionário será feito com sucesso.
@@ -71,15 +71,15 @@ Esse é o manual de usuário do site da empresa médica agenda+saúde, ele foi f
 
 - Clique em "Login".
 
-![Login](https://user-images.githubusercontent.com/95935490/214967799-aa04ad2e-c774-474d-a2e7-39cd5a1d6521.png)
+![Login]()
 
 - Clique em "Como administrador".
 
-![image](https://user-images.githubusercontent.com/95979551/208579358-99545bdb-c6b0-49f8-8076-8529b8b59c01.png)
+![image]()
 
 - Insira o email e a senha e aperte em "Login".
 
-![Login2 adm](https://user-images.githubusercontent.com/95935490/216327849-c3b4575c-df7b-4fe9-bc1b-178d8f555e07.png)
+![Login2 adm]()
 
 - Seu login de administrador será feito com sucesso.
 
@@ -91,7 +91,7 @@ Para fazer logout(sair) de sua conta.
 
 - Clique em "Sair".
 
-![image](https://user-images.githubusercontent.com/95979551/208579463-4c4812ef-8ddb-4309-a93f-afe40da0e25d.png)
+![image]()
 
 - Será direcionado para a página inicial sem login. 
 
@@ -103,16 +103,16 @@ Para se Cadastrar no site.
 
 - Clique em "Cadastrar-se".
 
-![image](https://user-images.githubusercontent.com/95979551/208568912-95742ddb-2308-4396-9eb8-368a42b9830e.png)
+![image]()
 
 - Insira os seguintes dados: Nome, Sobrenome, email, senha, data de nascimento, Cpf, gênero.
 
 
-![image](https://user-images.githubusercontent.com/95979551/208569150-e4c19e56-12b4-46fd-b3ab-e34c63dceaf9.png)
+![image]()
 
 - Clique em "Cadastrar". 
 
-![image](https://user-images.githubusercontent.com/95979551/208569487-ed7816a8-491d-45d0-a521-9c8ca355461e.png)
+![image]()
 
 
 
@@ -124,26 +124,26 @@ Para fazer agendamento de algum plano.
 
  - Clique em "Cadastrar".
  
- ![image](https://user-images.githubusercontent.com/95979551/208571845-1d1a730c-0a17-438c-a9a6-592a83122bf0.png)
+ ![image]()
 
  
  - Aperte em "Agendamento".
  
- ![image](https://user-images.githubusercontent.com/95979551/208571902-e7c08d9d-6b0e-407d-8ae4-0f3b0ce5ddf6.png)
+ ![image]()
 
  
  - Agende com o médico na área que você precisar 
 
-![image](https://user-images.githubusercontent.com/95979551/215331186-5bccc367-3f07-4bfe-aeab-13646605b642.jpeg)
+![image]()
 
 
  - Selecione data e hora
  
- ![image](https://user-images.githubusercontent.com/95979551/215331248-210295cf-0830-47c4-bd0a-37e399cc0734.jpeg)
+ ![image]()
  
  - Clique no botão "Cadastrar"
  
- ![image](https://user-images.githubusercontent.com/95979551/215331338-356bb404-c029-4166-a0f8-47c451553aa2.jpeg)
+ ![image]()
  
 
 
@@ -152,46 +152,46 @@ Para fazer agendamento de algum plano.
 
 - Em sua conta, clique em "calendário" 
 
- ![image](https://user-images.githubusercontent.com/95979551/208572850-2307c677-12f3-40e4-8369-1c5d2f5ec28d.png)
+ ![image]()
 
 
 - O calendário será exibido com as marcações feitas, assim como horário e data. 
 
-![IMG-20230202-WA0014](https://user-images.githubusercontent.com/95935490/216381810-b78861aa-0186-4e53-b3fe-b75d18179289.jpg)
+![IMG-20230202-WA0014]()
 
 
 **4.3 Editar Agendamento** 
 
 - Em sua conta, clique em calendário.
 
-![image](https://user-images.githubusercontent.com/95979551/208573709-c24e08ff-873e-49a8-a45c-f8e6b7456d86.png)
+![image]()
 
 - Escolha a marcação que deseja editar.
 - Aperte em editar.
 
-![image](https://user-images.githubusercontent.com/95979551/208573817-18f83087-5c8e-4b7f-9d73-98caf61597dc.png)
+![image]()
 
 - Edite seu agendamento. 
 
 - Clique em "Salvar alterações". 
 
-![image](https://user-images.githubusercontent.com/95979551/208573958-0ca023ab-0252-4f67-83b9-a9e9b3b97d2d.png)
+![image]()
 
 
 **4.4 Excluir Agendamento**
 
 - Em sua conta, clique em calendário. 
 
-![image](https://user-images.githubusercontent.com/95979551/208573709-c24e08ff-873e-49a8-a45c-f8e6b7456d86.png)
+![image]()
 
 - Escolha a marcação que deseja cancelar.
 - Aperte em cancelar.
 
-![image](https://user-images.githubusercontent.com/95979551/215331648-cdb18ff9-91a4-41ce-b35c-de2067aad4d0.png)
+![image]()
 
 - Confirme o cancelamento do agendamento. 
 
-![Cancelar agendamento cliente](https://user-images.githubusercontent.com/95935490/216742309-7effe120-97f6-45a7-a75a-f73e5dd3f6a4.png)
+![Cancelar agendamento cliente]()
 
 
 ## 5. RECUPERAR SENHA 
@@ -199,76 +199,76 @@ Para fazer agendamento de algum plano.
 - Clique em  "Login". 
 - Clique em "Esqueci minha senha".
 
-![image](https://user-images.githubusercontent.com/95979551/208577192-4ed45e9a-53bf-4c27-9256-b117edee4c5e.png)
+![image]()
 
 
 - Insira seu email.
 
-![image](https://user-images.githubusercontent.com/95979551/208576712-8e921cb6-c949-431e-87d0-13aadc5d38e8.png)
+![image]()
 
 - Digite o código de recuperação enviado para o seu email.
 
-![image](https://user-images.githubusercontent.com/95979551/208578162-8a1c4c73-c4f4-4488-983e-5b1ed8a2215b.png)
+![image]()
 
 - Insira uma nova senha e confirme a nova senha.
 
-![image](https://user-images.githubusercontent.com/95979551/208578185-0e4a418c-f9ee-411e-966e-38a511599510.png)
+![image]()
 
 - Clique em "Salvar alterações" e faça login.
 
-![image](https://user-images.githubusercontent.com/95979551/208578026-624e8b8e-3027-4def-8178-82ac15e8fc6c.png)
+![image]()
 
 
 ## 6. VISUALIZAR PERFIL
 
 - Em sua conta, clique em "Perfil"
 
-![image](https://user-images.githubusercontent.com/95979551/215332232-c0812ae0-9baf-4a96-b69b-1bc4d6db417f.png)
+![image]()
 
 - Seu perfil será exibido com os seus dados. 
 
-![Perfil img](https://user-images.githubusercontent.com/95979551/215332144-9697fd7d-81fd-4977-a1e2-67f9a66f5a1d.png)
+![Perfil img]()
 
 
 **6.2 Editar dados**
 
 - Em seu perfil, selecione o campo a ser alterado. 
 
-![cliente-perfil 2](https://user-images.githubusercontent.com/95935490/216082778-4cd061a3-d74e-4a3f-a62a-17046a4ab885.png)
+![cliente-perfil 2]()
 
 
 - Edite seus dados.
 
 - Clique em "Salvar alterações".
 
-![Salvar alteração botão ](https://user-images.githubusercontent.com/95935490/214933034-776bcde4-4bd5-4215-80a9-146cccc06ba0.png)
+![Salvar alteração botão ]()
 
 
 **6.2 Excluir dados**
 
 - Em seu perfil, clique em "Excluir conta".
 
-![Excluir conta botão ](https://user-images.githubusercontent.com/95935490/214932480-a8eab3ab-32cf-48d8-b4d0-b3018c8ac06c.png)
+![Excluir conta botão ]()
 
 - Confirme a exclusão da conta. 
 
-![Confirmação excluir conta](https://user-images.githubusercontent.com/95935490/214932518-e25e505c-f086-45ad-97b6-f202799ee856.png)
+![Confirmação excluir conta]()
 
 
 
 ## 7. REDEFINIR SENHA
 - Em sua conta, clique em "Perfil". 
 
-![Perfil botão](https://user-images.githubusercontent.com/95935490/214933102-5fc28866-e146-4ffa-8624-024bdcf486fc.png)
+![Perfil botão]()
 
 - Em "Deseja criar uma nova senha", selecione "SIM".
 
-![Deseja criar uma senha nova](https://user-images.githubusercontent.com/95935490/214933495-e4df3fd0-5a84-4d43-a939-acdd958f8f40.png)
+![Deseja criar uma senha nova]()
 
 - Digite a nova senha.
 - Clique em "Salvar alterações".
 
-![Salvar alteração botão ](https://user-images.githubusercontent.com/95935490/214933537-10b7cb42-c84d-4a09-8923-0e2a5dee5274.png)
+![Salvar alteração botão ]()
 
 
 
@@ -279,19 +279,19 @@ Para fazer agendamento de algum plano.
 
 - Clique em "Cadastrar".
 
-![Cadastrar ](https://user-images.githubusercontent.com/95935490/214917135-48cd752d-dc86-466b-af8f-1b26983ee6c7.png)
+![Cadastrar ]()
 
 - Clique em "Serviços".
 
-![Cadastrar serviço](https://user-images.githubusercontent.com/95935490/214921605-6dd50c36-c03a-4524-be48-610cda68bf11.png)
+![Cadastrar serviço]()
 
 - Preencha o formulário com os dados do novo serviço.
 
-![image](https://user-images.githubusercontent.com/95979551/208579892-0ed1aed1-6aa9-4bb9-a5ac-fcbd6333b65e.png)
+![image]()
 
 - Aperte em "Cadastrar". 
 
-![Cadastrar botão ](https://user-images.githubusercontent.com/95935490/214922484-5e973d75-e39a-4977-b621-e62cc71c1b0a.png)
+![Cadastrar botão ]()
 
 
 
@@ -300,16 +300,16 @@ Para fazer agendamento de algum plano.
 - Clique em "Cadastrar".
 - Clique em "Funcionários".
 
-![cadastrar funcionário- passo 1](https://user-images.githubusercontent.com/95935490/214917653-d52b7ace-c7de-49df-8a45-c9f17df193c3.png)
+![cadastrar funcionário- passo 1]()
 
 
 - Preencha o formulário com os dados do novo funcionário (nome, email, senha, data de nascimento).
 
-![image](https://user-images.githubusercontent.com/95979551/208580094-f473e324-3c88-4a3c-b7b1-c00778c5c2aa.png)
+![image]()
 
 - Aperte em "Cadastrar".
 
-![Cadastrar botão ](https://user-images.githubusercontent.com/95935490/214922484-5e973d75-e39a-4977-b621-e62cc71c1b0a.png)
+![Cadastrar botão ](l)
 
 
 ### 1.3 Cadastrar Administrador
@@ -317,243 +317,243 @@ Para fazer agendamento de algum plano.
 - Clique em "Cadastrar".
 - Clique em "Administrador".
 
-![Cadastrar adm](https://user-images.githubusercontent.com/95935490/214921475-67d5774c-b84a-4f90-ad48-9b3f0b91c880.png)
+![Cadastrar adm]()
 
 
 - Preencha o formulário com os dados do novo administrador (nome, email, senha, data de nascimento).
 
-![image](https://user-images.githubusercontent.com/95979551/208580240-540355f1-dc37-41cc-969a-f207d9e2a242.png)
+![image]()
 
 - Aperte em "Cadastrar".
 
-![Cadastrar botão ](https://user-images.githubusercontent.com/95935490/214922484-5e973d75-e39a-4977-b621-e62cc71c1b0a.png)
+![Cadastrar botão ]()
 
 ### 1.4 Cadastrar Horário 
 
 - Clique em "Cadastrar". 
 - Clique em "Horários". 
 
-![Cadastrar horário](https://user-images.githubusercontent.com/95935490/214921151-d929290c-b4cb-41ee-b1a5-0fefa64e4597.png)
+![Cadastrar horário]()
 
 - Preencha o formulário com os dados do novo horário  ( Nome do serviço, nome do funcionário, horário e data).
 
-![Cadastrar horário (dados) ](https://user-images.githubusercontent.com/95935490/214921366-7d9011b8-39e5-475b-ab57-fa4148869728.png)
+![Cadastrar horário (dados) ]()
 
 - Aperte em "Cadastrar ".
 
-![Cadastrar botão ](https://user-images.githubusercontent.com/95935490/214922484-5e973d75-e39a-4977-b621-e62cc71c1b0a.png)
+![Cadastrar botão ]()
 
 ### 2.1 Exibir clientes
 
 - Em sua conta administrador, clique em "Empresa".  
 
-![image](https://user-images.githubusercontent.com/95979551/215335913-7e1d5caf-0957-491f-a11b-2090813ed760.png)
+![image]()
 
 - Em sua conta administrador, clique em "Clientes".  
 
-![image](https://user-images.githubusercontent.com/95979551/215335926-5967cae8-d7bd-415d-96c7-cefab04e8955.png)
+![image]()
 
-- Serão exibidos os clientes cadastrados, assim como seus respectivos e-mails, telefone, data de nascimento, nome do pet e data do nascimento do pet. 
+- Serão exibidos os pacientes cadastrados, assim como seus respectivos nome, sobrenome, e-mail, Cpf, data de nascimento e id do cliente. 
 
-![image](https://user-images.githubusercontent.com/95979551/215335940-c5d0cd2d-a449-4993-942f-0e1e07a97944.png)
+![image]()
 
 ### 3.1 Consultar funcionários
 
 - Em sua conta administrador, clique em "Empresa".  
 
-![image](https://user-images.githubusercontent.com/95979551/215335913-7e1d5caf-0957-491f-a11b-2090813ed760.png)
+![image]()
 
 - Em sua conta administrador, clique em "Funcionários".
 
-![image](https://user-images.githubusercontent.com/95979551/215336331-57d0f4d2-9e81-455a-a374-2beaa320b393.png)
+![image]()
 
 - Serão exibidos todos os funcionários cadastrados, assim como os emails e datas de nascimento. 
 
-![image](https://user-images.githubusercontent.com/95979551/215336394-191be942-6cd9-4267-9323-faca2e90bfee.png)
+![image]()
 
 ### 3.2 Consultar administradores
 
 - Em sua conta administrador, clique em "Empresa". 
 
-![image](https://user-images.githubusercontent.com/95979551/216078341-187f112b-08e5-4ceb-a487-e9cf72edda6a.png)
+![image]()
 
 - Em sua conta administrador, clique em "Administrador". 
 
-![image](https://user-images.githubusercontent.com/95979551/216078504-52a97fbc-a3a8-4808-af64-8e055d40b3b4.png)
+![image]()
 
 - Serão exibidos todos os administradores cadastrados, assim como os emails e datas de nascimento.
 
-![image](https://user-images.githubusercontent.com/95979551/216078606-8cd5e785-5bca-4e9d-8291-1227fbe5d3cf.png)
+![image]()
 
 ### 3.3 Consultar agendamento 
 
 - Em sua conta administrador, clique em Calendário.  
 
-![image](https://user-images.githubusercontent.com/95979551/208572850-2307c677-12f3-40e4-8369-1c5d2f5ec28d.png)
+![image]()
 
 - Serão exibidos todos os agendamentos cadastrados, assim como o funcionário responsável, o cliente, serviço, data e hora. 
 
-![image](https://user-images.githubusercontent.com/95935490/216745089-149c53ff-d65b-4d5d-8cc0-d98d1b784df5.png)
+![image]()
 
 ### 3.4 Consultar serviços
 
 - Em sua conta administrador, clique em Serviços.  
 
-![serviços botão](https://user-images.githubusercontent.com/95935490/216745359-6fefe16b-3085-4f92-b21f-c66dff86bb46.png)
+![serviços botão]()
 
 
 - Serão exibidos todos os serviços cadastrados, assim como código do serviço, o nome do serviço, a descrição e o preço.	
 
-![Serviços tela](https://user-images.githubusercontent.com/95935490/216745400-95da9b8a-8646-4d88-b7d3-927fd52669d1.png)
+![Serviços tela]()
 
 
 ### 4.1 Editar funcionários
 
 - Em sua conta administrador, clique em "Empresa".  
 
-![image](https://user-images.githubusercontent.com/95979551/215335913-7e1d5caf-0957-491f-a11b-2090813ed760.png)
+![image]()
 
 - Em sua conta administrador, clique em "Funcionários".
 
-![image](https://user-images.githubusercontent.com/95979551/215336331-57d0f4d2-9e81-455a-a374-2beaa320b393.png)
+![image]()
 
 - Escolha o funcionário que deseja editar.
 - Aperte do símbolo editar.
 
-![image](https://user-images.githubusercontent.com/95979551/215336477-6fdccc9c-7ac3-493d-9417-fdace495bcb2.png)
+![image]()
 
 - Faça a edição.
 - Clique em "Salvar alterações".
 
-![image](https://user-images.githubusercontent.com/95979551/208578026-624e8b8e-3027-4def-8178-82ac15e8fc6c.png)
+![image]()
 
 ### 4.2 Editar serviços
 
 - Em sua conta administrador,  clique em "Serviços". 
 
-![image](https://user-images.githubusercontent.com/95979551/208580855-875054a4-bc21-4cec-a29a-9b425ef3b4c6.png)
+![image]()
 
 - Escolha o serviço que deseja editar. 
 - Aperte em editar. 
 
-![image](https://user-images.githubusercontent.com/95979551/215336477-6fdccc9c-7ac3-493d-9417-fdace495bcb2.png)
+![image]()
 
 - Clique em "Salvar alterações". 
 
-![image](https://user-images.githubusercontent.com/95979551/208578026-624e8b8e-3027-4def-8178-82ac15e8fc6c.png)
+![image]()
 
 ### 4.3 Editar administradores
 
 - Em sua conta administrador, clique em "Empresa".
 
-![image](https://user-images.githubusercontent.com/95979551/216079189-644fe568-7860-458b-ba8d-0b6219311f39.png)
+![image]()
  
 - Em sua conta administrador, clique em "Administrador".  
 
-![image](https://user-images.githubusercontent.com/95979551/216079258-f14fe51e-ca81-4466-9bc6-eb4c7b4f1ce9.png)
+![image]()
 
 - Escolha o administrador que deseja editar.
 - Aperte do símbolo editar.
 
-![image](https://user-images.githubusercontent.com/95979551/216079362-28030c9d-5c88-4895-b76f-ff729c311288.png)
+![image]()
 
 - Faça a edição.
 - Clique em "Salvar alterações".
 
-![image](https://user-images.githubusercontent.com/95979551/216079414-d5b0aafd-fee3-4bae-8567-28933e12f593.png)
+![image]()
 
 
 ### 5.1 Excluir funcionário
 
 - Em sua conta administrador, clique em "Empresa".  
 
-![image](https://user-images.githubusercontent.com/95979551/215335913-7e1d5caf-0957-491f-a11b-2090813ed760.png)
+![image]()
 
 - Em sua conta administrador, clique em "Funcionários".
 
-![image](https://user-images.githubusercontent.com/95979551/215336331-57d0f4d2-9e81-455a-a374-2beaa320b393.png)
+![image]()
 
 
 - Escolha o funcionário que deseja excluir. 
 - Aperte em excluir. 
 
-![image](https://user-images.githubusercontent.com/95979551/215336686-0cb4da9b-1d36-49bd-bb9e-7e63d2740159.png)
+![image]()
 
 - Confirme a exclusão do funcionário. 
 
-![excluir funcionário ](https://user-images.githubusercontent.com/95935490/216742398-31c3b1a8-ea78-47b4-be45-0c715eb9c4d0.png)
+![excluir funcionário ]()
 
 
 ### 5.2 Excluir serviços
 
 - Em sua conta administrador, clique em "Serviços".
 
-![image](https://user-images.githubusercontent.com/95979551/208581695-92f9113a-564c-40b4-8139-de38c333fb17.png)
+![image]()
 
 - Escolha o serviço que deseja excluir. 
 - Aperte em excluir. 
 
-![image](https://user-images.githubusercontent.com/95979551/215336686-0cb4da9b-1d36-49bd-bb9e-7e63d2740159.png)
+![image]()
 
 - Confirme a exclusão do serviço. 
 
-![excluir serviço ](https://user-images.githubusercontent.com/95935490/216742429-e54f6c18-3f21-428b-a0a3-1251adcde098.png)
+![excluir serviço ]()
 
 
 ### 5.3 Excluir administradores
 
 -Em sua conta administrador, clique em "Empresa".
 
-![image](https://user-images.githubusercontent.com/95979551/216080208-5f9bab09-9470-4077-a753-ed39034e1473.png)
+![image]()
 
 - Em sua conta administrador, clique em "Administrador". 
 
-![image](https://user-images.githubusercontent.com/95979551/216080257-70395738-9b2b-48cb-bfc8-85a4d092f81b.png)
+![image]()
 
 - Escolha o administrador que deseja excluir.
 - Aperte em excluir.
 
-![image](https://user-images.githubusercontent.com/95979551/216080402-5e53564b-08b3-40a7-bf95-8e281f5cf061.png)
+![image]()
 
 -  Confirme a exclusão do administrador. 
 
-![Excluir administradores](https://user-images.githubusercontent.com/95935490/216742482-7e647ec1-be81-4b85-bd78-b5a7a5d4d9da.png)
+![Excluir administradores]()
 
 ### 5.4 Excluir cliente
 
 - Em sua conta administrador, clique em "Empresa".
 
-![image](https://user-images.githubusercontent.com/95979551/216080208-5f9bab09-9470-4077-a753-ed39034e1473.png)
+![image]()
 
 - Em sua conta administrador, clique em "Clientes".
 
-![image](https://user-images.githubusercontent.com/95979551/215335926-5967cae8-d7bd-415d-96c7-cefab04e8955.png)
+![image]()
 
 - Escolha o cliente que deseja excluir.
 
 - Aperte em excluir.
 
-![image](https://user-images.githubusercontent.com/95979551/216080402-5e53564b-08b3-40a7-bf95-8e281f5cf061.png)
+![image]()
 
 - Confirme a exclusão do cliente. 
  
-![excluir cliente](https://user-images.githubusercontent.com/95935490/216743577-1cdaa879-907c-4a1e-b477-27536bbd494e.png)
+![excluir cliente]()
 
 ### 5.5 Excluir agendamento
 
-- Em sua conta administrador, clique em "Calendário".
+- Em sua conta administrador, clique em "".
 
-![image](https://user-images.githubusercontent.com/95979551/215336806-0e933475-dde1-475a-acac-825788033e7e.png)
+![image]()
 
 - Escolha o agendamento que deseja excluir.
 
 - Aperte em excluir.
 
-![image](https://user-images.githubusercontent.com/95979551/216080402-5e53564b-08b3-40a7-bf95-8e281f5cf061.png)
+![image]()
 
 - Confirme a exclusão do agendamento.
 
-![Excluir agendamento- adm ](https://user-images.githubusercontent.com/95935490/216743904-1454197c-634b-4b58-867f-85b2c8094f98.png)
+![Excluir agendamento- adm ]()
 
 
 ## 1. PÁGINA INICIAL - Funcionário
@@ -564,12 +564,12 @@ Para fazer agendamento de algum plano.
 - Faça "Login". 
 - Clique em "Calendário".
 
-![image](https://user-images.githubusercontent.com/95979551/208572850-2307c677-12f3-40e4-8369-1c5d2f5ec28d.png)
+![image]()
 
 ### 2.1 Acessar perfil
 
 - Faça "Login". 
 - Clique em "Perfil".
 
-![image](https://user-images.githubusercontent.com/95935490/216082543-f4a780ba-00d9-44a2-a452-1abae1ae04ef.png)
+![image]()
 
