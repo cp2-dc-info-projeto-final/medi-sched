@@ -25,13 +25,13 @@
                 <div class="collapse navbar-collapse" id="nav-content">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Início</a>
+                            <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Login</a>
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +44,7 @@
       <div class="col-md-6 align-self-center">
         <h1>A clínica mais completa para a sua saúde!</h1>
         <h4>Agende já uma consulta.</h4>
-        <a href="cadastro.php" class="btn btn-primary button">Cadastre-se</a>
+        <a href="agendamento.php" class="btn btn-primary button">Agende aqui!</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
         <img src=".img/medi.png" class="img-fluid" alt="Imagem relacionada à saúde.">
