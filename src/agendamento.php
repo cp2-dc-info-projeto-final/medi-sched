@@ -125,9 +125,9 @@ echo $mensagemErro;
                 <option value="1">Ortopedia</option>
                 <option value="2">Vacinação</option>
                 <option value="3">Oftalmologia</option>
-                <option value="4">Odontologico</option>
-                <option value="5">Psicologo</option>
-                <option value="6">Ginecologia</option>
+                <option value="4">Odontológico</option>
+                <option value="5">Psicólogo</option>
+                <option value="6">Ginecológico</option>
             </select>
         </div>
         
@@ -145,6 +145,7 @@ echo $mensagemErro;
             <label for="idCliente" class="form-label">Cliente</label>
             <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="Seu ID de cliente">
         </div>
+
         
         <div class="mb-3">
             <label for="dataConsulta" class="form-label">Data da Consulta</label>
@@ -163,6 +164,16 @@ echo $mensagemErro;
                 <option value="16:00">16:00</option>
                 <option value="17:00">17:00</option>
                 <option value="18:00">18:00</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label  class="form-label">Endereço</label>
+            <select class="form-select" name="endereco">
+                <option selectead>Locais dísponíveis...</option>
+            
+                <option value="1">Rua Manoel Reis, 15 - Duque de Caxias- Rj</option>
+                
             </select>
         </div>
         
