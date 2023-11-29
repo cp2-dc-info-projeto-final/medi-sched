@@ -101,6 +101,7 @@ $mysqli->close();
                         <th>ID do Cliente</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
+                        <th>Local da consulta</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -113,6 +114,7 @@ $mysqli->close();
                             <td><?php echo htmlspecialchars($idCliente); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
+                            <td>Rua Manoel Reis, 15 - Duque de Caxias- Rj</td>
                             <td>
                                 <a href="editar_agendamento.php?id=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-primary btn-sm">Editar</a>
                                 <form action="cancela_agendamento.php" method="post" style="display: inline;">
