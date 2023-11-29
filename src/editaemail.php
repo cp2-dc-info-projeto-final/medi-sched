@@ -91,7 +91,7 @@
 
             ?>
 
-          <p>Seu novo email<input type="text" placeholder="insira aqui" name="emailnovo"></p>
+          <p>Seu novo email<input type="email" placeholder="insira aqui" name="emailnovo"></p>
           <p>Insira sua senha atual <input type="password" placeholder="insira aqui" name="senha"></p>
           <p><input type="submit" value="Enviar" class="btn"></p>    
         </form>
