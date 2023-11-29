@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     if (empty($data_nascimento) || !strtotime($data_nascimento)) {
-        $mensagemErro .= "Preencha uma data de nascimento válida no formato YYYY-MM-DD.<br>";
+        $mensagemErro .= "Preencha uma data de nascimento válida.<br>";
         $erro = true;
     }
 
