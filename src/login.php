@@ -1,83 +1,72 @@
 <?php
-include "conecta_mysql.php"; // Conexão com o banco de dados
+// Conexão com o banco de dados
+include "conecta_mysql.php";
 
 session_start();
 
+// Inicializa a mensagem de erro como vazia
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
+    // Obtém o email e a senha do formulário de login
+    $email = mysqli_real_escape_string($mysqli, $_POST["email"]);
     $senha = $_POST["senha"];
 
-    // Escapar caracteres especiais para segurança na consulta ao banco de dados
-    $email = mysqli_real_escape_string($mysqli, $email);
-
-    // Primeiro verifica na tabela de administradores
-    $sqlAdmin = "SELECT * FROM Administrador WHERE email = ?";
-    $stmtAdmin = $mysqli->prepare($sqlAdmin);
-    $stmtAdmin->bind_param("s", $email);
-    $stmtAdmin->execute();
-    $resultAdmin = $stmtAdmin->get_result();
-    $rowAdmin = $resultAdmin->fetch_assoc();
-
-    if ($rowAdmin && password_verify($senha, $rowAdmin["senha"])) {
-        $_SESSION['email'] = $email;
-        $_SESSION['idAdministrador'] = $rowAdmin["idAdministrador"];
-        $_SESSION['tipo_usuario'] = 'administrador'; // Define o tipo de usuário na sessão
-        header("Location: index_adm.php"); // Redireciona para a página do administrador
-        exit;
+    // Tenta autenticar como administrador
+    $sql = "SELECT * FROM Administrador WHERE email = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($row = $result->fetch_assoc()) {
+        if (password_verify($senha, $row["senha"])) {
+            $_SESSION['email'] = $email;
+            $_SESSION['tipo_usuario'] = 'administrador';
+            header("Location: index_adm.php");
+            exit;
+        }
     }
-    $stmtAdmin->close();
 
-    // Se não for administrador, verifica na tabela de clientes
-    $sqlCliente = "SELECT * FROM Cliente WHERE email = ?";
-    $stmtCliente = $mysqli->prepare($sqlCliente);
-    $stmtCliente->bind_param("s", $email);
-    $stmtCliente->execute();
-    $resultCliente = $stmtCliente->get_result();
-    $rowCliente = $resultCliente->fetch_assoc();
-
-    if ($rowCliente && password_verify($senha, $rowCliente["senha"])) {
-        $_SESSION['email'] = $email;
-        $_SESSION['idCliente'] = $rowCliente["idCliente"];
-        $_SESSION['tipo_usuario'] = 'cliente';
-        header("Location: index_paciente.php"); // Redireciona para a página do paciente
-        exit;
+    // Tenta autenticar como cliente
+    $sql = "SELECT * FROM Cliente WHERE email = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($row = $result->fetch_assoc()) {
+        if (password_verify($senha, $row["senha"])) {
+            $_SESSION['email'] = $email;
+            $_SESSION['tipo_usuario'] = 'cliente';
+            header("Location: index_paciente.php");
+            exit;
+        }
     }
-    $stmtCliente->close();
 
-    // Se não for cliente, verifica na tabela de funcionários
-    $sqlFuncionario = "SELECT * FROM Funcionario WHERE email = ?";
-    $stmtFuncionario = $mysqli->prepare($sqlFuncionario);
-    $stmtFuncionario->bind_param("s", $email);
-    $stmtFuncionario->execute();
-    $resultFuncionario = $stmtFuncionario->get_result();
-    $rowFuncionario = $resultFuncionario->fetch_assoc();
-
-    if ($rowFuncionario && password_verify($senha, $rowFuncionario["senha"])) {
-        $_SESSION['email'] = $email;
-        $_SESSION['idFuncionario'] = $rowFuncionario["idFuncionario"];
-        $_SESSION['tipo_usuario'] = 'funcionario';
-        header("Location: index_funcionario.php"); // Redireciona para a página do funcionário
-        exit;
+    // Tenta autenticar como funcionário
+    $sql = "SELECT * FROM Funcionario WHERE email = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($row = $result->fetch_assoc()) {
+        if (password_verify($senha, $row["senha"])) {
+            $_SESSION['email'] = $email;
+            $_SESSION['tipo_usuario'] = 'funcionario';
+            header("Location: index_funcionario.php");
+            exit;
+        }
     }
-    $stmtFuncionario->close();
 
-    // Se o login falhar
+    // Se chegou aqui, o login falhou
     $mensagemErro = "Credenciais inválidas. Tente novamente.";
 }
 
-// Sempre feche a conexão depois de usar
 mysqli_close($mysqli);
 ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +74,6 @@ mysqli_close($mysqli);
     <link rel="stylesheet" href=".css/cad_log.css">
     <title>Login</title>
 </head>
-
 <body>
     <div class="container">
         <div class="form-image">
@@ -101,6 +89,12 @@ mysqli_close($mysqli);
                         <button><a href="cadastro.php">Cadastre-se</a></button>
                     </div>
                 </div>
+
+                <?php if (!empty($mensagemErro)): ?>
+                    <div class="error-message">
+                        <p><?php echo $mensagemErro; ?></p>
+                    </div>
+                <?php endif; ?>
 
                 <div class="input-box">
                     <label for="email">E-mail</label>
@@ -123,5 +117,4 @@ mysqli_close($mysqli);
         </div>
     </div>
 </body>
-
 </html>
