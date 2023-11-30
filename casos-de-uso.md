@@ -17,7 +17,7 @@
  
  
 ## Lista dos Atores
-
+ - 
  - Cliente;
  - Funcionários; 
  - Administrador;
@@ -29,47 +29,32 @@
 
 **Fluxo Principal**
 
-1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
-2. O sistema exibirá a página inicial.
-3. O funcionário clica em "Cadastro de funcionário".
-4. O sistema exibirá uma pagina de cadastro com um formulário.
-5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
-6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
-7. O administrador terá que permitir o cadastro do funcionário
-8. O sistema informará ao funcionário que o cadastro foi efetuado
+1. O administrador fará 
+2. O sistema exibirá a página inicial do administrador.
+3. O administrador irá clicar em sua navbar.
+4. O sistema exibirá as opções disponíveis na navbar.
+5. O administrador irá clicar na opção "Cadastrar Funcionário".
+6. O sistema exibirá a pagina de cadastro de funcionário.
+7. O administrador irá cadastrar o funcionário.
+8. O sistema voltará à sua pagina inicial de administrador.
    
 ![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/2c7a6f68-afab-4c5e-847e-901bca54e655)
 
 
 **Fluxo Alternativo  A**
 
-1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
-2. O sistema exibirá a página inicial.
-3. O funcionário clica em "Cadastro de funcionário".
-4. O sistema exibirá uma pagina de cadastro com um formulário.
-5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
-6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
-7. O sistema informará ao funcionário que o email ou senha estão inválidos.
-8. O funcionário digitará corretamente email ou senha.
-9. O funcionário clica em "Enviar".
-10. O administrador terá que permitir o cadastro do funcionário
-11. O sistema informará ao funcionário que o cadastro foi efetuado
+1. O administrador fará 
+2. O sistema exibirá a página inicial do administrador.
+3. O administrador irá clicar em sua navbar.
+4. O sistema exibirá as opções disponíveis na navbar.
+5. O administrador irá clicar na opção "Cadastrar Funcionário".
+6. O sistema exibirá a pagina de cadastro de funcionário.
+7. O administrador irá cadastrar o funcionário.
+8. O sistema informará ao administrador que os campos de cadastro não estão preenchidos corretamento.
+9. O administrador irá preencher os campos corretamente.
+10. O sistema voltará à sua pagina inicial de administrador.
     
 ![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/c55d1bf3-9449-4635-9e65-a85cdf4b7fd6)
-
-**Fluxo Alternativo  B**
-
-1. O funcionário terá que ter permissão do administrador para acessar a página de cadastro de funcionário.
-2. O sistema exibirá a página inicial.
-3. O funcionário clica em "Cadastro de funcionário".
-4. O sistema exibirá uma pagina de cadastro com um formulário.
-5. O funcionário irá inserir os dados no formulário (nome, e-mail, senha e cargo).
-6. O funcionário irá enviar os dados para o sistema clicando no botão "Enviar".
-7. O administrador terá que permitir o cadastro do funcionário
-8. O administrador não permitirá o cadastro do funcionário
-9. O sistema informará ao funcionário que o cadastro não foi permitido
-   
-![Fluxo alternativo funcionario2](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/773dc591-910b-4611-ac11-194c5357c66d)
 
 
 ### CDU 02 
