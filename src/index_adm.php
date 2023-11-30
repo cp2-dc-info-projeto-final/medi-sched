@@ -28,7 +28,7 @@ include "autentica_adm.php";
                             <a class="nav-link active" aria-current="page" href="index_adm.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="funcionario.php">Cadastrar Funcionario</a>
+                            <a class="nav-link" href="cadastro_func.php">Cadastrar Funcionario</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="perfil.php">Perfil</a>
