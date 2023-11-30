@@ -70,7 +70,7 @@ INSERT INTO Administrador (
     'Miguel', 
     'Sierra', 
     'miguelmesierra@gmail.com', 
-    '$2y$10$VmyDO8OvY5BpsnMdRXi4q.CV4KCJ.zhXZkpgJjuTHJzmQAOtjoxG2', 
+    '$2y$10$VmyDO8OvY5BpsnMdRXi4q.CV4KCJ.zhXZkpgJjuTHJzmQAOtjoxG2',   ---senha: 12345678------
     '123.456.789-00', 
     '1985-01-01', 
     'Masculino'
