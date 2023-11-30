@@ -17,7 +17,6 @@
  
  
 ## Lista dos Atores
- - 
  - Cliente;
  - Funcionários; 
  - Administrador;
@@ -29,7 +28,7 @@
 
 **Fluxo Principal**
 
-1. O administrador fará 
+1. O administrador fará login.
 2. O sistema exibirá a página inicial do administrador.
 3. O administrador irá clicar em sua navbar.
 4. O sistema exibirá as opções disponíveis na navbar.
@@ -43,7 +42,7 @@
 
 **Fluxo Alternativo  A**
 
-1. O administrador fará 
+1. O administrador fará login.
 2. O sistema exibirá a página inicial do administrador.
 3. O administrador irá clicar em sua navbar.
 4. O sistema exibirá as opções disponíveis na navbar.
