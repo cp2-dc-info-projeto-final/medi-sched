@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS Administrador (
     data_nascimento DATE NOT NULL,
     genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
 );
-
+---senha: 12345678------
 INSERT INTO Administrador (
     nome_administrador, 
     sobrenome_administrador, 
@@ -70,7 +70,7 @@ INSERT INTO Administrador (
     'Miguel', 
     'Sierra', 
     'miguelmesierra@gmail.com', 
-    '$2y$10$VmyDO8OvY5BpsnMdRXi4q.CV4KCJ.zhXZkpgJjuTHJzmQAOtjoxG2',   ---senha: 12345678------
+    '$2y$10$VmyDO8OvY5BpsnMdRXi4q.CV4KCJ.zhXZkpgJjuTHJzmQAOtjoxG2',   
     '123.456.789-00', 
     '1985-01-01', 
     'Masculino'
