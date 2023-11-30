@@ -17,6 +17,7 @@
  
  
 ## Lista dos Atores
+ - 
  - Cliente;
  - Funcionários; 
  - Administrador;
@@ -47,7 +48,7 @@
 3. O administrador irá clicar em sua navbar.
 4. O sistema exibirá as opções disponíveis na navbar.
 5. O administrador irá clicar na opção "Cadastrar Funcionário".
-6. O sistema exibirá a pagina de cadastro de funcionário.
+6. O sistema exibirá a pagina de cadastro de funcionário com um formulário.
 7. O administrador irá cadastrar o funcionário.
 8. O sistema informará ao administrador que os campos de cadastro não estão preenchidos corretamento.
 9. O administrador irá preencher os campos corretamente.
@@ -61,11 +62,11 @@
 **Fluxo Principal**
 
 1. O sistema exibirá a página inicial
-2. O cliente clica em "Cadastro".
+2. O cliente clica no butão "Cadastre-se".
 3. O sistema exibirá uma pagina de cadastro com um formulário.
-4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento).
-5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
-6. O sistema informará ao cliente que o cadastro foi efetuado.
+4. O cliente irá inserir os dados no formulário (nome, sobrenome, e-mail, senha, cpf, data de nascimento e gênero).
+5. O cliente irá enviar os dados para o sistema clicando no botão "Continuar".
+6. O sistema voltará para a página inicial.
 
 ![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/4fad766e-8244-4b10-a9d8-df1d23b84efd)
 
@@ -75,11 +76,11 @@
 2. O cliente clica em "Cadastro".
 3. O sistema exibirá uma pagina de cadastro com um formulário.
 4. O cliente irá inserir os dados no formulário (nome,e-mail ,senha, cpf, data de nascimento).
-5. O cliente irá enviar os dados para o sistema clicando no botão "Enviar".
-6. O sistema informará ao cliente que o email ou senha estão inválidos.
-7. O cliente digitará corretamente email ou senha.
-8. O cliente clica em "Enviar".
-9. O sistema informará ao cliente que o cadastro foi efetuado.
+5. O cliente irá enviar os dados para o sistema clicando no botão "Continuar".
+6. O sistema informará ao cliente que os campos de cadastro não estão preenchidos corretamento.
+7. O cliente irá preencher corretamente os campos.
+8. O cliente clica em "Continuar".
+9. O sistema voltará para a página inicial.
 
 ![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/5457bc2c-7931-48f4-a31d-f2f8068a0894)
 
