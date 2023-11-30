@@ -71,7 +71,7 @@ INSERT INTO Administrador (
     'Sierra', 
     'miguelmesierra@gmail.com', 
     '$2y$10$VmyDO8OvY5BpsnMdRXi4q.CV4KCJ.zhXZkpgJjuTHJzmQAOtjoxG2', 
-    '123.456.789-00', -- Substitua com um CPF válido
-    '1985-01-01', -- Uma data de nascimento que garanta que a pessoa tem mais de 18 anos
+    '123.456.789-00', 
+    '1985-01-01', 
     'Masculino'
 );
