@@ -1,3 +1,7 @@
+<?php
+include "autentica_paciente.php";
+?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
