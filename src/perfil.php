@@ -1,43 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
     <title>Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=".css"/>
-    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href=".css/perfil.css"/>
+  </head>
+
 <body class="fadeIn">
     <div id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                <a class="navbar-brand" href="index_adm.php"><img src=".img/logo.png" width="45%"/></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="index_paciente.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
                 <div class="collapse navbar-collapse" id="nav-content">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimento.php">Atendimentos</a>
+                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
+                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="editaemail.php">Redefinir Email</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
+                        </li>
                     </ul>
-                </div>
+               </div>
             </nav>
         </div>
-    <div id="slider">
-        <div class="container">
+        <div class="">
             <h1>Dados do seu Perfil</h1>
             <form action="perfil.php" method="POST" class="form-container">
             <?php
@@ -58,9 +54,8 @@
                     echo "Cpf: ".$cliente["cpf"]."<br";
         
                 }
-                
+              
             ?>
-
             </form>
         </div>
 </html>
