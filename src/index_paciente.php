@@ -1,3 +1,8 @@
+<?php
+include 'autentica_paciente.php';
+?>
+
+
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -26,9 +31,6 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
