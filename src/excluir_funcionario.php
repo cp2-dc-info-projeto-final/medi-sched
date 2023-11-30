@@ -1,13 +1,8 @@
 <?php
-include "conecta_mysql.php"; // Conecta ao banco de dados
+include "autentica_adm.php"; // Autenticação de administrador
+include "conecta_mysql.php"; // Conexão com o banco de dados
 
 session_start();
-
-// Verifica se o usuário está logado como administrador
-if (!isset($_SESSION['idAdministrador'])) {
-    header('Location: login.php');
-    exit;
-}
 
 // Verifica se o ID foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['id'])) {
