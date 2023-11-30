@@ -57,7 +57,6 @@ CREATE TABLE IF NOT EXISTS Administrador (
     data_nascimento DATE NOT NULL,
     genero ENUM('Feminino', 'Masculino', 'Outros', 'Prefiro não dizer') NOT NULL
 );
----senha: 12345678------
 INSERT INTO Administrador (
     nome_administrador, 
     sobrenome_administrador, 
