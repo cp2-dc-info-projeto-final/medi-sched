@@ -60,7 +60,7 @@ if ($mensagemErro) {
             <img src=".img/med.png" alt="">
         </div>
         <div class="form">
-            <form action="funcionario.php" method="post">
+            <form action="cadastro_func.php" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastro de Funcionário</h1>
