@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $area, $genero);
 
         if ($stmt->execute()) {
-            header("Location: index.php"); // Redirecionamento para a página de confirmação ou de login do funcionário
+            header("Location: index_adm.php"); // Redirecionamento para a página de confirmação ou de login do funcionário
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
