@@ -1,5 +1,5 @@
 <?php
-include "autentica_paciente.php";
+include "autentica_adm.php";
 ?>
 
 <!doctype html>
