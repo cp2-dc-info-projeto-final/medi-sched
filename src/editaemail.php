@@ -1,5 +1,5 @@
 <?php include "conecta_mysql.php";
-      include "autentica_paciente.php"  
+      include "autentica_paciente.php";
  ?>
 
 <!doctype html>
