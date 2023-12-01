@@ -2,7 +2,7 @@
 
 A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as funcionalidades e com ele iremos ensiná-los a como usar o nosso site.
 
-**Funcionalidades:**
+**Funcionalidades para os clientes:**
  - [Cadastro](#1-CADASTRAR)
  - [Login](#2-LOGIN)
  - [Logout](#3-LOGOUT)
@@ -15,8 +15,7 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
 **Funcionalidades para administrador:**
 
 - [Cadastrar funcionário (Página  inicial - adm)](#1-Cadastrar-funcionário)
-- [Consultar funcionários (Página  inicial - adm)](#2-Consultar-funcionários)
-- [Consultar administradores (Página  inicial - adm)]
+- [Consultar funcionários (Página  inicial - adm)](#2-Consultar-funcionários) o 
 - [Excluir funcionários (Página  inicial - adm)](#3-Excluir-funcionário)
 - [Excluir agendamento (Página  inicial - adm)](#4-Excluir-agendamento)
 
