@@ -15,7 +15,7 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
 **Funcionalidades para administrador:**
 
 - [Cadastrar funcionário (Página  inicial - adm)](#1-Cadastrar-funcionário)
-- [Consultar funcionários (Página  inicial - adm)](#2-Consultar-funcionários) o 
+- [Consultar funcionários (Página  inicial - adm)](#2-Consultar-funcionários) 
 - [Excluir funcionários (Página  inicial - adm)](#3-Excluir-funcionário)
 - [Excluir agendamento (Página  inicial - adm)](#4-Excluir-agendamento)
 
