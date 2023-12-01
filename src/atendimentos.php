@@ -144,12 +144,7 @@
           <p>
             <a href="atendimentos.php" class="text-reset">Atendimentos</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Sobre</a>
-          </p>
-          <p>
-            <a href="funcionario.php" class="text-reset">Trabalhe conosco.</a>
-          </p>
+
           
         </div>
 
