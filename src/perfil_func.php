@@ -1,55 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agenda+Saúde</title>
-    <link rel="stylesheet" href="" />
-  </head>
-
+<head>
+    <title>Área do Funcionário - Agenda+Saúde</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="caminho_para_seu_arquivo_css/inicial_funcionario.css"/>
+    <link rel="shortcut icon" href="caminho_para_seu_arquivo_logo/logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
 <body class="fadeIn">
     <div id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                <a class="navbar-brand" href="index.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
+                <a class="navbar-brand" href="index_funcionario.php"><img src=".img/logo.png" width="45%"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="nav-content">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
+                            <a class="nav-link active" aria-current="page" href="index_funcionario.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
+                            <a class="nav-link" href="editar_agendamento.php">Editar Consultas</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
+                            <a class="nav-link" href="cancela_agendamento.php">Cancelar Consultas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus_agend.php">Ver Agendamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil_func.php">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="editaemail.php">Redefinir Email</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
+                        </li>                      
                     </ul>
-               </div>
+                </div>
             </nav>
         </div>
-    </div id="slider">
+    </div>
         <div class="container">
             <h1>Dados do seu Perfil</h1>
             <form action="perfil_func.php" method="POST" class="form-container">
             <?php
+                include "autentica_funcionario.php";
                 include "conecta_mysql.php";
-                session_start();
 
-                $_SESSION["email"];
-
-                $sql = "SELECT * FROM funcionario WHERE email = '{$_SESSION["email"]}';"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-                for($i = 0; $i < $linhas; $i++){
-                    $funcionario = mysqli_fetch_array($res);
-                    echo "<strong>Dados pessoais:</strong><br>";
-                    echo "Id Funcionario: ".$funcionario["idFuncionario"]."<br>";
-                    echo "Nome: ".$funcionario["nome_funcionario"]."<br>";
-                    echo "E-mail: ".$funcionario["email"]."<br>";
-                    echo "Area: ".$funcionario["area"]."<br";
-        
+                if (!isset($_SESSION["email"])) {
+                    echo "Usuário não autenticado.";
+                    exit; 
                 }
-            ?>
+                
+                $email = $_SESSION["email"];
+                
+                $stmt = $mysqli->prepare("SELECT * FROM funcionario WHERE email = ?");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                
+                if ($result->num_rows > 0) {
+                    while ($funcionario = $result->fetch_assoc()) {
+                        echo "<strong>Dados pessoais:</strong><br>";
+                        echo "Id Funcionario: " . $funcionario["idFuncionario"] . "<br>";
+                        echo "Nome: " . $funcionario["nome_funcionario"] . "<br>";
+                        echo "E-mail: " . $funcionario["email"] . "<br>";
+                        echo "Cpf: " . $funcionario["cpf"] . "<br>";
+                    }
+                }                
+                $stmt->close();
+                $mysqli->close();
+                ?>
 
             </form>
         </div>
