@@ -35,7 +35,7 @@ if ($idCliente !== null) {
             $agendamentos[] = $row;
         }
     } else {
-        echo "<p>Você não tem agendamentos marcados.</p>";
+        echo "<p></p>";
     }
     $stmt->close();
 }
