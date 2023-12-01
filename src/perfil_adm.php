@@ -27,11 +27,7 @@
                             <a class="nav-link" href="cadastro_func.php">Cadastrar Funcionario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="perfil_adm.php">Perfil</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>
-                        </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="editaemail.php">Redefinir Email</a>
