@@ -1,37 +1,53 @@
 <?php
 include "envia_email.php";
-include "conecta_mysql.php"; // Se você precisar conectar-se ao banco de dados
-
+include "conecta_mysql.php"; // Este arquivo deve criar a conexão MySQLi ($mysqli)
 session_start();
 
-$email = $_POST['email']; 
+$email = $_POST['email'];
 
-// Gerar uma senha aleatória de 6 dígitos
-$recuperacao_senha = rand(100000, 999999);
+// Verifica se o e-mail existe
+$query = "SELECT email FROM Cliente WHERE email = ?";
+$stmt = $mysqli->prepare($query);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
-// Criptografar a senha antes de armazená-la no banco de dados
-$senha_criptografada = password_hash($recuperacao_senha, PASSWORD_DEFAULT);
-
-// Atualizar a senha no banco de dados para o usuário com o email fornecido
-$sql = "UPDATE Cliente SET senha = ? WHERE email = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$senha_criptografada, $email]);
-
-$assunto = "Recuperação de Senha";
-
-$mensagem = "Dados para recuperação de senha:<br>";
-$mensagem .= "<br><b>Nome:</b>";
-$mensagem .= "<br><b>Data:</b>";
-$mensagem .= "<br><b>E-mail:</b> $email";
-$mensagem .= "<br><b>Nova Senha:</b> $recuperacao_senha"; // Mostrar a nova senha gerada
-
-if(envia_email($email, $assunto, $mensagem)){
-    $_SESSION['msg_rec'] = "Instruções de recuperação de senha foram enviadas para o seu e-mail.";
-    header("Location: recuperar_cod.php"); // Redireciona para a página inicial de recuperação
+if ($result->num_rows === 0) {
+    // E-mail não encontrado
+    $_SESSION['msg_rec'] = "E-mail não encontrado no banco de dados.";
 } else {
-    $_SESSION['msg_rec'] = "Falha no envio do e-mail. Por favor, tente novamente.";
-    header("Location: recuperar_senha.php"); // Redireciona para a página inicial de recuperação
+    // Gera uma nova senha aleatória
+    $nova_senha = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 8);
+
+    $assunto = "Nova Senha Temporária";
+    $mensagem = "Sua nova senha temporária é: $nova_senha";
+
+    // Começa a transação
+    $mysqli->begin_transaction();
+
+    try {
+        // Atualiza a senha no banco de dados
+        $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+        $update_query = "UPDATE Cliente SET senha = ? WHERE email = ?";
+        $update_stmt = $mysqli->prepare($update_query);
+        $update_stmt->bind_param("ss", $senha_hash, $email);
+        $update_stmt->execute();
+
+        if(envia_email($email, $assunto, $mensagem)) {
+            // Se o e-mail foi enviado com sucesso, commit na transação
+            $mysqli->commit();
+            $_SESSION['msg_rec'] = "Uma nova senha foi enviada para o seu e-mail.";
+        } else {
+            // Se falhar o envio do e-mail, rollback na transação
+            $mysqli->rollback();
+            $_SESSION['msg_rec'] = "Falha ao enviar e-mail.";
+        }
+    } catch (Exception $e) {
+        // Em caso de erro, rollback na transação
+        $mysqli->rollback();
+        $_SESSION['msg_rec'] = "Erro ao atualizar a senha.";
+    }
 }
+
 exit;
 ?>
-
