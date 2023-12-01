@@ -1,4 +1,5 @@
 <?php include "conecta_mysql.php";
+      include "autentica_paciente.php"  
  ?>
 
 <!doctype html>
@@ -49,16 +50,12 @@
     </div>
     <div class="container">
         <p>Redefina seu Email!
-
             Apos redefinir voce sera encaminhado direto para a pagina de login
         </P>
         <form action="editaemail.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="editemail">
 		  	<?php
-            session_start();
-            
-            include "conecta_mysql.php";
-            
+
             $operacao = isset($_POST['operacao']) ? $_POST['operacao'] : '';
             
             if($operacao === "editemail") {
@@ -119,6 +116,8 @@
           <p>Insira sua senha atual <input type="password" placeholder="insira aqui" name="senha"></p>
           <p><input type="submit" value="Enviar" class="btn"></p>    
         </form>
+
     </div>
+
   </body>
 </html>
