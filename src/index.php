@@ -127,9 +127,6 @@
             <a href="atendimentos.php" class="text-reset">Atendimentos</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Sobre</a>
-          </p>
-          <p>
             <a href="cadastro_adm.php" class="text-reset">Seja nosso administrador.</a>
           </p>
           
