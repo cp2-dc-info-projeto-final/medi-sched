@@ -99,21 +99,15 @@ Para fazer agendamento de algum plano.
 
 - Em sua conta, clique em "Perfil"
 - Seu perfil será exibido com os seus dados. 
-
-**6.2 Excluir dados**
-
-- Em seu perfil, clique em "".
-- Confirme a exclusão da conta. 
-
-
+  
 ## 7. REDEFINIR SENHA
 
 - Em sua conta, clique em "Perfil". 
-- Em "Deseja criar uma nova senha", selecione "SIM".
+- Em "Editar".
 - Digite a nova senha.
-- Clique em "".
+- Clique em "Confirmar".
 
-=====================================
+_______________________________________
 
 ## 1. PÁGINA INICIAL - Adm
 
@@ -143,7 +137,7 @@ Para fazer agendamento de algum plano.
 - Aperte em excluir.
 - Confirme a exclusão do agendamento.
 
-=====================================
+_______________________________________
 
 ## 1. PÁGINA INICIAL - Funcionário
 
