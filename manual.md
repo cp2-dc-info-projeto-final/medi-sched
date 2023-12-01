@@ -12,7 +12,7 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
  - [Visualizar perfil](#7-VISUALIZAR-PERFIL)
  - [Redefinir senha](#8-REDEFINIR-SENHA)
 
- - Funcionalidades para administrador:
+**Funcionalidades para administrador:**
 
 - [Cadastrar funcionário (Página  inicial - adm)](#1-Cadastrar-funcionário)
 - [Consultar funcionários (Página  inicial - adm)](#2-Consultar-funcionários)
@@ -20,7 +20,7 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
 - [Excluir funcionários (Página  inicial - adm)](#3-Excluir-funcionário)
 - [Excluir agendamento (Página  inicial - adm)](#4-Excluir-agendamento)
 
- - Funcionalidades para funcionários:
+**Funcionalidades para funcionários:**
  
  - [Acessar calendário (Página  inicial - funcionário)](#1-Acessar-calendário)
  - [Acessar perfil (Página  inicial - funcionário)](#2-Acessar-perfil)
