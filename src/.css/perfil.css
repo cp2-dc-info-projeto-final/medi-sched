@@ -1,0 +1,48 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do Cabeçalho */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    max-width: 100px; /* Ajuste conforme necessário */
+}
+
+.navbar-toggler {
+    border-color: #ddd;
+}
+
+/* Estilos da Navegação */
+.navbar-nav .nav-item .nav-link {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos do Conteúdo */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+}
