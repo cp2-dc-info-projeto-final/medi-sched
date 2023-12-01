@@ -1,4 +1,6 @@
 <?php
+include "conecta_mysql.php"; // Conecte-se ao banco de dados
+
 $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,65 +14,83 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro = false;
 
     // Validações básicas
-    if (empty($idServico) || empty($idFuncionario) || empty($idCliente)) {
-        $mensagemErro .= "Todos os campos do agendamento são obrigatórios.<br>";
+    if (empty($idServico)) {
+        $mensagemErro .= "Por favor, selecione um serviço.<br>";
         $erro = true;
     }
 
-    if (empty($dataConsulta) || !strtotime($dataConsulta)) {
-        $mensagemErro .= "Preencha uma data de consulta válida no formato DD-MM-YYYY.<br>";
+    if (empty($idFuncionario)) {
+        $mensagemErro .= "Por favor, selecione um funcionário.<br>";
+        $erro = true;
+    }
+
+    if (empty($idCliente)) {
+        $mensagemErro .= "Por favor, insira seu ID de cliente.<br>";
+        $erro = true;
+    }
+
+    if (empty($dataConsulta) || !preg_match("/^\d{4}-\d{2}-\d{2}$/", $dataConsulta)) {
+        $mensagemErro .= "Preencha uma data de consulta válida no formato AAAA-MM-DD.<br>";
         $erro = true;
     }
 
     if (empty($horarioConsulta) || !preg_match("/^[0-2][0-9]:[0-5][0-9]$/", $horarioConsulta)) {
-        $mensagemErro .= "Preencha um horário de consulta válido .<br>";
+        $mensagemErro .= "Preencha um horário de consulta válido.<br>";
         $erro = true;
     }
-
-    // Cria a conexão com o banco de dados
-    $mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
-    if ($mysqli->connect_error) {
-        die("Erro na conexão: " . $mysqli->connect_error);
-    }
-
-    // Verifica se já existe um agendamento para o horário selecionado
-    $stmt = $mysqli->prepare("SELECT idAgendamento FROM Agendamento WHERE idFuncionario = ? AND data_consulta = ? AND horario_consulta = ?");
-    $stmt->bind_param("iss", $idFuncionario, $dataConsulta, $horarioConsulta);
-    $stmt->execute();
-    $stmt->store_result();
-
-    if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Já existe um agendamento para este horário com o funcionário selecionado.<br>";
-        $erro = true;
-    }
-
-    $stmt->close();
 
     if (!$erro) {
-        // Insere o novo agendamento no banco de dados
-        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
+        // Verifica se já existe um agendamento para o horário selecionado
+        $stmt = $mysqli->prepare("SELECT idAgendamento FROM Agendamento WHERE idFuncionario = ? AND data_consulta = ? AND horario_consulta = ?");
+        $stmt->bind_param("iss", $idFuncionario, $dataConsulta, $horarioConsulta);
+        $stmt->execute();
+        $stmt->store_result();
 
-        if ($stmt->execute()) {
-            // Redireciona para uma página de confirmação ou outra página conforme necessário
-            $stmt->close();
-            $mysqli->close();
-            header("Location: confirmacao.php"); // Não fiz a pagina de confirmação ainda
-            exit;
-        } else {
-            $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
+        if ($stmt->num_rows > 0) {
+            $mensagemErro .= "Já existe um agendamento para este horário com o funcionário selecionado.<br>";
+            $erro = true;
         }
 
         $stmt->close();
+
+        // Insere o novo agendamento no banco de dados
+        if (!$erro) {
+            $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
+
+            if ($stmt->execute()) {
+                header("Location: confirmacao.php");
+                exit;
+            } else {
+                $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
+            }
+
+            $stmt->close();
+        }
     }
 
     $mysqli->close();
 }
 
-// Se houver mensagens de erro, elas serão exibidas na página
-echo $mensagemErro;
-?>
+// Reabrindo a conexão para buscar os funcionários
+$mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
 
+if ($mysqli->connect_error) {
+    die("Erro na conexão: " . $mysqli->connect_error);
+}
+
+$sql = "SELECT idFuncionario, nome_funcionario, sobrenome_funcionario FROM Funcionario";
+$resultadoFuncionarios = $mysqli->query($sql);
+$funcionarios = [];
+
+if ($resultadoFuncionarios) {
+    while ($row = $resultadoFuncionarios->fetch_assoc()) {
+        $funcionarios[] = $row;
+    }
+}
+
+$mysqli->close();
+?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -135,12 +155,13 @@ echo $mensagemErro;
             <label for="idFuncionario" class="form-label">Funcionário</label>
             <select class="form-select" id="idFuncionario" name="idFuncionario">
                 <option selected>Escolha um funcionário...</option>
-            
-                <option value="1">Dr. Carlos</option>
-                
+                <?php foreach ($funcionarios as $funcionario): ?>
+                    <option value="<?php echo $funcionario['idFuncionario']; ?>">
+                        <?php echo htmlspecialchars($funcionario['nome_funcionario'] . ' ' . $funcionario['sobrenome_funcionario']); ?>
+                    </option>
+                <?php endforeach; ?>
             </select>
         </div>
-        
         <div class="mb-3">
             <label for="idCliente" class="form-label">Cliente</label>
             <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="Seu ID de cliente">
@@ -183,3 +204,5 @@ echo $mensagemErro;
 
 </body>
 </html>
+
+
