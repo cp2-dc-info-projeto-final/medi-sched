@@ -1,28 +1,30 @@
 <?php
-include "conecta_mysql.php"; // Conecta ao banco de dados
-include "autentica_paciente.php"; // Autenticação do paciente
+include "conecta_mysql.php";
 
+if (isset($_GET['idAgendamento'])) {
+    $idAgendamento = $_GET['idAgendamento'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['idAgendamento'])) {
-    $idAgendamento = $_POST['idAgendamento'];
+    // Prepara a declaração para cancelar o agendamento
+    if ($stmt = $mysqli->prepare("DELETE FROM Agendamento WHERE idAgendamento = ?")) {
+        $stmt->bind_param("i", $idAgendamento);
 
-    // Prepare a statement for deletion
-    $stmt = $mysqli->prepare("DELETE FROM Agendamento WHERE idAgendamento = ? AND idCliente = ?");
-    $stmt->bind_param("ii", $idAgendamento, $_SESSION['idCliente']);
+        if ($stmt->execute()) {
+            echo "Agendamento cancelado com sucesso.";
+        } else {
+            echo "Erro ao cancelar o agendamento: " . $stmt->error;
+        }
 
-    if ($stmt->execute()) {
-        $_SESSION['mensagemStatus'] = "Agendamento cancelado com sucesso.";
+        $stmt->close();
     } else {
-        $_SESSION['mensagemStatus'] = "Erro ao cancelar o agendamento: " . $stmt->error;
+        echo "Erro ao preparar a declaração: " . $mysqli->error;
     }
 
-    $stmt->close();
     $mysqli->close();
 } else {
-    $_SESSION['mensagemStatus'] = "ID do agendamento não foi fornecido.";
+    echo "ID do agendamento não fornecido.";
 }
 
-header('Location: meus_agend.php');
+// Redireciona de volta para a página de agendamentos
+header("Location: meus_agend.php");
 exit;
 ?>
-
