@@ -131,7 +131,6 @@ Para fazer agendamento de algum plano.
  
 ### 3. Excluir funcionário
 
-- Em sua conta administrador, clique em "Empresa".  
 - Em sua conta administrador, clique em "Funcionários".
 - Escolha o funcionário que deseja excluir. 
 - Aperte em excluir. 
@@ -139,7 +138,7 @@ Para fazer agendamento de algum plano.
  
 ### 4. Excluir agendamento
 
-- Em sua conta administrador, clique em "Calendário".
+- Em sua conta administrador, clique em "Meus Agendamentos".
 - Escolha o agendamento que deseja excluir.
 - Aperte em excluir.
 - Confirme a exclusão do agendamento.
@@ -148,10 +147,10 @@ Para fazer agendamento de algum plano.
 
 ## 1. PÁGINA INICIAL - Funcionário
 
-### 1. Acessar calendário
+### 1. Acessar agendamentos
 
 - Faça "Login". 
-- Clique em "Calendário".
+- Clique em "Meus Agendamentos".
 
 ### 2. Acessar perfil
 
@@ -160,6 +159,6 @@ Para fazer agendamento de algum plano.
 
 ### 3. Consultar agendamento 
 
-- Em sua conta de funcionário, clique em Agendamentos.  
+- Em sua conta de funcionário, clique em "Meus Agendamentos".  
 - Serão exibidos todos os agendamentos cadastrados, assim como o cliente, serviço, data e horário
 
