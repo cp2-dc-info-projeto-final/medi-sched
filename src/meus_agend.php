@@ -35,7 +35,7 @@ if ($idCliente !== null) {
             $agendamentos[] = $row;
         }
     } else {
-        $mensagem = "<p>Você não tem agendamentos marcados.</p>";
+        echo "<p>Você não tem agendamentos marcados.</p>";
     }
     $stmt->close();
 }
@@ -46,6 +46,7 @@ $mysqli->close();
 <!doctype html>
 <html lang="pt-br">
 <head>
+    <!-- Seu HTML e meta tags aqui -->
     <title>Meus Agendamentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,18 +77,16 @@ $mysqli->close();
                         <li class="nav-item">
                             <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
-			<li class="nav-item">
-				<a class="nav-link" href="logout.php">Logout</a>
+			            <li class="nav-item">
+				            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-    
     <div class="container mt-5">
         <h2>Meus Agendamentos</h2>
-        <?php if (isset($mensagem)): echo $mensagem; endif; ?>
         <?php if (count($agendamentos) > 0): ?>
             <table class="table table-striped mt-4">
                 <thead>
@@ -95,10 +94,8 @@ $mysqli->close();
                         <th>ID do Agendamento</th>
                         <th>ID do Serviço</th>
                         <th>ID do Funcionário</th>
-                        <th>ID do Cliente</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
-                        <th>Local da consulta</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -108,24 +105,22 @@ $mysqli->close();
                             <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
-                            <td><?php echo htmlspecialchars($idCliente); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
-                            <td>Rua Manoel Reis, 15 - Duque de Caxias- Rj</td>
                             <td>
-                                <a href="editar_agendamento.php?id=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-primary btn-sm">Editar</a>
-                                <form action="cancela_agendamento.php" method="post" style="display: inline;">
-                                    <input type="hidden" name="idAgendamento" value="<?php echo $agendamento['idAgendamento']; ?>">
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">Cancelar</button>
-                                </form>
+                                <a href="cancela_agendamento.php?idAgendamento=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">Cancelar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
+        <?php else: ?>
+            <p>Você não tem agendamentos marcados.</p>
         <?php endif; ?>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>   
 </body>
 </html>
+    
