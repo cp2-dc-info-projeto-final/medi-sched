@@ -1,5 +1,5 @@
 <?php
-include "autetica_funcionario.php";
+include "autentica_funcionario.php";
 ?>
 
 
