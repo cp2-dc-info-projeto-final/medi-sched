@@ -15,6 +15,8 @@ $result = $stmt->get_result();
 if ($result->num_rows === 0) {
     // E-mail não encontrado
     $_SESSION['msg_rec'] = "E-mail não encontrado no banco de dados.";
+    header("Location: login.php");
+    exit;
 } else {
     // Gera uma nova senha aleatória
     $nova_senha = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 8);
@@ -47,7 +49,8 @@ if ($result->num_rows === 0) {
         $mysqli->rollback();
         $_SESSION['msg_rec'] = "Erro ao atualizar a senha.";
     }
-}
 
-exit;
+    header("Location: login.php");
+    exit;
+}
 ?>
