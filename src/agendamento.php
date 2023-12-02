@@ -2,32 +2,23 @@
 session_start();
 include "conecta_mysql.php";
 
-if (!isset($_SESSION['email'])) {
+// Verifica se o usuário está logado e tem um ID de usuário
+if (!isset($_SESSION['email']) || !isset($_SESSION['idUsuario'])) {
     header('Location: login.php');
     exit;
 }
 
 $mensagemErro = "";
-
-// Verifica se o usuário está logado
-if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
-    $_SESSION['erro_login'] = "Você precisa fazer login para acessar esta página.";
-    header("Location: login.php");
-    exit;
-}
-
-$mensagemErro = "";
+$idCliente = $_SESSION['idUsuario']; // Usaremos o ID do usuário como ID do cliente para o agendamento
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Dados do agendamento
     $idServico = $_POST["idServico"];
     $idFuncionario = $_POST["idFuncionario"];
-    $idCliente = $_POST["idCliente"];
     $dataConsulta = $_POST["dataConsulta"];
     $horarioConsulta = $_POST["horarioConsulta"];
-
+    
     $erro = false;
-
+    
     // Validações básicas
     if (empty($idServico)) {
         $mensagemErro .= "Por favor, selecione um serviço.<br>";
@@ -39,15 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
-    if (empty($idCliente)) {
-        $mensagemErro .= "Por favor, insira seu ID de cliente.<br>";
-        $erro = true;
-    }
-
     if (empty($dataConsulta) || !preg_match("/^\d{4}-\d{2}-\d{2}$/", $dataConsulta)) {
         $mensagemErro .= "Preencha uma data de consulta válida no formato AAAA-MM-DD.<br>";
         $erro = true;
-    } else if ($dataConsulta < date("Y-m-d")) {
+    } else if (strtotime($dataConsulta) < strtotime(date("Y-m-d"))) {
         $mensagemErro .= "Não é possível selecionar uma data no passado.<br>";
         $erro = true;
     }
@@ -57,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
+    // Verifica se já existe um agendamento para o horário selecionado
     if (!$erro) {
-        // Verifica se já existe um agendamento para o horário selecionado
         $stmt = $mysqli->prepare("SELECT idAgendamento FROM Agendamento WHERE idFuncionario = ? AND data_consulta = ? AND horario_consulta = ?");
         $stmt->bind_param("iss", $idFuncionario, $dataConsulta, $horarioConsulta);
         $stmt->execute();
@@ -68,26 +54,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mensagemErro .= "Já existe um agendamento para este horário com o funcionário selecionado.<br>";
             $erro = true;
         }
-
         $stmt->close();
-
-        // Insere o novo agendamento no banco de dados
-        if (!$erro) {
-            $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
-
-            if ($stmt->execute()) {
-                header("Location: confirmacao.php");
-                exit;
-            } else {
-                $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
-            }
-
-            $stmt->close();
-        }
     }
 
-    $mysqli->close();
+    // Insere o novo agendamento no banco de dados
+    if (!$erro) {
+        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
+
+        if ($stmt->execute()) {
+            header("Location: confirmacao.php");
+            exit;
+        } else {
+            $mensagemErro .= "Erro ao inserir o agendamento: " . $stmt->error;
+        }
+        $stmt->close();
+    }
 }
 
 // Reabrindo a conexão para buscar os funcionários
@@ -107,7 +89,7 @@ if ($resultadoFuncionarios) {
     }
 }
 
-$mysqli->close();
+$mysqli->close();;
 ?>
 
 <!doctype html>
@@ -156,42 +138,37 @@ $mysqli->close();
     <?php endif; ?>
     
     <form action="agendamento.php" method="post">
-        <div class="mb-3">
-            <label for="idServico" class="form-label">Serviço</label>
-            <select class="form-select" id="idServico" name="idServico">
-                <option selected>Escolha um serviço...</option>
-                <option value="1">Ortopedia</option>
-                <option value="2">Vacinação</option>
-                <option value="3">Oftalmologia</option>
-                <option value="4">Odontológico</option>
-                <option value="5">Psicólogo</option>
-                <option value="6">Ginecológico</option>
-            </select>
-        </div>
-        
-        <div class="mb-3">
-            <label for="idFuncionario" class="form-label">Funcionário</label>
-            <select class="form-select" id="idFuncionario" name="idFuncionario">
-                <option selected>Escolha um funcionário...</option>
-                <?php foreach ($funcionarios as $funcionario): ?>
-                    <option value="<?php echo $funcionario['idFuncionario']; ?>">
-                        <?php echo htmlspecialchars($funcionario['nome_funcionario'] . ' ' . $funcionario['sobrenome_funcionario']); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="idCliente" class="form-label">Cliente</label>
-            <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="Seu ID de cliente">
-        </div>
+    <div class="mb-3">
+        <label for="idServico" class="form-label">Serviço</label>
+        <select class="form-select" id="idServico" name="idServico" required>
+            <option selected>Escolha um serviço...</option>
+            <option value="1">Ortopedia</option>
+            <option value="2">Vacinação</option>
+            <option value="3">Oftalmologia</option>
+            <option value="4">Odontológico</option>
+            <option value="5">Psicólogo</option>
+            <option value="6">Ginecológico</option>
+        </select>
+    </div>
+    
+    <div class="mb-3">
+        <label for="idFuncionario" class="form-label">Funcionário</label>
+        <select class="form-select" id="idFuncionario" name="idFuncionario" required>
+            <option selected>Escolha um funcionário...</option>
+            <?php foreach ($funcionarios as $funcionario): ?>
+                <option value="<?php echo $funcionario['idFuncionario']; ?>">
+                    <?php echo htmlspecialchars($funcionario['nome_funcionario'] . ' ' . $funcionario['sobrenome_funcionario']); ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
 
-        
-        <div class="mb-3">
-            <label for="dataConsulta" class="form-label">Data da Consulta</label>
-            <input type="date" class="form-control" id="dataConsulta" name="dataConsulta">
-        </div>
-        
-        <div class="mb-3">
+    <div class="mb-3">
+        <label for="dataConsulta" class="form-label">Data da Consulta</label>
+        <input type="date" class="form-control" id="dataConsulta" name="dataConsulta" required>
+    </div>
+    
+    <div class="mb-3">
             <label for="horarioConsulta" class="form-label">Horário da Consulta</label>
             <select class="form-control" id="horarioConsulta" name="horarioConsulta">
                 <option value="10:00">10:00</option>
@@ -206,21 +183,11 @@ $mysqli->close();
             </select>
         </div>
 
-        <div class="mb-3">
-            <label  class="form-label">Endereço</label>
-            <select class="form-select" name="endereco">
-                <option selectead>Locais dísponíveis...</option>
-            
-                <option value="1">Rua Manoel Reis, 15 - Duque de Caxias- Rj</option>
-                
-            </select>
-        </div>
+    <button type="submit" class="btn btn-primary">Agendar</button>
+</form>
+
         
-        <button type="submit" class="btn btn-primary">Agendar</button>
-    </form>
 </div>
 
 </body>
 </html>
-
-
