@@ -112,9 +112,6 @@ $mysqli->close();
                             <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
                         <li class="nav-item">
