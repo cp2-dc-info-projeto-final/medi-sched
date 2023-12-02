@@ -9,7 +9,6 @@ include "autentica_adm.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=".css/inicial.css"/>
-    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -53,8 +52,9 @@ include "autentica_adm.php";
         </div>
 
         <!-- Botão de Ação -->
-            <div class="col-lg-4 mb-3">
-                <a href="mostrar_funcionarios.php" class="btn btn-success" class="text-center">Ver Funcionarios</a>
+        <div class="row text-center mt-4">
+            <div class="container text-center">
+                <a href="mostrar_funcionario.php" class="btn btn-success">Ver Funcionarios</a>
             </div>
         </div>
     </div>
