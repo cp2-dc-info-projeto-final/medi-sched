@@ -33,7 +33,7 @@
                             <a class="nav-link" href="editaemailadm.php">Redefinir Email</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
+                            <a class="nav-link" href="editasenhaadm.php">Redefinir Senha</a>
                         </li>                       
                     </ul>
                 </div>
