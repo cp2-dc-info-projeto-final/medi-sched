@@ -134,7 +134,7 @@ _______________________________________
 
 ## 1. PÁGINA INICIAL - Funcionário
 
-### 1. Acessar agendamentos
+### 1. Acessar agendamento
 
 - Faça "Login". 
 - Clique em "Meus Agendamentos".
