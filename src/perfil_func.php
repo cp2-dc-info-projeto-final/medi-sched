@@ -27,7 +27,7 @@
                             <a class="nav-link" href="editaemailfunc.php">Redefinir Email</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
+                            <a class="nav-link" href="editasenhafunc.php">Redefinir Senha</a>
                         </li>     
                          <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>
