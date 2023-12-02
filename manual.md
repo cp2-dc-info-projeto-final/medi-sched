@@ -27,34 +27,34 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
 
 _______________________________________
 
-## 1. LOGIN
-
-**1.1 Para acessar como “cliente”:** 
-
- - Clicar em "Login".
- - Insira o email e a senha e aperte em "Login".
- - Será direcionado para a página inicial com login.
- 
-**1.2 Para fazer login como funcionário:**
-
-- Clique em "Login".
-- Insira o email e a senha e aperte em "Login".
-- Seu login de administrador será feito com sucesso.
-
-## 2. LOGOUT 
-
-Para sair da sua conta. 
-
-- Clique em “Logout".
-- Será direcionado para a página inicial sem login. 
-
-## 3. CADASTRAR
+## 1. CADASTRAR
 
 Para se cadastrar no site. 
 
 - Clique em "Cadastrar-se".
 - Insira os seguintes dados: Primeiro nome, sobrenome, email, senha, data de nascimento, CPF e Gênero .
 - Clique em "Continuar".
+
+## 2. LOGIN
+
+**2.1 Para acessar como “cliente”:** 
+
+ - Clicar em "Login".
+ - Insira o email e a senha e aperte em "Login".
+ - Será direcionado para a página inicial com login.
+ 
+**2.2 Para fazer login como funcionário:**
+
+- Clique em "Login".
+- Insira o email e a senha e aperte em "Login".
+- Seu login de administrador será feito com sucesso.
+
+## 3. LOGOUT 
+
+Para sair da sua conta. 
+
+- Clique em “Logout".
+- Será direcionado para a página inicial sem login. 
 
 ## 4. AGENDAMENTO 
 
