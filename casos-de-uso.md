@@ -52,7 +52,8 @@
 6. O administrador irá enviar os dados para o sistema. 
 7. O funcionário será cadastrado.
 
-![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/c55d1bf3-9449-4635-9e65-a85cdf4b7fd6)
+![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
+
 
 
 ### CDU 02 
