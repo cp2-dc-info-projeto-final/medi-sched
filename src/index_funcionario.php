@@ -29,12 +29,6 @@ include "autentica_funcionario.php";
                             <a class="nav-link active" aria-current="page" href="index_funcionario.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editar_agendamento.php">Editar Consultas</a> 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cancela_agendamento.php">Cancelar Consultas</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="meus_agend_func.php">Ver Agendamentos</a>
                         </li>
                         <li class="nav-item">
