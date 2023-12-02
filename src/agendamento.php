@@ -9,6 +9,17 @@ if (!isset($_SESSION['email'])) {
 
 $mensagemErro = "";
 
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
+    $_SESSION['erro_login'] = "Você precisa fazer login para acessar esta página.";
+    header("Location: login.php");
+    exit;
+}
+
+$mensagemErro = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Dados do agendamento
     $idServico = $_POST["idServico"];
@@ -37,6 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($dataConsulta) || !preg_match("/^\d{4}-\d{2}-\d{2}$/", $dataConsulta)) {
         $mensagemErro .= "Preencha uma data de consulta válida no formato AAAA-MM-DD.<br>";
+        $erro = true;
+    } else if ($dataConsulta < date("Y-m-d")) {
+        $mensagemErro .= "Não é possível selecionar uma data no passado.<br>";
         $erro = true;
     }
 
