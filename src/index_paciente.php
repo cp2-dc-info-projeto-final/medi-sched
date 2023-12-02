@@ -53,7 +53,6 @@ include 'autentica_paciente.php';
         <h1>A clínica mais completa para a sua saúde!</h1>
         <h4>Agende já uma consulta.</h4>
         <a href="agendamento.php" class="btn btn-primary button">Agende agora mesmo</a>
-        <a href="atendimentos.php" class="btn btn-outline-secondary button">Atendimentos</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
         <img src=".img/atendimento.png" class="img-fluid" alt="Imagem relacionada à saúde.">
