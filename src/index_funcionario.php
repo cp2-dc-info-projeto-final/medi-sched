@@ -9,7 +9,7 @@ include "autentica_funcionario.php";
     <title>Área do Funcionário - Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="caminho_para_seu_arquivo_css/inicial_funcionario.css"/>
+    <link rel="stylesheet" href=""/>
     <link rel="shortcut icon" href="caminho_para_seu_arquivo_logo/logo.png" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -61,13 +61,7 @@ include "autentica_funcionario.php";
 
         <!-- Botões de Ação -->
         <div class="row text-center mt-4">
-            <div class="col-lg-4 mb-3">
-                <a href="editar_agendamento.php" class="btn btn-info">Editar Consultas</a> <!-- Não feito ainda --> 
-            </div>
-            <div class="col-lg-4 mb-3">
-                <a href="cancela_agendamento.php" class="btn btn-warning">Cancelar Consultas</a>
-            </div>
-            <div class="col-lg-4 mb-3">
+            <div class="container text-center">
                 <a href="meus_agend_func.php" class="btn btn-success">Ver Agendamentos</a>
             </div>
         </div>
