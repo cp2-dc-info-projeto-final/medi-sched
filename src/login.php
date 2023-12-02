@@ -13,13 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"];
 
     // Tenta autenticar como administrador
-    $sql = "SELECT * FROM Administrador WHERE email = ?";
+    $sql = "SELECT idAdministrador, email, senha FROM Administrador WHERE email = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
         if (password_verify($senha, $row["senha"])) {
+            $_SESSION['idUsuario'] = $row["idAdministrador"]; // Armazena o ID do administrador
             $_SESSION['email'] = $email;
             $_SESSION['tipo_usuario'] = 'administrador';
             header("Location: index_adm.php");
@@ -28,13 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Tenta autenticar como cliente
-    $sql = "SELECT * FROM Cliente WHERE email = ?";
+    $sql = "SELECT idCliente, email, senha FROM Cliente WHERE email = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
         if (password_verify($senha, $row["senha"])) {
+            $_SESSION['idUsuario'] = $row["idCliente"]; // Armazena o ID do cliente
             $_SESSION['email'] = $email;
             $_SESSION['tipo_usuario'] = 'cliente';
             header("Location: index_paciente.php");
@@ -43,13 +45,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Tenta autenticar como funcionário
-    $sql = "SELECT * FROM Funcionario WHERE email = ?";
+    $sql = "SELECT idFuncionario, email, senha FROM Funcionario WHERE email = ?";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
         if (password_verify($senha, $row["senha"])) {
+            $_SESSION['idUsuario'] = $row["idFuncionario"]; // Armazena o ID do funcionário
             $_SESSION['email'] = $email;
             $_SESSION['tipo_usuario'] = 'funcionario';
             header("Location: index_funcionario.php");
@@ -63,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 mysqli_close($mysqli);
 ?>
+
 
 
 <!DOCTYPE html>
