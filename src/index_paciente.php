@@ -6,7 +6,7 @@ include 'autentica_paciente.php';
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <title>Agenda+Saúde</title>
+    <title>Área do Cliente - Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=".css/inicial.css"/>
