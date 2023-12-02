@@ -68,7 +68,7 @@ include "autentica_funcionario.php";
                 <a href="cancela_agendamento.php" class="btn btn-warning">Cancelar Consultas</a>
             </div>
             <div class="col-lg-4 mb-3">
-                <a href="meus_agend.php" class="btn btn-success">Ver Agendamentos</a>
+                <a href="meus_agend_func.php" class="btn btn-success">Ver Agendamentos</a>
             </div>
         </div>
     </div>
