@@ -24,27 +24,14 @@
                             <a class="nav-link active" aria-current="page" href="index_funcionario.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editar_agendamento.php">Editar Consultas</a> 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cancela_agendamento.php">Cancelar Consultas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="meus_agend.php">Ver Agendamentos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="perfil_func.php">Perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="editaemail.php">Redefinir Email</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
-                        </li>                      
+                        </li>     
+                         <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
