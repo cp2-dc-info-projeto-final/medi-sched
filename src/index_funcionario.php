@@ -38,7 +38,7 @@ include "autentica_funcionario.php";
                             <a class="nav-link" href="meus_agend.php">Ver Agendamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="perfil.php">Perfil</a>
+                            <a class="nav-link" href="perfil_func.php">Perfil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>
