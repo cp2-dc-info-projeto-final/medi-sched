@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=".css/editaemail.css"/>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -27,9 +27,7 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="atendimentos.php">Atendimentos</a>
-                        </li>
+              
                         <li class="nav-item">
                             <a class="nav-link" href="meus_agend.php">Meus Agendamentos</a>
                         </li>
