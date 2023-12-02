@@ -131,9 +131,6 @@ include 'autentica_paciente.php';
             Acesso ao site
           </h6>
           <p>
-            <a href="atendimentos.php" class="text-reset">Atendimentos</a>
-          </p>
-          <p>
             <a href="#!" class="text-reset">Sobre</a>
           </p>
           
@@ -157,7 +154,7 @@ include 'autentica_paciente.php';
 
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2023 Direitos autorais:
-    <a class="text-reset fw-bold" href="index.php">Agenda+Saúde</a>
+    <a class="text-reset fw-bold" href="index_paciente.php">Agenda+Saúde</a>
   </div>
 </footer>
 </footer>
