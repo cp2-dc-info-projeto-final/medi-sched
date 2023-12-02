@@ -22,7 +22,7 @@ unset($_SESSION['mensagemStatus']);
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href=".css"/>
 </head>
 <body>
     <div class="container mt-5">
