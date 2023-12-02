@@ -71,13 +71,7 @@ Para fazer agendamento de algum plano.
 
 - Em sua conta, clique em “Meus Agendamentos" 
 
-**4.3 Editar Agendamento** 
-
-- Em sua conta, clique em “Meus Agendamentos”
-- Aperte em editar.
-- Edite seu agendamento.
-
-**4.4 Excluir Agendamento**
+**4.3 Excluir Agendamento**
 
 - Em sua conta, clique em “Meus Agendamentos”.
 - Escolha a marcação que deseja cancelar.
