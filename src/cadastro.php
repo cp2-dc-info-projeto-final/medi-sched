@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Este endereço de email já está cadastrado como cliente.<br>";
+        $mensagemErro .= "Email Invalido.<br>";
         $erro = true;
     }
     $stmt->close();
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Este endereço de email já está cadastrado como funcionário.<br>";
+        $mensagemErro .= "Email Invalido.<br>";
         $erro = true;
     }
     $stmt->close();
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Este endereço de email já está cadastrado como administrador.<br>";
+        $mensagemErro .= "Email Invalido.<br>";
         $erro = true;
     }
     $stmt->close();
