@@ -189,7 +189,8 @@
 3. O funcionário ou cliente clicará no botão "cancelar".
 4. O sistema removerá o agendamento.
 
-![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (15)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/9273ff33-6e92-40dc-a0b6-a0c0024a2e72)
+![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (15)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2c630c3c-9454-499b-a130-3591bbc7b486).
+)
 
 
 ### CDU 09
