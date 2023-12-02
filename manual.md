@@ -20,7 +20,7 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
 
 **Funcionalidades para funcionários:**
  
- - [Acessar calendário (Página  inicial - funcionário)](#1-Acessar-calendário)
+ - [Acessar agendamento (Página  inicial - funcionário)](#1-Acessar-agendamento)
  - [Acessar perfil (Página  inicial - funcionário)](#2-Acessar-perfil)
 - [Consultar agendamento (Página  inicial - funcionário)](#3-Consultar-agendamento)
 
