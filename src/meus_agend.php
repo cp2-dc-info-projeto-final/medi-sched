@@ -25,7 +25,7 @@ if ($row = $result->fetch_assoc()) {
 $stmt->close();
 
 if ($idCliente !== null) {
-    $stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
+    $stmt = $mysqli->prepare("SELECT idAgendamento, idFuncionario, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
     $stmt->bind_param("i", $idCliente);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -35,7 +35,7 @@ if ($idCliente !== null) {
             $agendamentos[] = $row;
         }
     } else {
-        echo "<p></p>";
+        echo "<p>Você não tem agendamentos marcados.</p>";
     }
     $stmt->close();
 }
@@ -64,7 +64,7 @@ $mysqli->close();
     <div id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                <a class="navbar-brand" href="index_func.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
+                <a class="navbar-brand" href="index.php"><img src=".img/logo.png" class="img-center" width="45%"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,10 +74,10 @@ $mysqli->close();
                             <a class="nav-link active" aria-current="page" href="index_paciente.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="perfil_func.php">Perfil</a>
+                            <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
-			<li class="nav-item">
-				<a class="nav-link" href="logout.php">Logout</a>
+			            <li class="nav-item">
+				            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +91,6 @@ $mysqli->close();
                 <thead>
                     <tr>
                         <th>ID do Agendamento</th>
-                        <th>ID do Serviço</th>
                         <th>ID do Funcionário</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
@@ -102,7 +101,6 @@ $mysqli->close();
                     <?php foreach ($agendamentos as $agendamento): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
-                            <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
