@@ -33,12 +33,45 @@ $mysqli->close();
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <!-- Seu HTML e meta tags aqui -->
     <title>Agendamentos | Agenda+Saúde</title>
-    <!-- Resto do cabeçalho -->
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=".css/inicial.css"/>
+    <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body class="fadeIn">
-    <!-- Conteúdo do cabeçalho e navegação -->
+    <div id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                <a class="navbar-brand" href="index_funcionario.php"><img src=".img/logo.png" width="45%"/></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index_funcionario.php">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="meus_agend_func.php">Ver Agendamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfil_func.php">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</head>
+<body class="fadeIn">
     <div class="container mt-5">
         <h2>Agendamentos</h2>
         <?php if (count($agendamentos) > 0): ?>
