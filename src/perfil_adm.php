@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <title>Área do Funcionário - Agenda+Saúde</title>
+    <title>Área do Administrador - Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="caminho_para_seu_arquivo_css/inicial_funcionario.css"/>
