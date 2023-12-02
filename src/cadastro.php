@@ -3,6 +3,7 @@ $mensagemErro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
+    // Dados do formulário
     $primeiro_nome = $_POST["firstname"];
     $sobrenome = $_POST["lastname"];
     $email = $_POST["email"];
@@ -13,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $erro = false;
 
+    // Validações
     if (empty($primeiro_nome) || empty($sobrenome)) {
         $mensagemErro .= "Preencha seu nome completo com sobrenome.<br>";
         $erro = true;
@@ -43,23 +45,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erro = true;
     }
 
+    // Conexão com o banco de dados
     $mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
     if ($mysqli->connect_error) {
         die("Erro na conexão: " . $mysqli->connect_error);
     }
 
+    // Verifica se o email já está cadastrado como cliente
     $stmt = $mysqli->prepare("SELECT email FROM cliente WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
-
     if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Este endereço de email já está cadastrado.<br>";
+        $mensagemErro .= "Este endereço de email já está cadastrado como cliente.<br>";
         $erro = true;
     }
-
     $stmt->close();
-     echo $mensagemErro;
+
+    // Verifica se o email já está cadastrado como funcionário
+    $stmt = $mysqli->prepare("SELECT email FROM funcionario WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $mensagemErro .= "Este endereço de email já está cadastrado como funcionário.<br>";
+        $erro = true;
+    }
+    $stmt->close();
+
+    // Verifica se o email já está cadastrado como administrador
+    $stmt = $mysqli->prepare("SELECT email FROM administrador WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $mensagemErro .= "Este endereço de email já está cadastrado como administrador.<br>";
+        $erro = true;
+    }
+    $stmt->close();
+
+    // Exibe mensagens de erro, se houver
+    echo $mensagemErro;
+
+    // Se não houver erro, procede com o cadastro
     if (!$erro) { 
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
     
@@ -80,6 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
