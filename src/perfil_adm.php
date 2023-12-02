@@ -27,14 +27,14 @@
                             <a class="nav-link" href="cadastro_func.php">Cadastrar Funcionario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="editaemailadm.php">Redefinir Email</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="editasenhaadm.php">Redefinir Senha</a>
-                        </li>                       
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
