@@ -6,11 +6,10 @@ A empresa agenda+saúde disponibiliza para todos os usuários esse manual com as
  - [Cadastro](#1-CADASTRAR)
  - [Login](#2-LOGIN)
  - [Logout](#3-LOGOUT)
- - [Visualizar perfil](#4-VISUALIZAR-PERFIL)
- - [Agendamento](#5-AGENDAMENTO)
- - [Recuperar senha](#6-RECUPERAR-SENHA)
- - [Visualizar perfil](#7-VISUALIZAR-PERFIL)
- - [Redefinir senha](#8-REDEFINIR-SENHA)
+ - [Agendamento](#4-AGENDAMENTO)
+ - [Recuperar senha](#5-RECUPERAR-SENHA)
+ - [Visualizar perfil](#6-VISUALIZAR-PERFIL)
+ - [Redefinir senha](#7-REDEFINIR-SENHA)
 
 **Funcionalidades para administrador:**
 
