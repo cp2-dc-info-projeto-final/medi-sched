@@ -12,7 +12,6 @@ $mensagemErro = "";
 $idCliente = $_SESSION['idUsuario']; // Usaremos o ID do usuário como ID do cliente para o agendamento
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $idServico = $_POST["idServico"];
     $idFuncionario = $_POST["idFuncionario"];
     $dataConsulta = $_POST["dataConsulta"];
     $horarioConsulta = $_POST["horarioConsulta"];
@@ -20,11 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro = false;
     
     // Validações básicas
-    if (empty($idServico)) {
-        $mensagemErro .= "Por favor, selecione um serviço.<br>";
-        $erro = true;
-    }
-
     if (empty($idFuncionario)) {
         $mensagemErro .= "Por favor, selecione um funcionário.<br>";
         $erro = true;
@@ -59,8 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insere o novo agendamento no banco de dados
     if (!$erro) {
-        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idServico, idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("iiiss", $idServico, $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
+        $stmt = $mysqli->prepare("INSERT INTO Agendamento (idFuncionario, idCliente, data_consulta, horario_consulta) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("iiss", $idFuncionario, $idCliente, $dataConsulta, $horarioConsulta);
 
         if ($stmt->execute()) {
             header("Location: confirmacao.php");
@@ -79,8 +73,9 @@ if ($mysqli->connect_error) {
     die("Erro na conexão: " . $mysqli->connect_error);
 }
 
-$sql = "SELECT idFuncionario, nome_funcionario, sobrenome_funcionario FROM Funcionario";
-$resultadoFuncionarios = $mysqli->query($sql);
+// Consulta para obter os funcionários
+$sqlFuncionarios = "SELECT idFuncionario, nome_funcionario, sobrenome_funcionario, area FROM Funcionario";
+$resultadoFuncionarios = $mysqli->query($sqlFuncionarios);
 $funcionarios = [];
 
 if ($resultadoFuncionarios) {
@@ -89,13 +84,13 @@ if ($resultadoFuncionarios) {
     }
 }
 
-$mysqli->close();;
+$mysqli->close();
 ?>
 
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <title>Atendimentos | Agenda+Saúde</title>
+    <title>Agendamentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
@@ -128,66 +123,50 @@ $mysqli->close();;
         </div>
     </div>
 
-<div class="container mt-5">
-    <h2 class="mb-4">Agendar Consulta</h2>
-    <!-- Mensagem de erro, se houver -->
-    <?php if(!empty($mensagemErro)): ?>
-        <div class="alert alert-danger" role="alert">
-            <?php echo $mensagemErro; ?>
-        </div>
-    <?php endif; ?>
-    
-    <form action="agendamento.php" method="post">
-    <div class="mb-3">
-        <label for="idServico" class="form-label">Serviço</label>
-        <select class="form-select" id="idServico" name="idServico" required>
-            <option selected>Escolha um serviço...</option>
-            <option value="1">Ortopedia</option>
-            <option value="2">Vacinação</option>
-            <option value="3">Oftalmologia</option>
-            <option value="4">Odontológico</option>
-            <option value="5">Psicólogo</option>
-            <option value="6">Ginecológico</option>
-        </select>
-    </div>
-    
-    <div class="mb-3">
-        <label for="idFuncionario" class="form-label">Funcionário</label>
-        <select class="form-select" id="idFuncionario" name="idFuncionario" required>
-            <option selected>Escolha um funcionário...</option>
-            <?php foreach ($funcionarios as $funcionario): ?>
-                <option value="<?php echo $funcionario['idFuncionario']; ?>">
-                    <?php echo htmlspecialchars($funcionario['nome_funcionario'] . ' ' . $funcionario['sobrenome_funcionario']); ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+    <div class="container mt-5">
+        <h2 class="mb-4">Agendar Consulta</h2>
+        <!-- Mensagem de erro, se houver -->
+        <?php if(!empty($mensagemErro)): ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $mensagemErro; ?>
+            </div>
+        <?php endif; ?>
+        <form action="agendamento.php" method="post">
+            <div class="mb-3">
+                <label for="idFuncionario" class="form-label">Médico / Área Específica</label>
+                <select class="form-select" id="idFuncionario" name="idFuncionario" required>
+                    <option selected>Escolha um médico...</option>
+                    <?php foreach ($funcionarios as $funcionario): ?>
+                        <option value="<?php echo $funcionario['idFuncionario']; ?>">
+                            <?php echo htmlspecialchars($funcionario['nome_funcionario'] . ' / ' . $funcionario['area']); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
 
-    <div class="mb-3">
-        <label for="dataConsulta" class="form-label">Data da Consulta</label>
-        <input type="date" class="form-control" id="dataConsulta" name="dataConsulta" required>
+            <div class="mb-3">
+                <label for="dataConsulta" class="form-label">Data da Consulta</label>
+                <input type="date" class="form-control" id="dataConsulta" name="dataConsulta" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="horarioConsulta" class="form-label">Horário da Consulta</label>
+                <select class="form-control" id="horarioConsulta" name="horarioConsulta">
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agendar</button>
+        </form>
     </div>
-    
-    <div class="mb-3">
-            <label for="horarioConsulta" class="form-label">Horário da Consulta</label>
-            <select class="form-control" id="horarioConsulta" name="horarioConsulta">
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="12:00">12:00</option>
-                <option value="13:00">13:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-                <option value="17:00">17:00</option>
-                <option value="18:00">18:00</option>
-            </select>
-        </div>
-
-    <button type="submit" class="btn btn-primary">Agendar</button>
-</form>
-
-        
-</div>
 
 </body>
 </html>
