@@ -30,7 +30,7 @@
                             <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editaemail.php">Redefinir Email</a>
+                            <a class="nav-link" href="editaemailadm.php">Redefinir Email</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="editasenha.php">Redefinir Senha</a>
