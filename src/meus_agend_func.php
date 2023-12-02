@@ -8,14 +8,28 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario']) || $_SESSION
     exit;
 }
 
+$email_logado = $_SESSION['email'];
 $agendamentos = array();
 
 if ($mysqli->connect_error) {
     die("Erro na conexão: " . $mysqli->connect_error);
 }
 
-// Seleciona todos os agendamentos
-$stmt = $mysqli->prepare("SELECT idAgendamento, idServico, idFuncionario, idCliente, data_consulta, horario_consulta FROM Agendamento");
+// Obtém o id do funcionário logado
+$stmt = $mysqli->prepare("SELECT idFuncionario FROM Funcionario WHERE email = ?");
+$stmt->bind_param("s", $email_logado);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($row = $result->fetch_assoc()) {
+    $idFuncionarioLogado = $row['idFuncionario'];
+} else {
+    die("Funcionário não encontrado.");
+}
+$stmt->close();
+
+// Seleciona os agendamentos relacionados ao funcionário logado
+$stmt = $mysqli->prepare("SELECT idAgendamento, idFuncionario, idCliente, data_consulta, horario_consulta FROM Agendamento WHERE idFuncionario = ?");
+$stmt->bind_param("i", $idFuncionarioLogado);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -24,7 +38,6 @@ if ($result->num_rows > 0) {
         $agendamentos[] = $row;
     }
 } else {
-    echo "<p>Não há agendamentos marcados.</p>";
 }
 $stmt->close();
 $mysqli->close();
@@ -79,7 +92,6 @@ $mysqli->close();
                 <thead>
                     <tr>
                         <th>ID do Agendamento</th>
-                        <th>ID do Serviço</th>
                         <th>ID do Funcionário</th>
                         <th>ID do Cliente</th>
                         <th>Data da Consulta</th>
@@ -91,7 +103,6 @@ $mysqli->close();
                     <?php foreach ($agendamentos as $agendamento): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
-                            <td><?php echo htmlspecialchars($agendamento['idServico']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['idCliente']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
