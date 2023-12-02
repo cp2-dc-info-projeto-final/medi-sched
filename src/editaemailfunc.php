@@ -1,8 +1,3 @@
-
-<?php include "conecta_mysql.php";
-      include "autentica_funcionario.php";                      
- ?>
-
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -48,60 +43,81 @@
         </P>
         <form action="editaemailfunc.php" method="POST" class="form-container">
           <input type="hidden" name="operacao" value="editemail">
-		  	<?php            
-            $operacao = isset($_POST['operacao']) ? $_POST['operacao'] : '';
-            
-            if($operacao === "editemail") {
-            
-                if(isset($_SESSION["email"])) {
-                    $email = $_SESSION["email"];
-                    
-                    $emailnovo = mysqli_real_escape_string($mysqli, $_POST['emailnovo']);
-                    $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
-                    
-                    $stmt = $mysqli->prepare("SELECT senha FROM funcionario WHERE email = ?");
-                    $stmt->bind_param("s", $email);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-                    
-                    if($result->num_rows > 0) {
-                        $row = $result->fetch_assoc();
-                        
-                        if(password_verify($senha, $row['senha'])) {
-                            
-                            $stmt = $mysqli->prepare("SELECT email FROM funcionario WHERE email = ? UNION SELECT email FROM cliente WHERE email = ?");
-                            $stmt->bind_param("ss", $emailnovo, $emailnovo);
-                            $stmt->execute();
-                            $result = $stmt->get_result();
-                            
-                            if($result->num_rows === 0) {
+          <?php
+session_start();
+include "conecta_mysql.php";
 
-                                $stmt = $mysqli->prepare("UPDATE funcionario SET email = ? WHERE email = ?");
-                                $stmt->bind_param("ss", $emailnovo, $email);
-                                $stmt->execute();
-                                
-                                if($stmt->affected_rows > 0) {
-                                    header("Location: login.php"); 
-                                    exit;
-                                } else {
-                                    echo "Não foi possível atualizar o email.";
-                                }
-                            } else {
-                                echo "E-mail já cadastrado.";
-                            }
-                        } else {
+// Verifica se o usuário está logado
+if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
+    $_SESSION['erro_login'] = "Você precisa fazer login para acessar esta página.";
+    header("Location: login.php");
+    exit;
+}
 
-                            echo "Senha incorreta!";
-                        }
-                    } else {
+$email = $_SESSION['email'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
 
-                        echo "E-mail não encontrado.";
-                    }
-                    
-                    $stmt->close();
+// Verifica se o usuário é um funcionário no banco de dados
+$stmt = $mysqli->prepare("SELECT * FROM Funcionario WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows != 1 || $tipo_usuario !== 'funcionario') {
+    $_SESSION['erro_login'] = "Acesso restrito a funcionários.";
+    header("Location: login.php");
+    exit;
+}
+
+$operacao = isset($_POST['operacao']) ? $_POST['operacao'] : '';
+
+if ($operacao === "editemail" && isset($_SESSION["email"])) {
+    $emailnovo = $mysqli->real_escape_string($_POST['emailnovo']);
+    $senha = $mysqli->real_escape_string($_POST['senha']);
+
+    $stmt = $mysqli->prepare("SELECT senha FROM funcionario WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        if (password_verify($senha, $row['senha'])) {
+            $stmt = $mysqli->prepare("SELECT email FROM funcionario WHERE email = ? UNION SELECT email FROM cliente WHERE email = ?");
+            $stmt->bind_param("ss", $emailnovo, $emailnovo);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            if ($result->num_rows === 0) {
+                $stmt = $mysqli->prepare("UPDATE funcionario SET email = ? WHERE email = ?");
+                $stmt->bind_param("ss", $emailnovo, $email);
+                $stmt->execute();
+
+                if ($stmt->affected_rows > 0) {
+                    $_SESSION["email"] = $emailnovo;
+                    header("Location: login.php");
+                    exit;
+                } else {
+                    echo "Não foi possível atualizar o email.";
                 }
+            } else {
+                echo "E-mail já cadastrado.";
             }
-            ?>
+        } else {
+            echo "Senha incorreta!";
+        }
+    } else {
+        echo "E-mail não encontrado.";
+    }
+
+    $stmt->close();
+}
+
+
+mysqli_close($mysqli);
+?>
+
           <p>Seu novo email<input type="email" placeholder="insira aqui" name="emailnovo"></p>
           <p>Insira sua senha atual <input type="password" placeholder="insira aqui" name="senha"></p>
           <p><input type="submit" value="Enviar" class="btn"></p>    
