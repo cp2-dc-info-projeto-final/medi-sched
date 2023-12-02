@@ -37,7 +37,7 @@
 7. O funcionário será cadastrado.
 
    
-![Fluxo Principal Funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/2c7a6f68-afab-4c5e-847e-901bca54e655)
+![Fluxo Principal](![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/fb5df63a-634d-42a6-9c7a-158a85c5a20e))
 
 
 **Fluxo Alternativo  A**
