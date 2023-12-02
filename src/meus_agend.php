@@ -46,7 +46,6 @@ $mysqli->close();
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <!-- Seu HTML e meta tags aqui -->
     <title>Meus Agendamentos | Agenda+Saúde</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
