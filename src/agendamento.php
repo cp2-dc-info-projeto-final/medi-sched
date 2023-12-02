@@ -1,5 +1,11 @@
 <?php
-include "conecta_mysql.php"; // Conecte-se ao banco de dados
+session_start();
+include "conecta_mysql.php";
+
+if (!isset($_SESSION['email'])) {
+    header('Location: login.php');
+    exit;
+}
 
 $mensagemErro = "";
 
