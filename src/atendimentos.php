@@ -44,7 +44,6 @@
       <div class="col-md-6 align-self-center">
         <h1>A clínica mais completa para a sua saúde!</h1>
         <h4>Agende já uma consulta.</h4>
-        <a href="agendamento.php" class="btn btn-primary button">Agende aqui!</a>
       </div>
       <div class="col-md-6 align-self-center text-center">
         <img src=".img/medi.png" class="img-fluid" alt="Imagem relacionada à saúde.">
