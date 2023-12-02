@@ -9,8 +9,6 @@ if (!isset($_SESSION['email'])) {
 
 $mensagemErro = "";
 
-session_start();
-
 // Verifica se o usuário está logado
 if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
     $_SESSION['erro_login'] = "Você precisa fazer login para acessar esta página.";
