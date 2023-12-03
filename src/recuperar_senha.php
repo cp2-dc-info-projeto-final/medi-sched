@@ -12,7 +12,7 @@ include "conecta_mysql.php";
 
     <link rel="shortcut icon" href=".img/logo.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href=".css/login.css">
+    <link rel="stylesheet" href=".css/cad_log.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
