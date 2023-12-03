@@ -58,6 +58,16 @@ include "autentica_adm.php";
                 <a href="mostrar_funcionario.php" class="btn btn-success">Ver Funcionarios</a>
             </div>
         </div>
+        <div class="row text-center mt-4">
+            <div class="container text-center">
+                <a href="meus_agend_adm.php" class="btn btn-success">Ver Agendamentos</a>
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="container text-center">
+                <a href="exibir_clientes.php" class="btn btn-success">Ver Clientes</a>
+            </div>
+        </div>
     </div>
 
     <!-- Rodapé -->
