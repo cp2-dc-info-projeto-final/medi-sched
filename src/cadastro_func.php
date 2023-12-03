@@ -21,33 +21,100 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $area = isset($_POST["areasMedicas"]) ? $_POST["areasMedicas"] : '';
 
 
-    // Verificação de email duplicado
-    $stmt = $mysqli->prepare("SELECT email FROM Funcionario WHERE email = ?");
+    $erro = false;
+
+    // Validações
+    if (empty($primeiro_nome) || empty($sobrenome)) {
+        $mensagemErro .= "Preencha seu nome completo com sobrenome.<br>";
+        $erro = true;
+    }
+
+    if (strlen($email) < 8 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $mensagemErro .= "Preencha um email válido com pelo menos 8 caracteres.<br>";
+        $erro = true;
+    }
+
+    if (strlen($senha) < 8) {
+        $mensagemErro .= "A senha deve ter pelo menos 8 caracteres.<br>";
+        $erro = true;
+    }
+
+    if (empty($cpf) || strlen($cpf) != 14) {
+        $mensagemErro .= "Preencha um CPF válido com exatamente 11 dígitos numéricos.<br>";
+        $erro = true;
+    }
+    
+    if (empty($data_nascimento) || !strtotime($data_nascimento)) {
+        $mensagemErro .= "Preencha uma data de nascimento válida.<br>";
+        $erro = true;
+    }
+
+    if (empty($genero)) {
+        $mensagemErro .= "Selecione seu gênero.<br>";
+        $erro = true;
+    }
+
+    // Conexão com o banco de dados
+    $mysqli = new mysqli("localhost", "agendasaude", "123", "AGENDASAUDE");
+    if ($mysqli->connect_error) {
+        die("Erro na conexão: " . $mysqli->connect_error);
+    }
+
+    // Verifica se o email já está cadastrado como cliente
+    $stmt = $mysqli->prepare("SELECT email FROM cliente WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
-
     if ($stmt->num_rows > 0) {
-        $mensagemErro .= "Este endereço de email já está cadastrado.<br>";
-    } else {
-        $stmt->close();
+        $mensagemErro .= "Email Invalido.<br>";
+        $erro = true;
+    }
+    $stmt->close();
+
+    // Verifica se o email já está cadastrado como funcionário
+    $stmt = $mysqli->prepare("SELECT email FROM funcionario WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $mensagemErro .= "Email Invalido.<br>";
+        $erro = true;
+    }
+    $stmt->close();
+
+    // Verifica se o email já está cadastrado como administrador
+    $stmt = $mysqli->prepare("SELECT email FROM administrador WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $mensagemErro .= "Email Invalido.<br>";
+        $erro = true;
+    }
+    $stmt->close();
+
+    // Exibe mensagens de erro, se houver
+    echo $mensagemErro;
+
+    // Se não houver erro, procede com o cadastro
+    if (!$erro) { 
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+        
         $stmt = $mysqli->prepare("INSERT INTO Funcionario (nome_funcionario, sobrenome_funcionario, email, senha, cpf, data_nascimento, area, genero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssssss", $primeiro_nome, $sobrenome, $email, $senhaHash, $cpf, $data_nascimento, $area, $genero);
 
         if ($stmt->execute()) {
-            header("Location: index_adm.php"); // Redirecionamento para a página de confirmação ou de login do funcionário
+            $mysqli->close();
+            header("Location: login.php");
             exit;
         } else {
             $mensagemErro .= "Erro ao inserir dados: " . $stmt->error;
         }
+    
         $stmt->close();
     }
+    
     $mysqli->close();
-}
-
-if ($mensagemErro) {
-    echo "<div class='alert alert-danger'>$mensagemErro</div>";
 }
 ?>
 
@@ -165,4 +232,3 @@ if ($mensagemErro) {
     </script>
 </body>
 </html>
-
