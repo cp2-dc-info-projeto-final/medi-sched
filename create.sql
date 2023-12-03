@@ -34,7 +34,7 @@ CREATE TABLE Funcionario (
 
 DROP TABLE IF EXISTS Agendamento;
 CREATE TABLE IF NOT EXISTS Agendamento (
-    idAgendamento INT AUTO_INCREMENT PRIMARY KEY
+    idAgendamento INT AUTO_INCREMENT PRIMARY KEY,
     idFuncionario INT NOT NULL,
     idCliente INT NOT NULL,
     data_consulta DATE NOT NULL,
