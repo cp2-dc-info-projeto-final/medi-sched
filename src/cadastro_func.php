@@ -1,5 +1,12 @@
 <?php
+session_start();
 include "conecta_mysql.php"; // Conecta ao banco de dados
+
+// Verifica se o usuário é um administrador
+if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] != 'administrador') {
+    header('Location: login.php'); // Redireciona para a página de login se não for administrador
+    exit;
+}
 
 $mensagemErro = "";
 
