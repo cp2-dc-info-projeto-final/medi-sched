@@ -94,8 +94,7 @@
 6. O sistema verifica as informações fornecidas pelo usuário.
 7. O cliente está logado ao sistema.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/0ed60fb1-f390-4985-990e-029f0b403a1f)
-
+![WhatsApp Image 2023-12-02 at 22 58 01 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/91bb2e8a-e810-469a-af48-69319353e6cc)
 
  **Fluxo Alternativo  A**
 
