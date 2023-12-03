@@ -143,7 +143,7 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com a confirmação de seu agendamento.
 
-![WhatsApp Image 2023-12-02 at 23 10 28](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/426687ae-0705-40ab-9729-6af4bce9963c)
+![WhatsApp Image 2023-12-02 at 23 12 04](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ab09f20d-e858-4ee0-ad92-b9d48e796e15)
 
 **Fluxo Alternativo  A**
 
