@@ -105,8 +105,6 @@
 4. Será exibido os campos de email e senha.
 5. Cliente entra com email e senha.
 7. O sistema informará ao cliente que o email ou senha estão incorretos.
-8. O usuário corrige os dados incorretos.
-9. O sistema reconhece novamente os dados, e então o direciona para a página principal caso estejam corretos, se não, repete o processo.
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/bea21e76-6d3a-47f5-b5f2-d03295669540)
 
