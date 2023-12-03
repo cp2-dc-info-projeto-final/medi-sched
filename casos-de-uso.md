@@ -76,11 +76,8 @@
 3. O sistema exibirá uma pagina de cadastro com um formulário.
 4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento etc).
 5. O sistema informará ao cliente que os dados cadastrados são invalidos.
-6. O cliente irá inserir os dados corretamente.
-7. O cliente irá enviar os dados para o sistema. 
-8. O cliente será cadastrado.
-
-![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/5457bc2c-7931-48f4-a31d-f2f8068a0894)
+   
+![WhatsApp Image 2023-12-02 at 22 47 16](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6a4e7f63-28de-480f-ab27-6ef560de2878)
 
  ### CDU 03
  
