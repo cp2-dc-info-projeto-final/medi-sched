@@ -67,7 +67,7 @@
 5. O cliente irá enviar os dados para o sistema. 
 6. O cliente será cadastrado.
    
-![WhatsApp Image 2023-12-02 at 22 48 45 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/00bcf0c3-8e45-40be-aad7-5d5dc0471a62)
+![WhatsApp Image 2023-12-02 at 22 41 54](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/68320a7d-bd25-40df-9430-1068d3240cf0)
 
 **Fluxo Alternativo  A**
 
@@ -76,8 +76,11 @@
 3. O sistema exibirá uma pagina de cadastro com um formulário.
 4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento etc).
 5. O sistema informará ao cliente que os dados cadastrados são invalidos.
-   
-![WhatsApp Image 2023-12-02 at 22 47 16](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6a4e7f63-28de-480f-ab27-6ef560de2878)
+6. O cliente irá inserir os dados corretamente.
+7. O cliente irá enviar os dados para o sistema. 
+8. O cliente será cadastrado.
+
+![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/5457bc2c-7931-48f4-a31d-f2f8068a0894)
 
  ### CDU 03
  
@@ -146,8 +149,8 @@
 
 **Fluxo Alternativo  A**
 
-1.  sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis na região do cliente.
-2. O cliente irá escolher o horário,especialização do funcionário e os funcionários disponíveis na região do cliente. 
+1.  sistema exibirá os horários e especialização dos funcionários.
+2. O cliente irá escolher o horário e especialização do funcionário. 
 3. O cliente irá clicar em "Agendar".
 4. O sistema informará que o funcionário ou o horário não está disponivel.
 5. O cliente escolherá outro funcionário ou outro horário.
@@ -196,7 +199,7 @@
 
 1. O administrador irá acessar sua interface própria.
 2. Na interface do administrador terá a página "Funcionários".
-3. O sistema exibirá a página "Funcionários". Na página "Funcionários" haverá uma lista com cada cliente. Haverá um botão "excluir"ao lado de cada funcionário. 
+3. O sistema exibirá a página "Funcionários". Na página "Funcionários" haverá uma lista com cada cliente. Haverá um botão "excluir" ao lado de cada funcionário. 
 4. O administrador clicará no botão "excluir" e uma mensagem de "Gostaria de excluir esse funcionário?" será exibida.
 5. O administrador clicará em "sim" e excluirá o funcionário.
 
