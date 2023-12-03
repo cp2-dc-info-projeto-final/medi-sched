@@ -66,8 +66,8 @@
 4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento etc).
 5. O cliente irá enviar os dados para o sistema. 
 6. O cliente será cadastrado.
-
-![Fluxo Principal Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/4fad766e-8244-4b10-a9d8-df1d23b84efd)
+   
+![cliente principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/359fb7a6-2ab1-4f8a-80f9-5bfca7a57181)
 
 **Fluxo Alternativo  A**
 
