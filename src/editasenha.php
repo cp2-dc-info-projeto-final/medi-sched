@@ -55,7 +55,7 @@
                 <p><input type="submit" value="Enviar" class="btn"></p>
             </form>
         </div>
-<?php
+    <?php
     include "conecta_mysql.php";
     
     session_start();
@@ -139,7 +139,7 @@
         echo "<p>Erro: " . $error_message . "</p>";
     }
 
-?>
+    ?>
 
 
     </body>
