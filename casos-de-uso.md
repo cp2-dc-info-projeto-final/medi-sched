@@ -120,7 +120,8 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/0edc3ee5-87a2-48a7-a0bd-50dec11b17ab)
+![Uploading image.png…]()
+
 
 
 **Fluxo Alternativo  A**
@@ -142,8 +143,7 @@
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com a confirmação de seu agendamento.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/3f08a5bf-ffa4-4a80-aca0-e60136ca0357)
-
+![WhatsApp Image 2023-12-02 at 23 10 28](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/426687ae-0705-40ab-9729-6af4bce9963c)
 
 **Fluxo Alternativo  A**
 
