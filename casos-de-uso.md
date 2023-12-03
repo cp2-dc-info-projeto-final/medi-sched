@@ -80,7 +80,7 @@
 7. O cliente irá enviar os dados para o sistema. 
 8. O cliente será cadastrado.
 
-![Fluxo alternativo Cliente](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/5457bc2c-7931-48f4-a31d-f2f8068a0894)
+![WhatsApp Image 2023-12-02 at 22 53 55](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1c76d74a-46f7-48a6-822e-3a5d6372381f)
 
  ### CDU 03
  
