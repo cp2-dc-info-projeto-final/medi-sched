@@ -233,8 +233,5 @@
 3. O Cliente colocará a senha atual e o email novo desejado
 4. O sistema indica que a senha esta errada
 
-
-
-
-![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
+![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97ed3b12-ea89-4f33-b69c-1fc2df014405)
 
