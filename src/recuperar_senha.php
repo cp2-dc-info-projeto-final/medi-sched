@@ -60,6 +60,5 @@ include "conecta_mysql.php";
             </div>
         </div>
     </section>
-    <script src="validacao.js"></script>
 </body>
 </html>
