@@ -13,6 +13,7 @@
  - [CDU 09](#CDU-09): Excluir funcionário;
  - [CDU 10](#CDU-10): Logout;
  - [CDU 11](#CDU-11): Alterar Email;
+ - [CDU 12](#CDU-12): Alterar Senha;
  
  
  
