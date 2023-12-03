@@ -120,8 +120,7 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6c73c22c-541c-4ebc-81e3-d0bbd5cb0f34)
-
+![279776631-0ed60fb1-f390-4985-990e-029f0b403a1f](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/5538c827-4405-4136-a685-9c57ade9b61f)
 
 
 **Fluxo Alternativo  A**
