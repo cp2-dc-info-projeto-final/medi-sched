@@ -7,42 +7,50 @@ body {
     padding: 0;
 }
 
-/* Estilos do Cabeçalho */
-#header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 10px 0;
-}
-
-.navbar-brand img {
-    max-width: 100px; /* Ajuste conforme necessário */
-}
-
-.navbar-toggler {
-    border-color: #ddd;
-}
-
-/* Estilos da Navegação */
-.navbar-nav .nav-item .nav-link {
-    color: #007bff;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    color: #0056b3;
-}
-
 /* Estilos do Conteúdo */
-.form-container {
-    background-color: #fff;
+.container {
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    margin: 20px;
 }
 
 h1 {
     color: #333;
     font-size: 24px;
     text-align: center;
-    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para informações do perfil */
+.form-container strong {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-container p {
+    margin-top: 5px;
+}
+
+/* Estilos para botões ou links relacionados ao perfil */
+.profile-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-actions a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-actions a:hover {
+    background-color: #0056b3;
 }
