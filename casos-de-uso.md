@@ -12,6 +12,7 @@
  - [CDU 08](#CDU-08): Cancelar agendamento;
  - [CDU 09](#CDU-09): Excluir funcionário;
  - [CDU 10](#CDU-10): Logout;
+ - [CDU 11](#CDU-11): Alterar Email;
  
  
  
@@ -48,12 +49,8 @@
 4. O sistema exibirá uma pagina de cadastro com um formulário de cadastro.
 5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, cargo etc).
 6. O sistema informará ao administrador que os dados cadastrados são invalidos.
-7. O administrador irá inserir os dados corretamente
-6. O administrador irá enviar os dados para o sistema. 
-7. O funcionário será cadastrado.
 
 ![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
-
 
 
 ### CDU 02 
@@ -218,4 +215,26 @@
 3. O sistema recarrega para página inicial
 
 ![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
+
+### CDU 11
+
+**Fluxo Principal**
+
+1. O Cliente selecionará na pagina perfil "Alterar Email"
+3. O Cliente colocará a senha atual e o email novo desejado
+4. O sistema mudará o email caso a senha esteja certa
+5. O sistema redireciona o cliente para login com o email alterado
+   
+![WhatsApp Image 2023-12-02 at 23 37 06](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/4e8eac0c-f652-47b7-b6ee-69451d046c68)
+
+**Fluxo Alternativo  A**
+
+1. O Cliente selecionará na pagina perfil "Alterar Email"
+3. O Cliente colocará a senha atual e o email novo desejado
+4. O sistema indica que a senha esta errada
+
+
+
+
+![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
 
