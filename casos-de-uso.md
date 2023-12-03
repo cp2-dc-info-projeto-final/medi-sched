@@ -120,7 +120,7 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de cconfirmação de email enviado.
 
-![Uploading image.png…]()
+![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6c73c22c-541c-4ebc-81e3-d0bbd5cb0f34)
 
 
 
@@ -155,8 +155,7 @@
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com a confirmação de seu agendamento.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/80680e25-fcbf-434d-b5c1-3420a22fd544)
-
+![WhatsApp Image 2023-12-02 at 23 14 19](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ccc0cb7b-454b-4407-a300-1e96b1ea7743)
 
 ### CDU 06 
 
