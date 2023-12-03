@@ -25,7 +25,9 @@ if ($row = $result->fetch_assoc()) {
 $stmt->close();
 
 if ($idCliente !== null) {
-    $stmt = $mysqli->prepare("SELECT idAgendamento, idFuncionario, data_consulta, horario_consulta FROM Agendamento WHERE idCliente = ?");
+    $stmt = $mysqli->prepare("SELECT a.idAgendamento, f.nome_funcionario, f.area, a.data_consulta, a.horario_consulta FROM Agendamento a 
+        INNER JOIN Funcionario f ON a.idFuncionario = f.idFuncionario 
+        WHERE a.idCliente = ?");
     $stmt->bind_param("i", $idCliente);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -91,7 +93,8 @@ $mysqli->close();
                 <thead>
                     <tr>
                         <th>ID do Agendamento</th>
-                        <th>ID do Funcionário</th>
+                        <th>Nome do Médico</th>
+                        <th>Serviço</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
                         <th>Ações</th>
@@ -101,7 +104,8 @@ $mysqli->close();
                     <?php foreach ($agendamentos as $agendamento): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($agendamento['idAgendamento']); ?></td>
-                            <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['nome_funcionario']); ?></td>
+                            <td><?php echo htmlspecialchars($agendamento['area']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
                             <td>
