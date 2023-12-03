@@ -235,3 +235,21 @@
 
 ![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97ed3b12-ea89-4f33-b69c-1fc2df014405)
 
+### CDU 12
+
+**Fluxo Principal**
+
+1. O Cliente selecionará na pagina perfil "Alterar Senha"
+3. O Cliente colocará a senha atual e senha nova
+4. O sistema mudará a senha caso a senha atual esteja certa
+5. O sistema redireciona o cliente para login com a senha alterada
+
+![WhatsApp Image 2023-12-02 at 23 46 08](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/e101b867-1c17-4b3c-a421-104a2776394c)
+
+**Fluxo Alternativo  A**
+
+1. O Cliente selecionará na pagina perfil "Alterar Senha"
+3. O Cliente colocará a senha atual e o senha nova desejada
+4. O sistema indica que a senha esta errada
+   
+![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/86304821-da2f-456e-9db9-e630fb8daa92)
