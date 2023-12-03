@@ -220,4 +220,5 @@
 2. O sistema encerra sessão
 3. O sistema recarrega para página inicial
 
-![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (12)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/3631d87b-4909-410a-a5ec-d463dae30e87)
+![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
+
