@@ -55,7 +55,7 @@ include "autentica_adm.php";
         <!-- Botão de Ação -->
         <div class="row text-center mt-4">
             <div class="container text-center">
-                <a href="mostrar_funcionario.php" class="btn btn-success">Ver Funcionarios</a>
+                <a href="mostrar_funcionarios.php" class="btn btn-success">Ver Funcionarios</a>
             </div>
         </div>
         <div class="row text-center mt-4">
