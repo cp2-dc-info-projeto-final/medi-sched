@@ -36,10 +36,8 @@
 5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, cargo etc).
 6. O administrador irá enviar os dados para o sistema. 
 7. O funcionário será cadastrado.
-
    
-![Fluxo Principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/fb5df63a-634d-42a6-9c7a-158a85c5a20e)
-
+![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6288b632-adba-4fcf-8065-4e50598f78e3)
 
 **Fluxo Alternativo  A**
 
