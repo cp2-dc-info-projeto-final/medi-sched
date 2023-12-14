@@ -167,6 +167,12 @@
    
 ![Fluxo Principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/28a29710-9075-437f-83b9-d856d3800597)
 
+**Fluxo Alternativo  A**
+
+1. A pagina principal possuirá um botão "Visualizar agendamentos". 
+2. O sistema encaminhará o cliente à pagina de visualização de agendamentos.
+3. Caso não tenha nenhum agendamento marcado o sistema exibirá que não existe agendamentos marcados
+
 ### CDU 08 - Cancelar agendamento
 
 **Fluxo Principal**
