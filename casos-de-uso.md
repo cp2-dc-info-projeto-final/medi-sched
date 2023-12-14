@@ -121,8 +121,7 @@
 3. O cliente digita um email que não consta no banco de dados para a recuperação e seleciona "Recuperar".
 4. O sistema indentifica que não consta aquele email e imprime na tela "Email Inválido".
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/d14c1dad-4419-4b24-8cbe-a60ea066413a)
-
+![WhatsApp Image 2023-12-14 at 15 06 28 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/a488f4f1-88ca-4d8d-b261-589aab489060)
 
 ### CDU 05 - Agendamento
 
