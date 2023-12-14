@@ -48,11 +48,9 @@
             </form>
         </div>
         <?php
+session_start();
 include "conecta_mysql.php";
 
-session_start();
-
-// Verifica se o usuário está logado
 if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
     $_SESSION['erro_login'] = "Você precisa fazer login para acessar esta página.";
     header("Location: login.php");
@@ -62,24 +60,20 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['tipo_usuario'])) {
 $email = $_SESSION['email'];
 $tipo_usuario = $_SESSION['tipo_usuario'];
 
-// Verifica se o usuário é um funcionario no banco de dados
 $stmt = $mysqli->prepare("SELECT * FROM funcionario WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// Se não encontrar o usuário ou se o tipo na sessão não for 'cliente', redireciona
 if ($result->num_rows != 1 || $tipo_usuario !== 'funcionario') {
     $_SESSION['erro_login'] = "Acesso restrito a funcionario.";
     header("Location: login.php");
     exit;
 }
 
-$error_message = ''; // Variável para armazenar mensagens de erro
+$error_message = '';
 
-// Processa a mudança de senha
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST['operacao'] === 'editsenha') {
-
     $senhaAtual = mysqli_real_escape_string($mysqli, $_POST['senhaAtual']);
     $novaSenha = mysqli_real_escape_string($mysqli, $_POST['novaSenha']);
     $confirmaSenha = mysqli_real_escape_string($mysqli, $_POST['confirmaSenha']);
@@ -87,7 +81,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST
     // Verifica se as senhas têm mais de 8 caracteres
     if (strlen($novaSenha) < 8 || strlen($confirmaSenha) < 8) {
         $error_message = "A senha deve ter pelo menos 8 caracteres.";
-    } else if ($novaSenha === $confirmaSenha) {
+    } elseif ($novaSenha !== $confirmaSenha) {
+        $error_message = "As senhas não coincidem.";
+    } else {
         $stmt = $mysqli->prepare("SELECT senha FROM funcionario WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -97,19 +93,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST
             $row = $result->fetch_assoc();
 
             if (password_verify($senhaAtual, $row['senha'])) {
-                $hashedNovaSenha = password_hash($novaSenha, PASSWORD_DEFAULT);
+                // Verifica se a nova senha é diferente da senha atual
+                if (!password_verify($novaSenha, $row['senha'])) {
+                    $hashedNovaSenha = password_hash($novaSenha, PASSWORD_DEFAULT);
 
-                $stmt = $mysqli->prepare("UPDATE funcionario SET senha = ? WHERE email = ?");
-                $stmt->bind_param("ss", $hashedNovaSenha, $email);
-                $stmt->execute();
+                    $stmt = $mysqli->prepare("UPDATE funcionario SET senha = ? WHERE email = ?");
+                    $stmt->bind_param("ss", $hashedNovaSenha, $email);
+                    $stmt->execute();
 
-                if ($stmt->affected_rows > 0) {
-                    // Senha atualizada com sucesso
-                    $_SESSION['mensagem_sucesso'] = "Senha atualizada com sucesso.";
-                    header("Location: login.php"); 
-                    exit;
+                    if ($stmt->affected_rows > 0) {
+                        $_SESSION['mensagem_sucesso'] = "Senha atualizada com sucesso.";
+                        header("Location: login.php"); 
+                        exit;
+                    } else {
+                        $error_message = "Não foi possível atualizar a senha.";
+                    }
                 } else {
-                    $error_message = "Não foi possível atualizar a senha.";
+                    $error_message = "A nova senha não pode ser igual à senha atual.";
                 }
             } else {
                 $error_message = "Senha atual incorreta!";
@@ -118,20 +118,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST
             $error_message = "Erro ao buscar informações do usuário.";
         }
         $stmt->close();
-    } else {
-        $error_message = "As senhas não coincidem.";
     }
 }
 
-// Feche a conexão com o banco de dados
 mysqli_close($mysqli);
 
-// Exibir mensagem de erro, se houver
 if (!empty($error_message)) {
     echo "<p>Erro: " . $error_message . "</p>";
 }
-
 ?>
+
 
 </body>
 </html>
