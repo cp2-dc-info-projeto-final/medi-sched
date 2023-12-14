@@ -112,7 +112,7 @@
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
 5. O sistema retorna uma mensagem de confirmação de email enviado.
 
-![WhatsApp Image 2023-12-02 at 23 52 41](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b01e7182-740c-4fb6-a00a-c16c4ce1f6c8)
+![WhatsApp Image 2023-12-14 at 16 06 21 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/612a2c84-bf1e-4141-9cea-36fc14364253)
 
 **Fluxo Alternativo  A**
 
