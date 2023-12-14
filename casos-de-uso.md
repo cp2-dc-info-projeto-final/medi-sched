@@ -75,7 +75,7 @@
 7. O cliente irá enviar os dados para o sistema. 
 8. O cliente será cadastrado.
 
-![WhatsApp Image 2023-12-14 at 14 19 50](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/5afd03db-334a-4cd4-abe6-c44195960fc0)
+![WhatsApp Image 2023-12-14 at 14 23 11](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ab53cad5-df04-4a3d-9fc3-6d6cae8bbafa)
 
  ### CDU 03 - Login
  
