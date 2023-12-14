@@ -239,14 +239,6 @@
    
 ![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/86304821-da2f-456e-9db9-e630fb8daa92)
 
-**Fluxo Alternativo B**
-
-1. O Cliente selecionará na pagina perfil "Alterar Senha"
-2. O Cliente colocará a senha atual e a senha nova desejada
-3. O cliente colocará a senha nova novamente para confirmação
-4. O sistema indica que a nova senha não pode ser igual a senha atual
-
-
 ### CDU 12 - Logout
 
 **Fluxo Principal**
