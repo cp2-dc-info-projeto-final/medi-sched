@@ -102,7 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
 
-            if (password_verify($senhaAtual, $row['senha'])) {
+            // Verifica se a nova senha é diferente da senha atual
+            if (password_verify($senhaAtual, $row['senha']) && !password_verify($novaSenha, $row['senha'])) {
                 $hashedNovaSenha = password_hash($novaSenha, PASSWORD_DEFAULT);
 
                 $stmt = $mysqli->prepare("UPDATE administrador SET senha = ? WHERE email = ?");
@@ -118,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao']) && $_POST
                     $error_message = "Não foi possível atualizar a senha.";
                 }
             } else {
-                $error_message = "Senha atual incorreta!";
+                $error_message = "Senha atual incorreta ou igual à nova senha!";
             }
         } else {
             $error_message = "Erro ao buscar informações do usuário.";
@@ -136,8 +137,8 @@ mysqli_close($mysqli);
 if (!empty($error_message)) {
     echo "<p>Erro: " . $error_message . "</p>";
 }
-
 ?>
+
 
 </body>
 </html>
