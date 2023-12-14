@@ -63,7 +63,7 @@
                     while ($administrador = $result->fetch_assoc()) {
                         echo "<strong>Dados pessoais:</strong><br>";
                         echo "Id Administrador: " . $administrador["idAdministrador"] . "<br>";
-                        echo "Nome: " . $administrador["nome_administrador"] . "<br>";
+                        echo "Nome: " . $administrador["nome_administrador"] ." ".$administrador["sobrenome_administrador"]. "<br>";
                         echo "E-mail: " . $administrador["email"] . "<br>";
                     }
                 } 
