@@ -54,30 +54,33 @@ Para se cadastrar no site.
 
  - Clique em Entrar
  - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2e80d16b-c944-47c2-b2b5-36b793c791bc)
- 
-**2.2 Para fazer login como funcionário:**
 
-- Clique em "Login".
-- Insira o email e a senha e aperte em "Login".
-- Seu login de administrador será feito com sucesso.
 
 ## 3. LOGOUT 
 
 Para sair da sua conta. 
 
 - Clique em “Logout".
-- Será direcionado para a página inicial sem login. 
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/a334a4f8-1e13-47c2-8169-3e670e6e1faa)
+
+- Será direcionado para a página inicial sem login.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9bd6662d-3973-4532-8b95-c8f0d8dae0f6)
+
 
 ## 4. AGENDAMENTO 
 
-Para fazer agendamento de algum plano. 
+Para fazer um agendamento. 
 
-**Caso não esteja cadastrado:**
- - Clique em "Cadastrar".
+**É necessário que o cliente esteja logado:**
 
- - Aperte em "Agendamento".
- - Agende um tipo de serviço, profissional da área, data e horário da consulta.
- - Clique no botão "Cadastrar"
+ - Clique em "Agende agora mesmo".
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/eb1cdc70-7316-46cb-b979-205a56e0456e)
+
+ - Agende um serviço com um médico da área específica, data e horário da consulta.
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/61ea58c8-43a6-47d5-bbd3-ca95214cbd59)
+
+ - Clique no botão "Agendar"
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/4dbf3e82-2e7e-406d-bb37-191c3ed55d42)
 
 **4.2 Para consultar Agendamento (Visualizar Meus Agendamentos)**
 
@@ -86,17 +89,32 @@ Para fazer agendamento de algum plano.
 **4.3 Excluir Agendamento**
 
 - Em sua conta, clique em “Meus Agendamentos”.
-- Escolha a marcação que deseja cancelar.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9d265cec-98bc-4802-ae8b-78648d94b4b5)
+
+- Escolha o agendamento que deseja cancelar.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/6e0d7b6b-1a3c-4cad-b1e3-960d8a8e6f92)
+
 - Aperte em cancelar.
-- Confirme o cancelamento do agendamento. 
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/64babda2-8e6d-431e-be42-1c6f0b953d1d)
+    
+- Confirme o cancelamento do agendamento.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/a96c8cc0-1ba8-4098-b869-3da0c826ba49)
 
 
 ## 5. RECUPERAR SENHA 
 
-- Clique em  "Login". 
-- Clique em "Esqueci minha senha".
+- Clique em  "Login".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/89b4c45f-bee9-4038-b6c6-276dd6c7043d)
+
+- Clique em "Esqueceu sua senha?".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/1e618c12-c3bc-4f72-a2ee-1068c884d9bb)
+
 - Insira seu email.
-- Digite o código de recuperação enviado para o seu email.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/a2d5ab6c-d2cd-48d4-8b0a-e704f4769cf4)
+
+- Você irá receber uma mensagem no seu email com a sua nova senha temporária.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/fbc86784-eb6d-442e-a498-a32e9ccd4933)
+
 - Insira uma nova senha e confirme a nova senha.
 - Clique em "Salvar alterações" e faça login.
 
