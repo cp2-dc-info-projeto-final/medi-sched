@@ -37,7 +37,7 @@
 6. O administrador irá enviar os dados para o sistema. 
 7. O funcionário será cadastrado.
    
-![WhatsApp Image 2023-12-14 at 14 12 26](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/01bee113-8584-4fc4-bbe0-cdfc90f8150f)
+![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6288b632-adba-4fcf-8065-4e50598f78e3)
 
 **Fluxo Alternativo  A**
 
@@ -53,7 +53,7 @@
 ![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
 
 
-### CDU 02 
+### CDU 02 - Cadastrar cliente
 
 **Fluxo Principal**
 
@@ -79,7 +79,7 @@
 
 ![WhatsApp Image 2023-12-02 at 22 53 55](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/1c76d74a-46f7-48a6-822e-3a5d6372381f)
 
- ### CDU 03
+ ### CDU 03 - Login
  
 **Fluxo Principal**
 
@@ -106,7 +106,7 @@
 
 
 
-### CDU 04 
+### CDU 04 - Recuperar senha
 
 **Fluxo Principal**
 
@@ -128,7 +128,7 @@
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/d14c1dad-4419-4b24-8cbe-a60ea066413a)
 
 
-### CDU 05
+### CDU 05 - Agendamento
 
  **Fluxo Principal**
 
@@ -151,7 +151,7 @@
 
 ![WhatsApp Image 2023-12-02 at 23 14 19](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ccc0cb7b-454b-4407-a300-1e96b1ea7743)
 
-### CDU 06 
+### CDU 06 - Visualizar funcionários cadastrados
 
 **Fluxo Principal**
 
