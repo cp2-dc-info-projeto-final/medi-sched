@@ -100,9 +100,7 @@
 5. Cliente entra com email e senha.
 7. O sistema informará ao cliente que as credenciais estão incorretos.
 
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/bea21e76-6d3a-47f5-b5f2-d03295669540)
-
-
+![WhatsApp Image 2023-12-14 at 14 33 06](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c2b3b322-9f5d-4428-9964-c4200b8e7f00)
 
 ### CDU 04 - Recuperar senha
 
