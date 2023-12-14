@@ -163,9 +163,8 @@
 1. A pagina principal possuirá um botão "Visualizar agendamentos". 
 2. O sistema encaminhará o cliente à pagina de visualização de agendamentos.
 3. O cliente poderá ver os agendamentos feitos
-   
-![Fluxo Principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/28a29710-9075-437f-83b9-d856d3800597)
 
+![WhatsApp Image 2023-12-14 at 16 25 06](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/0be9d9ba-f199-4752-9fb0-74c3a3376473)
 
 ### CDU 08 - Cancelar agendamento
 
