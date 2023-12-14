@@ -62,7 +62,7 @@
 5. O cliente irá enviar os dados para o sistema. 
 6. O cliente será cadastrado.
    
-![WhatsApp Image 2023-12-02 at 22 51 12](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/8e2b68f8-3cfa-4dd6-9153-a5bfb0a603dd)
+   ![WhatsApp Image 2023-12-14 at 15 59 48](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/88ae5f2d-6429-4364-a581-c580506f1595)
 
 **Fluxo Alternativo  A**
 
