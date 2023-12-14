@@ -159,7 +159,7 @@
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/1ed019c9-d8c6-49ab-8210-2ac32c4ee6f9)
 
 
-### CDU 07
+### CDU 07 - Visualizar agendamento
 
 **Fluxo Principal**
 1. A pagina principal possuirá um botão "Visualizar agendamentos". 
@@ -168,7 +168,7 @@
    
 ![Fluxo Principal](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/28a29710-9075-437f-83b9-d856d3800597)
 
-### CDU 08 
+### CDU 08 - Cancelar agendamento
 
 **Fluxo Principal**
 1. Na interface do funcionário terá a página "agendamentos".
@@ -180,7 +180,7 @@
 )
 
 
-### CDU 09
+### CDU 09 - Excluir funcionário
 
 **Fluxo Principal**
 
@@ -202,7 +202,7 @@
 
 ![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (8)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c3552f96-b179-48d9-8e88-c157280e867c)
 
-### CDU 10
+### CDU 10 - Logout
 
 **Fluxo Principal**
 1. O cliente selecionará "Logout"
@@ -211,7 +211,7 @@
 
 ![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
 
-### CDU 11
+### CDU 11 - Alterar Email
 
 **Fluxo Principal**
 
@@ -230,7 +230,7 @@
 
 ![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97ed3b12-ea89-4f33-b69c-1fc2df014405)
 
-### CDU 12
+### CDU 12 - Alterar Senha
 
 **Fluxo Principal**
 
@@ -244,7 +244,15 @@
 **Fluxo Alternativo  A**
 
 1. O Cliente selecionará na pagina perfil "Alterar Senha"
-3. O Cliente colocará a senha atual e o senha nova desejada
-4. O sistema indica que a senha esta errada
+2. O Cliente colocará a senha atual e a senha nova desejada
+3. O cliente colocará a senha nova novamente para confirmação
+4. O sistema indica que a senha está difirente da senha de confirmação
    
 ![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/86304821-da2f-456e-9db9-e630fb8daa92)
+
+**Fluxo Alternativo B**
+
+1. O Cliente selecionará na pagina perfil "Alterar Senha"
+2. O Cliente colocará a senha atual e a senha nova desejada
+3. O cliente colocará a senha nova novamente para confirmação
+4. O sistema indica que a nova senha não pode ser igual a senha atual
