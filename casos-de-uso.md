@@ -217,7 +217,7 @@
 4. O sistema mudará o email caso a senha esteja certa
 5. O sistema redireciona o cliente para login com o email alterado
    
-![WhatsApp Image 2023-12-02 at 23 37 06](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/4e8eac0c-f652-47b7-b6ee-69451d046c68)
+![WhatsApp Image 2023-12-14 at 16 50 00](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97b103bc-4b1a-4357-96f4-22d86500d9fa)
 
 **Fluxo Alternativo  A**
 
