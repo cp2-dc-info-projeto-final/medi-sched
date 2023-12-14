@@ -154,8 +154,8 @@
 2. Nessa interface terá um botão para ver os funcionários cadastrados.
 3. O administrador clica nesse botão.
 4. O sistema irá mostrar todos os funcionários cadastrados, com um botão para excluir os cadastros de funcionários.
-
-![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ffcbcd2c-7595-4354-b62b-b0004ba8ae00)
+   
+![WhatsApp Image 2023-12-14 at 16 13 56 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/39bbab2d-dcd8-491a-aa65-b93f4054930c)
 
 ### CDU 07 - Visualizar agendamento
 
