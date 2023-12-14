@@ -67,7 +67,7 @@
                     while ($cliente = $result->fetch_assoc()) {
                         echo "<strong>Dados pessoais:</strong><br>";
                         echo "Id Cliente: " . $cliente["idCliente"] . "<br>";
-                        echo "Nome: " . $cliente["nome_cliente"] . "<br>";
+                        echo "Nome: " . $cliente["nome_cliente"] . " ". $cliente["sobrenome_cliente"]. "<br>";
                         echo "E-mail: " . $cliente["email"] . "<br>";
                         echo "Cpf: " . $cliente["cpf"] . "<br>";
                     }
