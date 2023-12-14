@@ -245,7 +245,7 @@
 3. O cliente colocará a senha nova novamente para confirmação
 4. O sistema indica que a senha está difirente da senha de confirmação
    
-![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/86304821-da2f-456e-9db9-e630fb8daa92)
+![WhatsApp Image 2023-12-14 at 16 48 07](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/e012fcb4-f3d6-4797-98ab-ce2062395822)
 
 ### CDU 12 - Logout
 
