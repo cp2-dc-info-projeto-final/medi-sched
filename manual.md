@@ -115,21 +115,31 @@ Para fazer um agendamento.
 - Você irá receber uma mensagem no seu email com a sua nova senha temporária.
 - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/fbc86784-eb6d-442e-a498-a32e9ccd4933)
 
-- Insira uma nova senha e confirme a nova senha.
-- Clique em "Salvar alterações" e faça login.
+- Insira sua nova senha com seu email e logue em sua conta.
 
 
 ## 6. VISUALIZAR PERFIL
 
-- Em sua conta, clique em "Perfil"
-- Seu perfil será exibido com os seus dados. 
-  
+- Logado em sua conta, clique em "Perfil"
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9697a327-2366-417b-9efb-0542007d3a05)
+
+- Seu perfil será exibido com os seus dados.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/14479457-25e4-4ba7-ae74-b0f9b60bedb4)
+
 ## 7. REDEFINIR SENHA
 
-- Em sua conta, clique em "Perfil". 
-- Em "Editar".
+- Logado em sua conta, clique em "Perfil"
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9697a327-2366-417b-9efb-0542007d3a05)
+- 
+- Clique em "Redefinir Senha".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/fe7361c4-a92a-4a6e-ac6f-41562830dde9)
+
 - Digite a nova senha.
-- Clique em "Confirmar".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/cc2e1055-2721-4826-b6db-4f54535e9d36)
+
+- Clique em "Enviar".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/66b432b4-1eb2-43be-9821-bd609072c781)
+
 
 _______________________________________
 
@@ -137,23 +147,42 @@ _______________________________________
 
 ### 1. Cadastrar funcionário
 
-- Clique em "Cadastrar".
-- Clique em "Funcionários".
-- Preencha o formulário com os dados do novo funcionário (nome, email, senha, data de nascimento).
-- Aperte em "Cadastrar".
+**Para ter acesso a essa funcionalidade é preciso estar logado como administrador**
 
-### 2. Consultar funcionários
+- Clique em "Cadastrar Funcionario".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/0ba1eebc-f317-4c98-bc2f-5640cc397b2e)
+
+- Preencha o formulário com os dados do novo funcionário (nome, email, senha, data de nascimento).
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/8b7868d7-a84e-449f-903e-61a51ef6dfb8)
+
+- Clique em "Cadastrar".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/28136876-e85a-493c-adcf-2d43063c83a9)
+
+
+### 2. Visualizar funcionários
   
-- Em sua conta administrador, clique em "Funcionários".
-- Serão exibidos todos os funcionários cadastrados, assim como os nomes, emails e datas de nascimento. 
+- Clique em "Ver Funcionarios".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/f2057c2f-1366-4f06-9310-202ad60b9b25)
+
+- Serão exibidos todos os funcionários cadastrados, assim como os nomes, emails, cpf, genero, datas de nascimento.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/7f4354b6-07cd-41e9-a28e-b811717a0ab4)
+ 
  
 ### 3. Excluir funcionário
 
-- Em sua conta administrador, clique em "Funcionários".
-- Escolha o funcionário que deseja excluir. 
-- Aperte em excluir. 
-- Confirme a exclusão do funcionário. 
- 
+- Clique em "Ver Funcionarios".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/f2057c2f-1366-4f06-9310-202ad60b9b25)
+
+- Serão exibidos todos os funcionários cadastrados, assim como os nomes, emails, cpf, genero, datas de nascimento.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/7f4354b6-07cd-41e9-a28e-b811717a0ab4)
+  
+- Escolha o funcionário que deseja excluir e clique no botão "Excluir".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/ee05a714-d553-475e-abf2-4e069f0d47e9)
+
+- Confirme a exclusão.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/878c1d19-5244-42fc-b328-a353d36a33de)
+
+
 ### 4. Excluir agendamento
 
 - Em sua conta administrador, clique em "Meus Agendamentos".
