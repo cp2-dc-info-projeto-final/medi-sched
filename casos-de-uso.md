@@ -11,9 +11,9 @@
  - [CDU 07](#CDU-07): Visualizar agendamento;
  - [CDU 08](#CDU-08): Cancelar agendamento;
  - [CDU 09](#CDU-09): Excluir funcionário;
- - [CDU 10](#CDU-10): Logout;
- - [CDU 11](#CDU-11): Alterar Email;
- - [CDU 12](#CDU-12): Alterar Senha;
+ - [CDU 10](#CDU-11): Alterar Email;
+ - [CDU 11](#CDU-12): Alterar Senha;
+ - [CDU 12](#CDU-10): Logout;
  
  
  
@@ -201,16 +201,7 @@
 
 ![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (8)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c3552f96-b179-48d9-8e88-c157280e867c)
 
-### CDU 10 - Logout
-
-**Fluxo Principal**
-1. O cliente selecionará "Logout"
-2. O sistema encerra sessão
-3. O sistema recarrega para página inicial
-
-![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
-
-### CDU 11 - Alterar Email
+### CDU 10 - Alterar Email
 
 **Fluxo Principal**
 
@@ -229,7 +220,7 @@
 
 ![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97ed3b12-ea89-4f33-b69c-1fc2df014405)
 
-### CDU 12 - Alterar Senha
+### CDU 11 - Alterar Senha
 
 **Fluxo Principal**
 
@@ -255,3 +246,13 @@
 2. O Cliente colocará a senha atual e a senha nova desejada
 3. O cliente colocará a senha nova novamente para confirmação
 4. O sistema indica que a nova senha não pode ser igual a senha atual
+
+
+### CDU 12 - Logout
+
+**Fluxo Principal**
+1. O cliente selecionará "Logout"
+2. O sistema encerra sessão
+3. O sistema recarrega para página inicial
+
+![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
