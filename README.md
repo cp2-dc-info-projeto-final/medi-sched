@@ -23,4 +23,4 @@ O programa tem como objetivo agendar clientes para um atendimento médico com pr
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/diagrama%20banco%20de%20dados/Diagrama-AgendaSaude-banco-de-dados.png)
+![Diagrama de Banco de Dados](https://github.com/cp2-dc-info-projeto-final/medi-sched/blob/main/diagrama%20banco%20de%20dados/modelagembancodedados.png)
