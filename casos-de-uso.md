@@ -49,9 +49,7 @@
 6. Sistema exibe mensagem informando o problema: "As informações inseridas já estão cadastradas".
 7. Administrador repete o processo de cadastro.
 
-
-![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
-
+![WhatsApp Image 2023-12-14 at 14 12 04](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b69b65f8-e253-42ef-89d7-91570eda32de)
 
 ### CDU 02 - Cadastrar cliente
 
