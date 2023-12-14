@@ -255,3 +255,11 @@
 3. O sistema recarrega para página inicial
 
 ![WhatsApp Image 2023-12-02 at 23 01 30](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/d1badab7-edfb-404d-9cb0-cf5044727d01)
+
+
+
+
+
+![Captura de tela 2023-12-14 171754](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/95931280/53d70da0-dfb1-43b6-b457-39a3195dbc15)
+
+
