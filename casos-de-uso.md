@@ -24,7 +24,7 @@
  - Administrador;
 
 ## Diagrama de Casos de Uso
-![Diagrama CDU (3)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2eea3a72-5052-4dc3-a695-7016692a15d6)
+![Captura de tela 2023-12-14 171754](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/95931280/53d70da0-dfb1-43b6-b457-39a3195dbc15)
 
 ### CDU 01 - Cadastrar Funcionario
 **Fluxo Principal**
@@ -260,6 +260,5 @@
 
 
 
-![Captura de tela 2023-12-14 171754](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/95931280/53d70da0-dfb1-43b6-b457-39a3195dbc15)
 
 
