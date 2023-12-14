@@ -235,8 +235,8 @@
 3. O Cliente colocará a senha atual e senha nova
 4. O sistema mudará a senha caso a senha atual esteja certa
 5. O sistema redireciona o cliente para login com a senha alterada
-
-![WhatsApp Image 2023-12-02 at 23 46 08](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/e101b867-1c17-4b3c-a421-104a2776394c)
+   
+![WhatsApp Image 2023-12-14 at 16 46 11 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/129e13a9-fd09-4a83-927e-62dea6bc42a0)
 
 **Fluxo Alternativo  A**
 
