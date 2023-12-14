@@ -143,8 +143,8 @@
 5. O cliente escolherá outro funcionário ou outro horário.
 6. O cliente irá clicar em "Agendar".
 7. O cliente será redirecionado para outra página com a confirmação de seu agendamento.
-
-![WhatsApp Image 2023-12-02 at 23 14 19](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/ccc0cb7b-454b-4407-a300-1e96b1ea7743)
+   
+![WhatsApp Image 2023-12-14 at 15 19 57](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/c74b77d6-e35a-4bb8-af94-e1e325c1097e)
 
 ### CDU 06 - Visualizar funcionários cadastrados
 
