@@ -182,30 +182,31 @@ _______________________________________
 - Confirme a exclusão.
 - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/878c1d19-5244-42fc-b328-a353d36a33de)
 
-
-### 4. Excluir agendamento
-
-- Em sua conta administrador, clique em "Meus Agendamentos".
-- Escolha o agendamento que deseja excluir.
-- Aperte em excluir.
-- Confirme a exclusão do agendamento.
-
 _______________________________________
 
 ## 1. PÁGINA INICIAL - Funcionário
 
 ### 1. Acessar agendamento
 
-- Faça "Login". 
-- Clique em "Meus Agendamentos".
+- Faça "Login".
+- Clique em "Ver Agendamentos".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9058b057-0ce6-4787-9071-f921f62542e2)
+
 
 ### 2. Acessar perfil
 
 - Faça "Login". 
 - Clique em "Perfil".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/18e58166-c3c0-4361-bd7e-fe701bd1f7e3)
 
-### 3. Consultar agendamento 
+### 3. Cancelar agendamento
 
-- Em sua conta de funcionário, clique em "Meus Agendamentos".  
-- Serão exibidos todos os agendamentos cadastrados, assim como o cliente, serviço, data e horário
+- Faça "Login".
+- Clique em "Ver Agendamentos".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/9058b057-0ce6-4787-9071-f921f62542e2)
+- 
+- Clique no botão "Cancelar" no agendamento em que deseja cancelar.
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/117f7157-11aa-407e-83ab-637c22336adb)
+
+
 
