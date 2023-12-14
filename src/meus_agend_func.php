@@ -38,7 +38,6 @@ if ($idFuncionarioLogado !== null) {
             $agendamentos[] = $row;
         }
     } else {
-        echo "<p>Não há agendamentos marcados.</p>";
     }
     $stmt->close();
 }
