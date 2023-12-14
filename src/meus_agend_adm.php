@@ -66,8 +66,8 @@ $mysqli->close();
                         <li class="nav-item">
                             <a class="nav-link" href="perfil.php">Perfil</a>
                         </li>
-			<li class="nav-item">
-				<a class="nav-link" href="logout.php">Logout</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,6 @@ $mysqli->close();
                         <th>ID do Funcionário</th>
                         <th>Data da Consulta</th>
                         <th>Horário da Consulta</th>
-                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,9 +93,6 @@ $mysqli->close();
                             <td><?php echo htmlspecialchars($agendamento['idFuncionario']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['data_consulta']); ?></td>
                             <td><?php echo htmlspecialchars($agendamento['horario_consulta']); ?></td>
-                            <td>
-                                <a href="cancela_agendamento.php?idAgendamento=<?php echo $agendamento['idAgendamento']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">Cancelar</a>
-                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
