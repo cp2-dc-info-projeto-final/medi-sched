@@ -31,6 +31,8 @@ _______________________________________
 Para se cadastrar no site. 
 
 - Clique em "Cadastrar-se".
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/52d34792-c3ea-4bf2-ac35-3c9d5dec5515)
+- 
 - Insira os seguintes dados: Primeiro nome, sobrenome, email, senha, data de nascimento, CPF e Gênero .
 - Clique em "Continuar".
 
