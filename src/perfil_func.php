@@ -60,7 +60,7 @@
                     while ($funcionario = $result->fetch_assoc()) {
                         echo "<strong>Dados pessoais:</strong><br>";
                         echo "Id Funcionario: " . $funcionario["idFuncionario"] . "<br>";
-                        echo "Nome: " . $funcionario["nome_funcionario"] . "<br>";
+                        echo "Nome: " . $funcionario["nome_funcionario"] ." ". $funcionario["sobrenome_funcionario"].  "<br>";
                         echo "E-mail: " . $funcionario["email"] . "<br>";
                         echo "Cpf: " . $funcionario["cpf"] . "<br>";
                     }
