@@ -2,7 +2,7 @@
 
 ### RF 01
 
-O sistema deve permitir cadastro de pacientes com nome, sobrenome, CPF, data de nascimento, email e senha.
+O sistema deve permitir cadastro de pacientes com nome, sobrenome, CPF, data de nascimento, gênero, email e senha.
 
 ### RF 02
 
@@ -14,7 +14,7 @@ Os usuários devem conseguir agendar consultas, especificando data, horário e m
 
 ### RF 04
 
-O sistema deve permitir que o administrador cadastre médicos com nome, sobrenome, área, CPF, email e senha.
+O sistema deve permitir que o administrador cadastre médicos com nome, sobrenome, área, CPF, gênero, email e senha.
 
 ### RF 05
 
@@ -50,15 +50,7 @@ O sistema deve ter uma área de perfil.
 
 ### RF 13
 
-O sistema deve permitir que o usuário altere seu E-mail e senha
-
-### RF 14
-
-O sistema deve permitir que o Médico altere seu E-mail e senha
-
-### RF 13
-
-O sistema deve permitir que o administrador altere seu E-mail e senha
+O sistema deve permitir que os usuários altere seu E-mail e senha
 
 ## Requisitos Não-Funcionais
 
@@ -72,19 +64,11 @@ O sistema deve comunicar-se com o banco de dados MySQL.
 
 ### RNF 03
 
-A curva de aprendizado para usar o sistema deve ser baixa, mesmo para usuários não técnicos.
+As informações do usuário devem ser armazenadas de forma segura usando criptografia.
 
 ### RNF 04
 
-As informações do usuário devem ser armazenadas de forma segura usando criptografia.
-
-### RNF 05
-
 O sistema não deve permitir que o usuário visualize dados privativos de outros usuários.
-
-### RNF 06
-
-O sistema deve suportar diferentes fusos horários, idiomas e formatos de data/hora, dependendo da localização dos usuários.
 
 
 
