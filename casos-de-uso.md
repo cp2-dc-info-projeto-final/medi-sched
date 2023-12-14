@@ -33,7 +33,7 @@
 2. O sistema exibirá a página inicial.
 3. O administrador seleciona "Cadastrar funcionário".
 4. O sistema exibirá uma pagina de cadastro com um formulário de cadastro.
-5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, cargo etc).
+5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, CPF, especialidade e gênero).
 6. O administrador irá enviar os dados para o sistema. 
 7. O funcionário será cadastrado.
    
@@ -45,8 +45,10 @@
 2. O sistema exibirá a página inicial.
 3. O administrador seleciona "Cadastrar funcionário".
 4. O sistema exibirá uma pagina de cadastro com um formulário de cadastro.
-5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, cargo etc).
-6. O sistema informará ao administrador que os dados cadastrados são invalidos.
+5. O administrador irá inserir os dados no formulário (nome, e-mail, senha, CPF, especialidade e gênero).
+6. Sistema exibe mensagem informando o problema: "As informações inseridas já estão cadastradas".
+7. Administrador repete o processo de cadastro.
+
 
 ![Fluxo alternativo funcionario](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/d094c78f-0285-4194-a549-1c843559269f).
 
@@ -58,7 +60,7 @@
 1. O sistema exibirá a página inicial
 2. O cliente clica em "Cadastro".
 3. O sistema exibirá uma pagina de cadastro com um formulário.
-4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento etc).
+4. O cliente irá inserir os dados no formulário (nome, sobrenome, e-mail, senha, cpf, data de nascimento e gênero).
 5. O cliente irá enviar os dados para o sistema. 
 6. O cliente será cadastrado.
    
@@ -69,8 +71,8 @@
 1. O sistema exibirá a página inicial
 2. O cliente clica em "Cadastro".
 3. O sistema exibirá uma pagina de cadastro com um formulário.
-4. O cliente irá inserir os dados no formulário (nome, e-mail, senha, cpf, data de nascimento etc).
-5. O sistema informará ao cliente que os dados cadastrados são invalidos.
+4. O cliente irá inserir os dados no formulário (nome, sobrenome, e-mail, senha, cpf, data de nascimento e gênero).
+5. Sistema exibe mensagem informando o problema: "As credenciais inseridas já estão cadastradas".
 6. O cliente irá inserir os dados corretamente.
 7. O cliente irá enviar os dados para o sistema. 
 8. O cliente será cadastrado.
@@ -98,7 +100,7 @@
 3. O cliente será redirecionado para a página de login.
 4. Será exibido os campos de email e senha.
 5. Cliente entra com email e senha.
-7. O sistema informará ao cliente que o email ou senha estão incorretos.
+7. O sistema informará ao cliente que as credenciais estão incorretos.
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/bea21e76-6d3a-47f5-b5f2-d03295669540)
 
@@ -112,7 +114,7 @@
 2. O sistema requisita um email de recuperaçao.
 3. O cliente digita o email de recuperação e seleciona "Recuperar".
 4. O sistema envia para o email inserido uma senha provisória que deve ser usada para login".
-5. O sistema retorna uma mensagem de cconfirmação de email enviado.
+5. O sistema retorna uma mensagem de confirmação de email enviado.
 
 ![WhatsApp Image 2023-12-02 at 23 52 41](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/b01e7182-740c-4fb6-a00a-c16c4ce1f6c8)
 
@@ -130,8 +132,8 @@
 
  **Fluxo Principal**
 
-1. O sistema exibirá os horários,especialização dos funcionários e os funcionários disponíveis para o cliente.
-2. O cliente irá escolher o horário,especialização do funcionário e os funcionarios disponíveis na região do cliente. 
+1. O sistema exibirá os horários, especialização dos funcionários e os funcionários disponíveis para o cliente.
+2. O cliente irá escolher o horário, especialização do funcionário e os funcionarios. 
 3. O cliente irá clicar em "Agendar".
 4. O cliente será redirecionado para outra página com a confirmação de seu agendamento.
 
