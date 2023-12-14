@@ -37,7 +37,7 @@
 6. O administrador irá enviar os dados para o sistema. 
 7. O funcionário será cadastrado.
    
-![Diagrama sem nome drawio](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/6288b632-adba-4fcf-8065-4e50598f78e3)
+![WhatsApp Image 2023-12-14 at 14 12 26](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/01bee113-8584-4fc4-bbe0-cdfc90f8150f)
 
 **Fluxo Alternativo  A**
 
