@@ -225,7 +225,7 @@
 3. O Cliente colocará a senha atual e o email novo desejado
 4. O sistema indica que a senha esta errada
 
-![WhatsApp Image 2023-12-02 at 23 41 09](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/97ed3b12-ea89-4f33-b69c-1fc2df014405)
+![WhatsApp Image 2023-12-14 at 16 51 02](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/623eb28f-1231-4e5e-919b-7aba48ffbb26)
 
 ### CDU 11 - Alterar Senha
 
