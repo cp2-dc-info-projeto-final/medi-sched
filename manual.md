@@ -31,16 +31,22 @@ _______________________________________
 Para se cadastrar no site. 
 
 - Clique em "Cadastrar-se".
-- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/52d34792-c3ea-4bf2-ac35-3c9d5dec5515)
-- 
+  ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/52d34792-c3ea-4bf2-ac35-3c9d5dec5515)
+  
 - Insira os seguintes dados: Primeiro nome, sobrenome, email, senha, data de nascimento, CPF e Gênero .
+  ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/3342a9e2-64a8-48a7-ad4e-d6f6946319ec)
+
 - Clique em "Continuar".
+  ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/99d73091-785e-422b-8557-04776de473ae)
+
 
 ## 2. LOGIN
 
 **2.1 Para acessar como “cliente”:** 
 
  - Clicar em "Login".
+   ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/f44ef309-aef4-443b-a8eb-ad372b516102)
+
  - Insira o email e a senha e aperte em "Login".
  - Será direcionado para a página inicial com login.
  
