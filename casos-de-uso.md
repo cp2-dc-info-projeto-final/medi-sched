@@ -157,6 +157,12 @@
 
 ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142700631/1ed019c9-d8c6-49ab-8210-2ac32c4ee6f9)
 
+**Fluxo Alternativo  A**
+
+1. O administrador possuirá uma interface própria para administradores.
+2. Nessa interface terá um botão para ver os funcionários cadastrados.
+3. O administrador clica nesse botão.
+4. Caso nao tenha nenhum funcionario cadastrado o sistema exibirá que nao existe funcionarios 
 
 ### CDU 07 - Visualizar agendamento
 
