@@ -27,7 +27,7 @@
 ![Diagrama CDU (3)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2eea3a72-5052-4dc3-a695-7016692a15d6)
 
 ### CDU 01
-Cadastrar Cliente
+Cadastrar Cliente;
 **Fluxo Principal**
 
 1. O administrador acessará a sua pagina inicial.
