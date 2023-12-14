@@ -37,8 +37,7 @@ Para se cadastrar no site.
 - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/3342a9e2-64a8-48a7-ad4e-d6f6946319ec)
 
 - Clique em "Continuar".
-- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/99d73091-785e-422b-8557-04776de473ae)
-
+- ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/f6397e6e-6b02-42ac-bde7-25b0b3bbc6d4)
 
 ## 2. LOGIN
 
@@ -47,8 +46,14 @@ Para se cadastrar no site.
  - Clicar em "Login".
  - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/f44ef309-aef4-443b-a8eb-ad372b516102)
 
- - Insira o email e a senha e aperte em "Login".
- - Será direcionado para a página inicial com login.
+ - Será direcionado para a página com login.
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/8c8afa15-5294-4f39-8509-6daae266f2d2)
+
+ - Insira email e senha
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/4c852e69-424b-460a-af62-3631e1b0f18b)
+
+ - Clique em Entrar
+ - ![image](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2e80d16b-c944-47c2-b2b5-36b793c791bc)
  
 **2.2 Para fazer login como funcionário:**
 
