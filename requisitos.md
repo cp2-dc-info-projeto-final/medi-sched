@@ -70,6 +70,10 @@ As informações do usuário devem ser armazenadas de forma segura usando cripto
 
 O sistema não deve permitir que o usuário visualize dados privativos de outros usuários.
 
+### RNF 04
+
+O sistema deve disponibilizar o sistema em português.
+
 
 
 
