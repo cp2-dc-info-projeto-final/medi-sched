@@ -52,6 +52,14 @@ O sistema deve ter uma área de perfil.
 
 O sistema deve permitir que os usuários altere seu E-mail e senha
 
+### RF 14
+
+O sistema não deverá permitir agendamento duplicado
+
+### RF 15 
+
+O sistema não deverá permitir cadastro duplicado 
+
 ## Requisitos Não-Funcionais
 
 ### RNF 01
