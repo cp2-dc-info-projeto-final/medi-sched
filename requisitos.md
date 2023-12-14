@@ -4,9 +4,7 @@
 
 O sistema deverá cadastrar usuários (e-mail, nome de usuário, nome completo, data de nascimento, senha, confirmar senha);
 
-### RF 02 
 
-O sistema deverá cadastrar administradores (id de administrador, e-mail, nome de usuário, nome completo, data de nascimento, senha, confirmar senha); 
 
 ### RF 03
 
@@ -14,31 +12,25 @@ Os usuários devem poder agendar eventos, como consultas, reuniões, reservas e 
 
 ### RF 04
 
-O sistema deve permitir que os usuários escolham datas, horários e locais disponíveis.
+O sistema deve permitir que os usuários escolham datas e horários.
 
-### RF 05
-
-Deve ser possível adicionar notas ou requisitos específicos ao agendamento (por exemplo, alergias alimentares em uma reserva de restaurante).
 
 ### RF 06
 
 Os usuários devem poder visualizar a disponibilidade de horários e datas para os prestadores de serviços.
 
-### RF 07
-
-O sistema deve exibir um calendário com slots disponíveis, indicando horários ocupados e livres.
 
 ### RF 08
 
-Os usuários devem poder modificar, cancelar ou reagendar seus próprios agendamentos dentro de um prazo especificado.
+Os usuários devem poder cancelar ou reagendar seus próprios agendamentos dentro de um prazo especificado.
 
 ### RF 09
 
-Os prestadores de serviços devem ter a capacidade de gerenciar suas agendas, bloquear horários específicos e aceitar ou recusar solicitações de agendamento.
+Os prestadores de serviços devem ter a capacidade de gerenciar suas agendas e cancelar o agendamento caso for necessário 
 
 ### RF 10
 
-O sistema deve ser acessível por meio de um aplicativo móvel compatível com plataforma Android, além de uma versão responsiva para navegadores web móveis.
+Os administradores deverá cadastrar funcionário assim como excluir os funcionários cadastrados.
 
 ## Requisitos Não-Funcionais
 
