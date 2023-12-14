@@ -169,7 +169,7 @@
 ### CDU 08 - Cancelar agendamento
 
 **Fluxo Principal**
-1. Na interface do funcionário terá a página "agendamentos".
+1. Na interface do usuario terá a página "agendamentos".
 2. Dentro da página "agendamentos" cada agendamento que ainda não teve seu serviço prestado terá o botão "cancelar". 
 3. O funcionário ou cliente clicará no botão "cancelar".
 4. O sistema removerá o agendamento.
@@ -177,6 +177,14 @@
 ![279767478-5642a14b-db69-450c-bb23-506842798975 drawio (15)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/136659414/2c630c3c-9454-499b-a130-3591bbc7b486).
 )
 
+**Fluxo Alternativo A**
+
+1. O usuario clicara para cancelar o agendamento
+2. O sistema enviara uma mensagem de confirmação
+3. O usuario clicara em não
+4. O sistema retornara a pagina de agendamento
+
+![WhatsApp Image 2023-12-14 at 16 39 25 (1)](https://github.com/cp2-dc-info-projeto-final/medi-sched/assets/142699957/a83106c2-c630-444b-9d3d-37632bed2353)
 
 ### CDU 09 - Excluir funcionário
 
