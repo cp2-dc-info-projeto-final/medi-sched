@@ -87,8 +87,8 @@ if ($operacao === "editemail") {
             $row = $result->fetch_assoc();
 
             if (password_verify($senha, $row['senha'])) {
-                $stmt = $mysqli->prepare("SELECT email FROM cliente WHERE email = ? UNION SELECT email FROM funcionario WHERE email = ?");
-                $stmt->bind_param("ss", $emailnovo, $emailnovo);
+                $stmt = $mysqli->prepare("SELECT email FROM cliente WHERE email = ? UNION SELECT email FROM funcionario WHERE email = ? UNION SELECT email FROM administrador WHERE email = ?");
+                $stmt->bind_param("sss", $emailnovo, $emailnovo, $emailnovo);
                 $stmt->execute();
                 $result = $stmt->get_result();
 
