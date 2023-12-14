@@ -82,6 +82,9 @@ O sistema não deve permitir que o usuário visualize dados privativos de outros
 
 O sistema deve disponibilizar o sistema em português.
 
+### RNF 05
+
+O usuário deverá ter conexão com a internet para usutilizar do sistema.
 
 
 
